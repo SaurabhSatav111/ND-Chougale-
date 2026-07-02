@@ -4358,13 +4358,13 @@ body.dark .branch-info-name {
 
 @media(max-width:767px) {
   :root {
-    --header-nav-h: 105px !important;
-    --header-total-h: 105px !important;
+    --header-nav-h: 110px !important;
+    --header-total-h: 110px !important;
   }
   
   .navbar {
     height: auto !important;
-    padding: 8px 0 !important;
+    padding: 0 !important;
   }
   
   .nav-inner {
@@ -4373,6 +4373,9 @@ body.dark .branch-info-name {
     height: auto !important;
     gap: 8px 0 !important;
     position: relative !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
   }
   
   .nav-logo {
@@ -4382,14 +4385,16 @@ body.dark .branch-info-name {
     display: flex !important;
     justify-content: center !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
   
   .nav-logo-img {
     height: auto !important;
-    max-height: 45px !important;
+    max-height: 55px !important;
     width: 100% !important;
     max-width: 100% !important;
-    object-fit: contain !important;
+    object-fit: fill !important;
+    border-radius: 0 !important;
   }
   
   .nav-lang-top {
@@ -4402,7 +4407,7 @@ body.dark .branch-info-name {
     justify-content: flex-start !important;
     font-size: 11px !important;
     background: none !important;
-    padding: 0 !important;
+    padding: 0 0 8px 16px !important;
     box-shadow: none !important;
     z-index: 999;
   }
@@ -4419,7 +4424,7 @@ body.dark .branch-info-name {
     align-items: center !important;
     justify-content: flex-end !important;
     border-top: none !important;
-    padding-top: 0 !important;
+    padding: 0 16px 8px 0 !important;
     margin-top: 0 !important;
   }
 
@@ -4714,13 +4719,13 @@ body.dark .drawer-lang .lang-switch-link.active {
 /* Two-Row Desktop/Laptop Header Layout with Full Width Centered Logo */
 @media (min-width: 768px) {
   :root {
-    --header-nav-h: 140px !important;
-    --header-total-h: 140px !important;
+    --header-nav-h: 150px !important;
+    --header-total-h: 150px !important;
   }
   
   .navbar {
     height: auto !important;
-    padding: 12px 0 !important;
+    padding: 0 !important;
   }
   
   .nav-inner {
@@ -4728,6 +4733,9 @@ body.dark .drawer-lang .lang-switch-link.active {
     grid-template-columns: 1fr auto !important;
     height: auto !important;
     gap: 12px 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
   }
   
   .nav-logo {
@@ -4736,6 +4744,8 @@ body.dark .drawer-lang .lang-switch-link.active {
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   
   .nav-logo-img {
@@ -4743,7 +4753,8 @@ body.dark .drawer-lang .lang-switch-link.active {
     max-height: 80px !important;
     width: 100% !important;
     max-width: 100% !important;
-    object-fit: contain !important;
+    object-fit: fill !important;
+    border-radius: 0 !important;
   }
   
   .nav-links {
@@ -4754,6 +4765,7 @@ body.dark .drawer-lang .lang-switch-link.active {
     align-items: center !important;
     border-top: 1px solid var(--text-200);
     padding-top: 12px !important;
+    padding-left: 40px !important;
     margin-top: 4px !important;
     width: 100% !important;
   }
@@ -4770,6 +4782,7 @@ body.dark .drawer-lang .lang-switch-link.active {
     align-items: center !important;
     border-top: 1px solid var(--text-200);
     padding-top: 12px !important;
+    padding-right: 40px !important;
     margin-top: 4px !important;
   }
   
