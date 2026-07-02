@@ -1,388 +1,859 @@
 <!DOCTYPE html>
 <html lang="mr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>कर्ज सेवा | Loans — N.D. Chougale Nagari Path Sanstha</title>
-  <meta name="description" content="Gold Loan in 15 minutes, Home Loan, Personal Loan, Business Loan — lowest rates in Kolhapur. Apply now.">
+  <meta name="description"
+    content="Gold Loan in 15 minutes, Home Loan, Personal Loan, Business Loan — lowest rates in Kolhapur. Apply now.">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .page-hero { background:linear-gradient(180deg,#F1F5F9 0%,#FFEADB 100%); padding:60px 0 80px; margin-top:var(--header-total-h); border-bottom:1px solid var(--text-200); }
-    body.dark .page-hero { background:linear-gradient(180deg,#1A0F00 0%,#261600 100%); border-bottom-color:var(--text-200); }
-    .page-hero-title { font-size:clamp(32px,4vw,56px); color:var(--primary); font-weight:900; margin-bottom:14px; }
-    .page-hero-desc { font-size:17px; color:var(--text-600); max-width:600px; }
-    .breadcrumb { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text-400); margin-bottom:20px; }
-    .breadcrumb a { color:var(--text-600); }
-    .loan-full-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:28px; margin-bottom:60px; }
-    .loan-detail-card { background:var(--surface); border-radius:var(--r-card); overflow:hidden; box-shadow:var(--shadow-card); display:flex; flex-direction:column; }
-    .loan-dc-top { height:120px; display:flex; align-items:center; justify-content:space-between; padding:24px; }
-    .loan-dc-body { padding:28px; flex-grow:1; }
-    .loan-dc-title { font-size:20px; font-weight:700; color:var(--primary); margin-bottom:10px; }
-    .loan-dc-desc { font-size:14px; color:var(--text-600); line-height:1.7; margin-bottom:18px; }
-    .loan-params { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:18px; }
-    .param-box { background:var(--bg); border-radius:10px; padding:12px 14px; }
-    .param-label { font-size:11px; color:var(--text-400); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; }
-    .param-val { font-family:var(--font-head); font-size:16px; font-weight:700; color:var(--primary); margin-top:4px; }
-    .process-section { background:var(--primary); padding:80px 0; }
-    .process-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:32px; }
-    .process-step { text-align:center; }
-    .step-num { width:56px; height:56px; border-radius:50%; background:rgba(242,177,52,0.15); border:2px solid rgba(242,177,52,0.4); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; font-family:var(--font-head); font-size:20px; font-weight:900; color:var(--accent); }
-    .step-title { font-family:var(--font-head); font-size:16px; font-weight:700; color:white; margin-bottom:8px; }
-    .step-desc { font-size:13px; color:rgba(255,255,255,0.6); line-height:1.7; }
-    @media(max-width:767px) { .loan-full-grid { grid-template-columns:1fr; } .process-steps { grid-template-columns:1fr 1fr; } .loan-params { grid-template-columns:1fr; } }
+    .page-hero {
+      background: linear-gradient(180deg, #F1F5F9 0%, #FFEADB 100%);
+      padding: 60px 0 80px;
+      margin-top: var(--header-total-h);
+      border-bottom: 1px solid var(--text-200);
+    }
+
+    body.dark .page-hero {
+      background: linear-gradient(180deg, #1A0F00 0%, #261600 100%);
+      border-bottom-color: var(--text-200);
+    }
+
+    .page-hero-title {
+      font-size: clamp(32px, 4vw, 56px);
+      color: var(--primary);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .page-hero-desc {
+      font-size: 17px;
+      color: var(--text-600);
+      max-width: 600px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-400);
+      margin-bottom: 20px;
+    }
+
+    .breadcrumb a {
+      color: var(--text-600);
+    }
+
+    .loan-full-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-bottom: 60px;
+    }
+
+    .loan-detail-card {
+      background: var(--surface);
+      border-radius: var(--r-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .loan-dc-top {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px;
+    }
+
+    .loan-dc-body {
+      padding: 28px;
+      flex-grow: 1;
+    }
+
+    .loan-dc-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .loan-dc-desc {
+      font-size: 14px;
+      color: var(--text-600);
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .loan-params {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .param-box {
+      background: var(--bg);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .param-label {
+      font-size: 11px;
+      color: var(--text-400);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .param-val {
+      font-family: var(--font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 4px;
+    }
+
+    .process-section {
+      background: var(--primary);
+      padding: 80px 0;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .process-step {
+      text-align: center;
+    }
+
+    .step-num {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(242, 177, 52, 0.15);
+      border: 2px solid rgba(242, 177, 52, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-family: var(--font-head);
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--accent);
+    }
+
+    .step-title {
+      font-family: var(--font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .step-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.7;
+    }
+
+    @media(max-width:767px) {
+      .loan-full-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .loan-params {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
+
 <body>
-<!-- SVG SPRITE -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
-  <symbol id="i-home"     viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></symbol>
-  <symbol id="i-account"  viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
-  <symbol id="i-loan"     viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M12 2v9M8 5l4-3 4 3"/></symbol>
-  <symbol id="i-deposit"  viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="9"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></symbol>
-  <symbol id="i-rates"    viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
-  <symbol id="i-calc"     viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="9" y1="22" x2="9" y2="16"/><line x1="15" y1="22" x2="15" y2="16"/><line x1="9" y1="16" x2="15" y2="16"/><path d="M8 6h8M8 10h8"/></symbol>
-  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
-  <symbol id="i-branch"   viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
-  <symbol id="i-chat"     viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
-  <symbol id="i-mobile"   viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></symbol>
-  <symbol id="i-upi"      viewBox="0 0 24 24"><path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/><polyline points="9 17 12 10 15 17"/></symbol>
-  <symbol id="i-support"  viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
-  <symbol id="i-shield"   viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
-  <symbol id="i-award"    viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
-  <symbol id="i-star"     viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor"/></symbol>
-  <symbol id="i-phone"    viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-  <symbol id="i-mail"     viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22 6 12 13 2 6"/></symbol>
-  <symbol id="i-clock"    viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
-  <symbol id="i-search"   viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
-  <symbol id="i-moon"     viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></symbol>
-  <symbol id="i-sun"      viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></symbol>
-  <symbol id="i-menu"     viewBox="0 0 24 24"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
-  <symbol id="i-chevron-up"   viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></symbol>
-  <symbol id="i-plus"     viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></symbol>
-  <symbol id="i-neft"     viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></symbol>
-  <symbol id="i-atm"      viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></symbol>
-  <symbol id="i-locker"   viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
-  <symbol id="i-passbook" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
-  <symbol id="i-check"    viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
-  <symbol id="i-trust"    viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
-  <symbol id="i-speed"    viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
-  <symbol id="i-growth"   viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></symbol>
-  <symbol id="i-team"     viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
-  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
-  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></symbol>
-  <symbol id="i-youtube"  viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></symbol>
-</svg>
+  <!-- SVG SPRITE -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
+    </symbol>
+    <symbol id="i-account" viewBox="0 0 24 24">
+      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+      <circle cx="12" cy="7" r="4" />
+    </symbol>
+    <symbol id="i-loan" viewBox="0 0 24 24">
+      <rect x="3" y="11" width="18" height="11" rx="2" />
+      <path d="M12 2v9M8 5l4-3 4 3" />
+    </symbol>
+    <symbol id="i-deposit" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <line x1="9" y1="9" x2="15" y2="9" />
+      <line x1="9" y1="13" x2="15" y2="13" />
+      <line x1="9" y1="17" x2="15" y2="17" />
+    </symbol>
+    <symbol id="i-rates" viewBox="0 0 24 24">
+      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+    </symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24">
+      <rect x="4" y="2" width="16" height="20" rx="2" />
+      <line x1="9" y1="22" x2="9" y2="16" />
+      <line x1="15" y1="22" x2="15" y2="16" />
+      <line x1="9" y1="16" x2="15" y2="16" />
+      <path d="M8 6h8M8 10h8" />
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+    </symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+      <circle cx="12" cy="10" r="3" />
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24">
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+    </symbol>
+    <symbol id="i-mobile" viewBox="0 0 24 24">
+      <rect x="5" y="2" width="14" height="20" rx="2" />
+      <line x1="12" y1="18" x2="12" y2="18" />
+    </symbol>
+    <symbol id="i-upi" viewBox="0 0 24 24">
+      <path d="M17 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z" />
+      <polyline points="9 17 12 10 15 17" />
+    </symbol>
+    <symbol id="i-support" viewBox="0 0 24 24">
+      <path
+        d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+    </symbol>
+    <symbol id="i-award" viewBox="0 0 24 24">
+      <circle cx="12" cy="8" r="7" />
+      <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+        fill="currentColor" />
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path
+        d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+      <polyline points="22 6 12 13 2 6" />
+    </symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10" />
+      <polyline points="12 6 12 12 16 14" />
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="5" />
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24">
+      <line x1="3" y1="12" x2="21" y2="12" />
+      <line x1="3" y1="6" x2="21" y2="6" />
+      <line x1="3" y1="18" x2="21" y2="18" />
+    </symbol>
+    <symbol id="i-chevron-up" viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15" />
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </symbol>
+    <symbol id="i-neft" viewBox="0 0 24 24">
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+    </symbol>
+    <symbol id="i-atm" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="20" height="14" rx="2" />
+      <line x1="2" y1="10" x2="22" y2="10" />
+    </symbol>
+    <symbol id="i-locker" viewBox="0 0 24 24">
+      <rect x="3" y="11" width="18" height="11" rx="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+    </symbol>
+    <symbol id="i-passbook" viewBox="0 0 24 24">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <polyline points="20 6 9 17 4 12" />
+    </symbol>
+    <symbol id="i-trust" viewBox="0 0 24 24">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+      <polyline points="9 12 11 14 15 10" />
+    </symbol>
+    <symbol id="i-speed" viewBox="0 0 24 24">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+    </symbol>
+    <symbol id="i-growth" viewBox="0 0 24 24">
+      <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+      <polyline points="17 6 23 6 23 12" />
+    </symbol>
+    <symbol id="i-team" viewBox="0 0 24 24">
+      <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+      <circle cx="9" cy="7" r="4" />
+      <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="2" y="2" width="20" height="20" rx="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24">
+      <path
+        d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.97C5.12 20 12 20 12 20s6.88 0 8.59-.45a2.78 2.78 0 0 0 1.95-1.97A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+      <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+    </symbol>
+  </svg>
 
-<header class="site-header" id="site-header">
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-bar-group">
-        <span class="top-bar-item"><svg class="icon"><use href="#i-clock"/></svg><span data-lang="mr">सोम-शनि: सकाळी १०:०० - सायं ५:३०</span><span data-lang="en">Mon–Sat: 10:00 AM – 5:30 PM</span></span>
-        <span class="top-bar-item"><svg class="icon"><use href="#i-phone"/></svg>0231-2654321</span>
-        <span class="top-bar-item"><svg class="icon"><use href="#i-mail"/></svg>info@ndchougale.com</span>
-      </div>
-      <div class="top-bar-group">
-        <span class="top-bar-ifsc">IFSC: NDCB0000102</span>
+  <header class="site-header" id="site-header">
+    <div class="top-bar">
+      <div class="container top-bar-inner">
+        <div class="top-bar-group">
+          <span class="top-bar-item"><svg class="icon">
+              <use href="#i-clock" />
+            </svg><span data-lang="mr">सोम-शनि: सकाळी १०:०० - सायं ५:३०</span><span data-lang="en">Mon–Sat: 10:00 AM –
+              5:30 PM</span></span>
+          <span class="top-bar-item"><svg class="icon">
+              <use href="#i-phone" />
+            </svg>0231-2654321</span>
+          <span class="top-bar-item"><svg class="icon">
+              <use href="#i-mail" />
+            </svg>info@ndchougale.com</span>
+        </div>
+        <div class="top-bar-group">
+          <span class="top-bar-ifsc">IFSC: NDCB0000102</span>
+        </div>
       </div>
     </div>
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <div class="nav-lang-top">
+          <a href="#" class="lang-switch-link active" data-lang-set="mr">मराठी</a>
+          <span style="color:var(--text-200); opacity: 0.5;">|</span>
+          <a href="#" class="lang-switch-link" data-lang-set="en">English</a>
+        </div>
+        <a href="index.html" class="nav-logo" aria-label="Home"
+          style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+          <div class="nav-logo-icon-wrap" style="background:none; padding:0; margin:0;">
+            <img src="assets/images/logo1.jpeg" alt="Logo" class="nav-logo-img"
+              style="height: 64px; width: auto; object-fit: contain;">
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link"><span data-lang="mr">मुख्यपृष्ठ</span><span
+                data-lang="en">Home</span></a></li>
+          <li>
+            <a href="about.html" class="nav-link"><span data-lang="mr">आमच्याबद्दल</span><span data-lang="en">About
+                Us</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg></a>
+            <div class="dropdown-menu">
+              <a href="about.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-team" />
+                </svg><span><span data-lang="mr">माहिती आढावा</span><span data-lang="en">Overview</span></span></a>
+              <a href="about.html#directors-section" class="dropdown-item"><svg class="icon">
+                  <use href="#i-account" />
+                </svg><span><span data-lang="mr">संचालक मंडळ</span><span data-lang="en">Board of
+                    Directors</span></span></a>
+            </div>
+          </li>
+          <li>
+            <a href="deposits.html" class="nav-link"><span data-lang="mr">ठेव योजना</span><span
+                data-lang="en">Deposits</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg></a>
+            <div class="dropdown-menu">
+              <a href="deposits.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-account" />
+                </svg><span><span data-lang="mr">बचत खाते</span><span data-lang="en">Savings Account</span></span></a>
+              <a href="deposits.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-deposit" />
+                </svg><span><span data-lang="mr">मुदत ठेव (FD)</span><span data-lang="en">Fixed
+                    Deposit</span></span></a>
+              <a href="deposits.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-calc" />
+                </svg><span><span data-lang="mr">आवर्ती ठेव (RD)</span><span data-lang="en">Recurring
+                    Deposit</span></span></a>
+            </div>
+          </li>
+          <li>
+            <a href="loans.html" class="nav-link active"><span data-lang="mr">कर्ज सेवा</span><span
+                data-lang="en">Loans</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg></a>
+            <div class="dropdown-menu">
+              <a href="loans.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-shield" />
+                </svg><span><span data-lang="mr">सुवर्ण कर्ज</span><span data-lang="en">Gold Loan</span></span></a>
+              <a href="loans.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-account" />
+                </svg><span><span data-lang="mr">वैयक्तिक कर्ज</span><span data-lang="en">Personal
+                    Loan</span></span></a>
+              <a href="loans.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-branch" />
+                </svg><span><span data-lang="mr">गृह कर्ज</span><span data-lang="en">Home Loan</span></span></a>
+              <a href="loans.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-growth" />
+                </svg><span><span data-lang="mr">व्यावसायिक कर्ज</span><span data-lang="en">Business
+                    Loan</span></span></a>
+            </div>
+          </li>
+          <li><a href="services.html" class="nav-link"><span data-lang="mr">डिजिटल सेवा</span><span
+                data-lang="en">Services</span></a></li>
+          <li><a href="sip.html" class="nav-link"><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale
+                SIP</span></a></li>
+          <li>
+            <a href="gallery.html" class="nav-link"><span data-lang="mr">दालन</span><span
+                data-lang="en">Gallery</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg></a>
+            <div class="dropdown-menu">
+              <a href="gallery.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-award" />
+                </svg><span><span data-lang="mr">छायाचित्र दालन</span><span data-lang="en">Photo
+                    Gallery</span></span></a>
+              <a href="downloads.html" class="dropdown-item"><svg class="icon">
+                  <use href="#i-download" />
+                </svg><span><span data-lang="mr">माहितीपत्रक/डाउनलोड</span><span
+                    data-lang="en">Downloads</span></span></a>
+            </div>
+          </li>
+          <li><a href="contact.html" class="nav-link"><span data-lang="mr">संपर्क</span><span data-lang="en">Contact
+                Us</span></a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-icon-btn search-trigger" aria-label="Search"><svg class="icon">
+              <use href="#i-search" />
+            </svg></button>
+          <button class="nav-icon-btn theme-btn" aria-label="Toggle Theme"><svg class="icon">
+              <use href="#i-moon" />
+            </svg></button>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="index.html" class="mobile-drawer-link"><svg class="icon">
+        <use href="#i-home" />
+      </svg><span data-lang="mr">मुख्यपृष्ठ</span><span data-lang="en">Home</span></a>
+    <a href="about.html" class="mobile-drawer-link"><svg class="icon">
+        <use href="#i-team" />
+      </svg><span data-lang="mr">आमच्याबद्दल</span><span data-lang="en">About</span></a>
+    <a href="deposits.html" class="mobile-drawer-link"><svg class="icon">
+        <use href="#i-deposit" />
+      </svg><span data-lang="mr">ठेव योजना</span><span data-lang="en">Deposits</span></a>
+    <a href="loans.html" class="mobile-drawer-link"><svg class="icon">
+        <use href="#i-loan" />
+      </svg><span data-lang="mr">कर्ज सेवा</span><span data-lang="en">Loans</span></a>
+    <a href="services.html" class="mobile-drawer-link"><svg class="icon">
+        <use href="#i-mobile" />
+      </svg><span data-lang="mr">डिजिटल सेवा</span><span data-lang="en">Services</span></a>
+    <a href="sip.html" class="mobile-drawer-link"><svg class="icon">
+        <use href="#i-growth" />
+      </svg><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></a>
+    <a href="gallery.html" class="mobile-drawer-link"><svg class="icon">
+        <use href="#i-award" />
+      </svg><span data-lang="mr">दालन</span><span data-lang="en">Gallery</span></a>
+    <a href="contact.html" class="mobile-drawer-link"><svg class="icon">
+        <use href="#i-phone" />
+      </svg><span data-lang="mr">संपर्क</span><span data-lang="en">Contact</span></a>
+    <a href="loans.html" class="mobile-drawer-link drawer-cta"><span data-lang="mr">कर्ज अर्ज करा</span><span
+        data-lang="en">Apply for Loan</span></a>
   </div>
-  <nav class="navbar">
-    <div class="container nav-inner">
-      <div class="nav-lang-top">
-        <a href="#" class="lang-switch-link active" data-lang-set="mr">मराठी</a>
-        <span style="color:var(--text-200); opacity: 0.5;">|</span>
-        <a href="#" class="lang-switch-link" data-lang-set="en">English</a>
-      </div>
-      <a href="index.html" class="nav-logo" aria-label="Home" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
-        <div class="nav-logo-icon-wrap" style="background:none; padding:0; margin:0;">
-          <img src="assets/images/logo.jpeg" alt="Logo" class="nav-logo-img" style="height: 64px; width: auto; object-fit: contain;">
-        </div>
-      </a>
-            <ul class="nav-links">
-        <li><a href="index.html" class="nav-link"><span data-lang="mr">मुख्यपृष्ठ</span><span data-lang="en">Home</span></a></li>
-        <li>
-          <a href="about.html" class="nav-link"><span data-lang="mr">आमच्याबद्दल</span><span data-lang="en">About Us</span><svg class="nav-link-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
-          <div class="dropdown-menu">
-            <a href="about.html" class="dropdown-item"><svg class="icon"><use href="#i-team"/></svg><span><span data-lang="mr">माहिती आढावा</span><span data-lang="en">Overview</span></span></a>
-            <a href="about.html#directors-section" class="dropdown-item"><svg class="icon"><use href="#i-account"/></svg><span><span data-lang="mr">संचालक मंडळ</span><span data-lang="en">Board of Directors</span></span></a>
-          </div>
-        </li>
-        <li>
-          <a href="deposits.html" class="nav-link"><span data-lang="mr">ठेव योजना</span><span data-lang="en">Deposits</span><svg class="nav-link-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
-          <div class="dropdown-menu">
-            <a href="deposits.html" class="dropdown-item"><svg class="icon"><use href="#i-account"/></svg><span><span data-lang="mr">बचत खाते</span><span data-lang="en">Savings Account</span></span></a>
-            <a href="deposits.html" class="dropdown-item"><svg class="icon"><use href="#i-deposit"/></svg><span><span data-lang="mr">मुदत ठेव (FD)</span><span data-lang="en">Fixed Deposit</span></span></a>
-            <a href="deposits.html" class="dropdown-item"><svg class="icon"><use href="#i-calc"/></svg><span><span data-lang="mr">आवर्ती ठेव (RD)</span><span data-lang="en">Recurring Deposit</span></span></a>
-          </div>
-        </li>
-        <li>
-          <a href="loans.html" class="nav-link active"><span data-lang="mr">कर्ज सेवा</span><span data-lang="en">Loans</span><svg class="nav-link-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
-          <div class="dropdown-menu">
-            <a href="loans.html" class="dropdown-item"><svg class="icon"><use href="#i-shield"/></svg><span><span data-lang="mr">सुवर्ण कर्ज</span><span data-lang="en">Gold Loan</span></span></a>
-            <a href="loans.html" class="dropdown-item"><svg class="icon"><use href="#i-account"/></svg><span><span data-lang="mr">वैयक्तिक कर्ज</span><span data-lang="en">Personal Loan</span></span></a>
-            <a href="loans.html" class="dropdown-item"><svg class="icon"><use href="#i-branch"/></svg><span><span data-lang="mr">गृह कर्ज</span><span data-lang="en">Home Loan</span></span></a>
-            <a href="loans.html" class="dropdown-item"><svg class="icon"><use href="#i-growth"/></svg><span><span data-lang="mr">व्यावसायिक कर्ज</span><span data-lang="en">Business Loan</span></span></a>
-          </div>
-        </li>
-        <li><a href="services.html" class="nav-link"><span data-lang="mr">डिजिटल सेवा</span><span data-lang="en">Services</span></a></li>
-        <li><a href="sip.html" class="nav-link"><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></a></li>
-        <li>
-          <a href="gallery.html" class="nav-link"><span data-lang="mr">दालन</span><span data-lang="en">Gallery</span><svg class="nav-link-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
-          <div class="dropdown-menu">
-            <a href="gallery.html" class="dropdown-item"><svg class="icon"><use href="#i-award"/></svg><span><span data-lang="mr">छायाचित्र दालन</span><span data-lang="en">Photo Gallery</span></span></a>
-            <a href="downloads.html" class="dropdown-item"><svg class="icon"><use href="#i-download"/></svg><span><span data-lang="mr">माहितीपत्रक/डाउनलोड</span><span data-lang="en">Downloads</span></span></a>
-          </div>
-        </li>
-        <li><a href="contact.html" class="nav-link"><span data-lang="mr">संपर्क</span><span data-lang="en">Contact Us</span></a></li>
-      </ul>
-      <div class="nav-actions">
-        <button class="nav-icon-btn search-trigger" aria-label="Search"><svg class="icon"><use href="#i-search"/></svg></button>
-        <button class="nav-icon-btn theme-btn" aria-label="Toggle Theme"><svg class="icon"><use href="#i-moon"/></svg></button>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-</header>
+  <div class="drawer-overlay" id="drawer-overlay"></div>
 
-<!-- MOBILE DRAWER -->
-<div class="mobile-drawer" id="mobile-drawer">
-  <a href="index.html" class="mobile-drawer-link"><svg class="icon"><use href="#i-home"/></svg><span data-lang="mr">मुख्यपृष्ठ</span><span data-lang="en">Home</span></a>
-  <a href="about.html" class="mobile-drawer-link"><svg class="icon"><use href="#i-team"/></svg><span data-lang="mr">आमच्याबद्दल</span><span data-lang="en">About</span></a>
-  <a href="deposits.html" class="mobile-drawer-link"><svg class="icon"><use href="#i-deposit"/></svg><span data-lang="mr">ठेव योजना</span><span data-lang="en">Deposits</span></a>
-  <a href="loans.html" class="mobile-drawer-link"><svg class="icon"><use href="#i-loan"/></svg><span data-lang="mr">कर्ज सेवा</span><span data-lang="en">Loans</span></a>
-  <a href="services.html" class="mobile-drawer-link"><svg class="icon"><use href="#i-mobile"/></svg><span data-lang="mr">डिजिटल सेवा</span><span data-lang="en">Services</span></a>
-  <a href="sip.html" class="mobile-drawer-link"><svg class="icon"><use href="#i-growth"/></svg><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></a>
-  <a href="gallery.html" class="mobile-drawer-link"><svg class="icon"><use href="#i-award"/></svg><span data-lang="mr">दालन</span><span data-lang="en">Gallery</span></a>
-  <a href="contact.html" class="mobile-drawer-link"><svg class="icon"><use href="#i-phone"/></svg><span data-lang="mr">संपर्क</span><span data-lang="en">Contact</span></a>
-  <a href="loans.html" class="mobile-drawer-link drawer-cta"><span data-lang="mr">कर्ज अर्ज करा</span><span data-lang="en">Apply for Loan</span></a>
-</div>
-<div class="drawer-overlay" id="drawer-overlay"></div>
-
-<div class="page-hero">
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html" data-lang="mr">मुख्यपृष्ठ</a><a href="index.html" data-lang="en">Home</a> › <span data-lang="mr">कर्ज सेवा</span><span data-lang="en">Loans</span></div>
-    <span class="section-tag" data-lang="mr">कर्ज सेवा</span>
-    <span class="section-tag" data-lang="en">LOAN SERVICES</span>
-    <h1 class="page-hero-title"><span data-lang="mr">तुमच्या प्रत्येक स्वप्नासाठी कर्ज</span><span data-lang="en">Loans for Every Dream</span></h1>
-    <p class="page-hero-desc"><span data-lang="mr">कमीत कमी व्याजदर, जलद मंजुरी आणि सोपी प्रक्रिया. सुवर्ण कर्ज फक्त १५ मिनिटांत!</span><span data-lang="en">Lowest interest rates, quick approval and easy process. Gold loan in just 15 minutes!</span></p>
-  </div>
-</div>
-
-<main>
-<section class="section-py" style="background:var(--bg)">
-  <div class="container">
-    <div class="loan-full-grid">
-      <!-- Gold Loan -->
-      <div class="loan-detail-card reveal reveal-d1">
-        <div class="loan-dc-top lc-gold">
-          <div style="z-index:2;">
-            <div class="loan-icon-circle"><svg class="icon"><use href="#i-shield"/></svg></div>
-          </div>
-          <div style="text-align:right;z-index:2;">
-            <div style="font-size:28px;font-weight:900;color:white;font-family:var(--font-head);">9.50%</div>
-            <div style="font-size:12px;color:rgba(255,255,255,0.7);">p.a. onwards</div>
-          </div>
-        </div>
-        <div class="loan-dc-body">
-          <div class="loan-dc-title" data-lang="mr">सुवर्ण कर्ज</div>
-          <div class="loan-dc-title" data-lang="en">Gold Loan</div>
-          <p class="loan-dc-desc" data-lang="mr">सोन्याच्या दागिन्यांवर त्वरित आणि सुरक्षित कर्ज. बाजारातील सर्वोत्तम मूल्यांकन. कमीत कमी कागदपत्रे.</p>
-          <p class="loan-dc-desc" data-lang="en">Instant and secure loan against gold ornaments. Best market valuation. Minimal documentation required.</p>
-          <div class="loan-params">
-            <div class="param-box"><div class="param-label" data-lang="mr">कमाल मर्यादा</div><div class="param-label" data-lang="en">Max Amount</div><div class="param-val">₹50 Lakh</div></div>
-            <div class="param-box"><div class="param-label" data-lang="mr">मंजुरी वेळ</div><div class="param-label" data-lang="en">Approval Time</div><div class="param-val" data-lang="mr">१५ मिनिटे</div><div class="param-val" data-lang="en">15 Minutes</div></div>
-            <div class="param-box"><div class="param-label" data-lang="mr">LTV</div><div class="param-label" data-lang="en">LTV Ratio</div><div class="param-val">Up to 90%</div></div>
-            <div class="param-box"><div class="param-label" data-lang="mr">कमाल मुदत</div><div class="param-label" data-lang="en">Max Tenure</div><div class="param-val" data-lang="mr">१ वर्ष</div><div class="param-val" data-lang="en">1 Year</div></div>
-          </div>
-          <a href="contact.html" class="btn btn-gold btn-full"><span data-lang="mr">सुवर्ण कर्ज अर्ज करा</span><span data-lang="en">Apply Gold Loan</span></a>
-        </div>
-      </div>
-
-      <!-- Home Loan -->
-      <div class="loan-detail-card reveal reveal-d2">
-        <div class="loan-dc-top lc-green">
-          <div class="loan-icon-circle" style="z-index:2;"><svg class="icon"><use href="#i-branch"/></svg></div>
-          <div style="text-align:right;z-index:2;"><div style="font-size:28px;font-weight:900;color:white;font-family:var(--font-head);">9.80%</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">p.a. onwards</div></div>
-        </div>
-        <div class="loan-dc-body">
-          <div class="loan-dc-title" data-lang="mr">गृह कर्ज</div>
-          <div class="loan-dc-title" data-lang="en">Home Loan</div>
-          <p class="loan-dc-desc" data-lang="mr">स्वतःचे घर हे प्रत्येकाचे स्वप्न. आमच्या गृहकर्जाने हे स्वप्न सत्यात उतरवा. १५ वर्षांपर्यंत लवचिक परतफेड.</p>
-          <p class="loan-dc-desc" data-lang="en">Your own home is every person's dream. Make it reality with our home loan. Flexible repayment up to 15 years.</p>
-          <div class="loan-params">
-            <div class="param-box"><div class="param-label" data-lang="mr">कमाल मर्यादा</div><div class="param-label" data-lang="en">Max Amount</div><div class="param-val">₹75 Lakh</div></div>
-            <div class="param-box"><div class="param-label" data-lang="mr">मुदत</div><div class="param-label" data-lang="en">Tenure</div><div class="param-val" data-lang="mr">१५ वर्षे</div><div class="param-val" data-lang="en">15 Years</div></div>
-            <div class="param-box"><div class="param-label" data-lang="mr">व्याजदर</div><div class="param-label" data-lang="en">Interest</div><div class="param-val">9.80% p.a.</div></div>
-            <div class="param-box"><div class="param-label" data-lang="mr">LTV</div><div class="param-label" data-lang="en">LTV</div><div class="param-val">Up to 80%</div></div>
-          </div>
-          <a href="contact.html" class="btn btn-secondary btn-full"><span data-lang="mr">गृहकर्ज अर्ज करा</span><span data-lang="en">Apply Home Loan</span></a>
-        </div>
-      </div>
-
-      <!-- Personal Loan -->
-      <div class="loan-detail-card reveal reveal-d3">
-        <div class="loan-dc-top lc-navy">
-          <div class="loan-icon-circle" style="z-index:2;"><svg class="icon"><use href="#i-loan"/></svg></div>
-          <div style="text-align:right;z-index:2;"><div style="font-size:28px;font-weight:900;color:white;font-family:var(--font-head);">11.50%</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">p.a. onwards</div></div>
-        </div>
-        <div class="loan-dc-body">
-          <div class="loan-dc-title" data-lang="mr">वैयक्तिक कर्ज</div>
-          <div class="loan-dc-title" data-lang="en">Personal Loan</div>
-          <p class="loan-dc-desc" data-lang="mr">वैद्यकीय खर्च, लग्न समारंभ, शिक्षण, प्रवास — कोणत्याही वैयक्तिक कारणासाठी जलद कर्ज.</p>
-          <p class="loan-dc-desc" data-lang="en">Medical, wedding, education, travel — quick loan for any personal purpose with minimal paperwork.</p>
-          <div class="loan-params">
-            <div class="param-box"><div class="param-label">Max Amount</div><div class="param-val">₹10 Lakh</div></div>
-            <div class="param-box"><div class="param-label">Tenure</div><div class="param-val">5 Years</div></div>
-            <div class="param-box"><div class="param-label">Processing</div><div class="param-val">3–5 Days</div></div>
-            <div class="param-box"><div class="param-label">Collateral</div><div class="param-val">None</div></div>
-          </div>
-          <a href="contact.html" class="btn btn-primary btn-full"><span data-lang="mr">वैयक्तिक कर्ज अर्ज करा</span><span data-lang="en">Apply Personal Loan</span></a>
-        </div>
-      </div>
-
-      <!-- Business Loan -->
-      <div class="loan-detail-card reveal reveal-d4">
-        <div class="loan-dc-top lc-dark">
-          <div class="loan-icon-circle" style="z-index:2;"><svg class="icon"><use href="#i-growth"/></svg></div>
-          <div style="text-align:right;z-index:2;"><div style="font-size:28px;font-weight:900;color:white;font-family:var(--font-head);">12.00%</div><div style="font-size:12px;color:rgba(255,255,255,0.7);">p.a. onwards</div></div>
-        </div>
-        <div class="loan-dc-body">
-          <div class="loan-dc-title" data-lang="mr">व्यावसायिक कर्ज</div>
-          <div class="loan-dc-title" data-lang="en">Business Loan</div>
-          <p class="loan-dc-desc" data-lang="mr">व्यवसाय विस्तार, नवीन यंत्रसामग्री, खेळते भांडवल — सर्व व्यावसायिक गरजांसाठी.</p>
-          <p class="loan-dc-desc" data-lang="en">Business expansion, new machinery, working capital — for all commercial needs of entrepreneurs.</p>
-          <div class="loan-params">
-            <div class="param-box"><div class="param-label">Max Amount</div><div class="param-val">₹25 Lakh</div></div>
-            <div class="param-box"><div class="param-label">Tenure</div><div class="param-val">7 Years</div></div>
-            <div class="param-box"><div class="param-label">Processing</div><div class="param-val">5–7 Days</div></div>
-            <div class="param-box"><div class="param-label">Expert Support</div><div class="param-val">Free</div></div>
-          </div>
-          <a href="contact.html" class="btn btn-primary btn-full"><span data-lang="mr">व्यावसायिक कर्ज अर्ज करा</span><span data-lang="en">Apply Business Loan</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Application Process -->
-<section class="process-section">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag tag-white" data-lang="mr">अर्ज प्रक्रिया</span>
-      <span class="section-tag tag-white" data-lang="en">APPLICATION PROCESS</span>
-      <h2 class="section-title text-white"><span data-lang="mr">कर्ज कसे मिळवाल?</span><span data-lang="en">How to Get a Loan?</span></h2>
-    </div>
-    <div class="process-steps reveal">
-      <div class="process-step">
-        <div class="step-num">1</div>
-        <div class="step-title" data-lang="mr">अर्ज करा</div>
-        <div class="step-title" data-lang="en">Apply</div>
-        <p class="step-desc" data-lang="mr">ऑनलाईन किंवा शाखेत भेट देऊन अर्ज करा.</p>
-        <p class="step-desc" data-lang="en">Apply online or visit the nearest branch.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">2</div>
-        <div class="step-title" data-lang="mr">कागदपत्रे</div>
-        <div class="step-title" data-lang="en">Documents</div>
-        <p class="step-desc" data-lang="mr">आवश्यक कागदपत्रे जमा करा.</p>
-        <p class="step-desc" data-lang="en">Submit the required documents.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">3</div>
-        <div class="step-title" data-lang="mr">पडताळणी</div>
-        <div class="step-title" data-lang="en">Verification</div>
-        <p class="step-desc" data-lang="mr">आमचे अधिकारी अर्जाची तपासणी करतात.</p>
-        <p class="step-desc" data-lang="en">Our officers verify your application.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">4</div>
-        <div class="step-title" data-lang="mr">रक्कम मिळवा</div>
-        <div class="step-title" data-lang="en">Get Funds</div>
-        <p class="step-desc" data-lang="mr">मंजुरी मिळाल्यावर थेट खात्यात जमा.</p>
-        <p class="step-desc" data-lang="en">Amount credited directly to your account.</p>
-      </div>
-    </div>
-  </div>
-</section>
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-main">
+  <div class="page-hero">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand-logo">
-            <img src="assets/images/logo.jpeg" alt="Logo" class="footer-logo-img" style="height: 50px; width: auto; object-fit: contain; margin-right: 12px;">
-            <div>
-              <div class="footer-brand-name" data-lang="mr">एन. डी. चौगुले</div>
-              <div class="footer-brand-name" data-lang="en">N.D. Chougale</div>
-              <div class="footer-brand-sub">Nagari Path Sanstha Maryadit</div>
+      <div class="breadcrumb"><a href="index.html" data-lang="mr">मुख्यपृष्ठ</a><a href="index.html"
+          data-lang="en">Home</a> › <span data-lang="mr">कर्ज सेवा</span><span data-lang="en">Loans</span></div>
+      <span class="section-tag" data-lang="mr">कर्ज सेवा</span>
+      <span class="section-tag" data-lang="en">LOAN SERVICES</span>
+      <h1 class="page-hero-title"><span data-lang="mr">तुमच्या प्रत्येक स्वप्नासाठी कर्ज</span><span
+          data-lang="en">Loans for Every Dream</span></h1>
+      <p class="page-hero-desc"><span data-lang="mr">कमीत कमी व्याजदर, जलद मंजुरी आणि सोपी प्रक्रिया. सुवर्ण कर्ज फक्त
+          १५ मिनिटांत!</span><span data-lang="en">Lowest interest rates, quick approval and easy process. Gold loan in
+          just 15 minutes!</span></p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section-py" style="background:var(--bg)">
+      <div class="container">
+        <div class="loan-full-grid">
+          <!-- Gold Loan -->
+          <div class="loan-detail-card reveal reveal-d1">
+            <div class="loan-dc-top lc-gold">
+              <div style="z-index:2;">
+                <div class="loan-icon-circle"><svg class="icon">
+                    <use href="#i-shield" />
+                  </svg></div>
+              </div>
+              <div style="text-align:right;z-index:2;">
+                <div style="font-size:28px;font-weight:900;color:white;font-family:var(--font-head);">9.50%</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.7);">p.a. onwards</div>
+              </div>
+            </div>
+            <div class="loan-dc-body">
+              <div class="loan-dc-title" data-lang="mr">सुवर्ण कर्ज</div>
+              <div class="loan-dc-title" data-lang="en">Gold Loan</div>
+              <p class="loan-dc-desc" data-lang="mr">सोन्याच्या दागिन्यांवर त्वरित आणि सुरक्षित कर्ज. बाजारातील
+                सर्वोत्तम मूल्यांकन. कमीत कमी कागदपत्रे.</p>
+              <p class="loan-dc-desc" data-lang="en">Instant and secure loan against gold ornaments. Best market
+                valuation. Minimal documentation required.</p>
+              <div class="loan-params">
+                <div class="param-box">
+                  <div class="param-label" data-lang="mr">कमाल मर्यादा</div>
+                  <div class="param-label" data-lang="en">Max Amount</div>
+                  <div class="param-val">₹50 Lakh</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label" data-lang="mr">मंजुरी वेळ</div>
+                  <div class="param-label" data-lang="en">Approval Time</div>
+                  <div class="param-val" data-lang="mr">१५ मिनिटे</div>
+                  <div class="param-val" data-lang="en">15 Minutes</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label" data-lang="mr">LTV</div>
+                  <div class="param-label" data-lang="en">LTV Ratio</div>
+                  <div class="param-val">Up to 90%</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label" data-lang="mr">कमाल मुदत</div>
+                  <div class="param-label" data-lang="en">Max Tenure</div>
+                  <div class="param-val" data-lang="mr">१ वर्ष</div>
+                  <div class="param-val" data-lang="en">1 Year</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-gold btn-full"><span data-lang="mr">सुवर्ण कर्ज अर्ज करा</span><span
+                  data-lang="en">Apply Gold Loan</span></a>
             </div>
           </div>
-          <p class="footer-desc" data-lang="mr">१९९६ पासून कोल्हापूर जिल्ह्यातील सर्वात विश्वसनीय सहकारी पतसंस्था. ३०+ वर्षांचा अखंड सेवेचा वारसा.</p>
-          <p class="footer-desc" data-lang="en">Kolhapur's most trusted cooperative financial institution since 1996. 30+ years of uninterrupted service legacy.</p>
-          <div class="footer-socials">
-            <a href="#" class="footer-social" aria-label="Facebook"><svg class="icon"><use href="#i-facebook"/></svg></a>
-            <a href="#" class="footer-social" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
-            <a href="#" class="footer-social" aria-label="YouTube"><svg class="icon"><use href="#i-youtube"/></svg></a>
+
+          <!-- Home Loan -->
+          <div class="loan-detail-card reveal reveal-d2">
+            <div class="loan-dc-top lc-green">
+              <div class="loan-icon-circle" style="z-index:2;"><svg class="icon">
+                  <use href="#i-branch" />
+                </svg></div>
+              <div style="text-align:right;z-index:2;">
+                <div style="font-size:28px;font-weight:900;color:white;font-family:var(--font-head);">9.80%</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.7);">p.a. onwards</div>
+              </div>
+            </div>
+            <div class="loan-dc-body">
+              <div class="loan-dc-title" data-lang="mr">गृह कर्ज</div>
+              <div class="loan-dc-title" data-lang="en">Home Loan</div>
+              <p class="loan-dc-desc" data-lang="mr">स्वतःचे घर हे प्रत्येकाचे स्वप्न. आमच्या गृहकर्जाने हे स्वप्न
+                सत्यात उतरवा. १५ वर्षांपर्यंत लवचिक परतफेड.</p>
+              <p class="loan-dc-desc" data-lang="en">Your own home is every person's dream. Make it reality with our
+                home loan. Flexible repayment up to 15 years.</p>
+              <div class="loan-params">
+                <div class="param-box">
+                  <div class="param-label" data-lang="mr">कमाल मर्यादा</div>
+                  <div class="param-label" data-lang="en">Max Amount</div>
+                  <div class="param-val">₹75 Lakh</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label" data-lang="mr">मुदत</div>
+                  <div class="param-label" data-lang="en">Tenure</div>
+                  <div class="param-val" data-lang="mr">१५ वर्षे</div>
+                  <div class="param-val" data-lang="en">15 Years</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label" data-lang="mr">व्याजदर</div>
+                  <div class="param-label" data-lang="en">Interest</div>
+                  <div class="param-val">9.80% p.a.</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label" data-lang="mr">LTV</div>
+                  <div class="param-label" data-lang="en">LTV</div>
+                  <div class="param-val">Up to 80%</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-secondary btn-full"><span data-lang="mr">गृहकर्ज अर्ज
+                  करा</span><span data-lang="en">Apply Home Loan</span></a>
+            </div>
+          </div>
+
+          <!-- Personal Loan -->
+          <div class="loan-detail-card reveal reveal-d3">
+            <div class="loan-dc-top lc-navy">
+              <div class="loan-icon-circle" style="z-index:2;"><svg class="icon">
+                  <use href="#i-loan" />
+                </svg></div>
+              <div style="text-align:right;z-index:2;">
+                <div style="font-size:28px;font-weight:900;color:white;font-family:var(--font-head);">11.50%</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.7);">p.a. onwards</div>
+              </div>
+            </div>
+            <div class="loan-dc-body">
+              <div class="loan-dc-title" data-lang="mr">वैयक्तिक कर्ज</div>
+              <div class="loan-dc-title" data-lang="en">Personal Loan</div>
+              <p class="loan-dc-desc" data-lang="mr">वैद्यकीय खर्च, लग्न समारंभ, शिक्षण, प्रवास — कोणत्याही वैयक्तिक
+                कारणासाठी जलद कर्ज.</p>
+              <p class="loan-dc-desc" data-lang="en">Medical, wedding, education, travel — quick loan for any personal
+                purpose with minimal paperwork.</p>
+              <div class="loan-params">
+                <div class="param-box">
+                  <div class="param-label">Max Amount</div>
+                  <div class="param-val">₹10 Lakh</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label">Tenure</div>
+                  <div class="param-val">5 Years</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label">Processing</div>
+                  <div class="param-val">3–5 Days</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label">Collateral</div>
+                  <div class="param-val">None</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-full"><span data-lang="mr">वैयक्तिक कर्ज अर्ज
+                  करा</span><span data-lang="en">Apply Personal Loan</span></a>
+            </div>
+          </div>
+
+          <!-- Business Loan -->
+          <div class="loan-detail-card reveal reveal-d4">
+            <div class="loan-dc-top lc-dark">
+              <div class="loan-icon-circle" style="z-index:2;"><svg class="icon">
+                  <use href="#i-growth" />
+                </svg></div>
+              <div style="text-align:right;z-index:2;">
+                <div style="font-size:28px;font-weight:900;color:white;font-family:var(--font-head);">12.00%</div>
+                <div style="font-size:12px;color:rgba(255,255,255,0.7);">p.a. onwards</div>
+              </div>
+            </div>
+            <div class="loan-dc-body">
+              <div class="loan-dc-title" data-lang="mr">व्यावसायिक कर्ज</div>
+              <div class="loan-dc-title" data-lang="en">Business Loan</div>
+              <p class="loan-dc-desc" data-lang="mr">व्यवसाय विस्तार, नवीन यंत्रसामग्री, खेळते भांडवल — सर्व व्यावसायिक
+                गरजांसाठी.</p>
+              <p class="loan-dc-desc" data-lang="en">Business expansion, new machinery, working capital — for all
+                commercial needs of entrepreneurs.</p>
+              <div class="loan-params">
+                <div class="param-box">
+                  <div class="param-label">Max Amount</div>
+                  <div class="param-val">₹25 Lakh</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label">Tenure</div>
+                  <div class="param-val">7 Years</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label">Processing</div>
+                  <div class="param-val">5–7 Days</div>
+                </div>
+                <div class="param-box">
+                  <div class="param-label">Expert Support</div>
+                  <div class="param-val">Free</div>
+                </div>
+              </div>
+              <a href="contact.html" class="btn btn-primary btn-full"><span data-lang="mr">व्यावसायिक कर्ज अर्ज
+                  करा</span><span data-lang="en">Apply Business Loan</span></a>
+            </div>
           </div>
         </div>
-        <div>
-          <div class="footer-col-title" data-lang="mr">जलद दुवे</div>
-          <div class="footer-col-title" data-lang="en">Quick Links</div>
-          <ul class="footer-links">
-            <li><a href="about.html" data-lang="mr">आमच्याबद्दल</a><a href="about.html" data-lang="en">About Us</a></li>
-            <li><a href="deposits.html" data-lang="mr">ठेव योजना</a><a href="deposits.html" data-lang="en">Deposits</a></li>
-            <li><a href="loans.html" data-lang="mr">कर्ज सेवा</a><a href="loans.html" data-lang="en">Loans</a></li>
-            <li><a href="services.html" data-lang="mr">डिजिटल सेवा</a><a href="services.html" data-lang="en">Digital Services</a></li>
-            <li><a href="sip.html" data-lang="mr">चौगुले SIP</a><a href="sip.html" data-lang="en">Chougale SIP</a></li>
-            <li><a href="gallery.html" data-lang="mr">छायाचित्र दालन</a><a href="gallery.html" data-lang="en">Gallery</a></li>
-            <li><a href="downloads.html" data-lang="mr">डाऊनलोड</a><a href="downloads.html" data-lang="en">Downloads</a></li>
-            <li><a href="contact.html" data-lang="mr">संपर्क</a><a href="contact.html" data-lang="en">Contact</a></li>
-          </ul>
+      </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="process-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag tag-white" data-lang="mr">अर्ज प्रक्रिया</span>
+          <span class="section-tag tag-white" data-lang="en">APPLICATION PROCESS</span>
+          <h2 class="section-title text-white"><span data-lang="mr">कर्ज कसे मिळवाल?</span><span data-lang="en">How to
+              Get a Loan?</span></h2>
         </div>
-        <div>
-          <div class="footer-col-title" data-lang="mr">सेवा</div>
-          <div class="footer-col-title" data-lang="en">Services</div>
-          <ul class="footer-links">
-            <li><a href="loans.html" data-lang="mr">सुवर्ण कर्ज</a><a href="loans.html" data-lang="en">Gold Loan</a></li>
-            <li><a href="deposits.html" data-lang="mr">मुदत ठेव</a><a href="deposits.html" data-lang="en">Fixed Deposit</a></li>
-            <li><a href="deposits.html" data-lang="mr">आवर्ती ठेव</a><a href="deposits.html" data-lang="en">Recurring Deposit</a></li>
-            <li><a href="sip.html" data-lang="mr">चौगुले SIP</a><a href="sip.html" data-lang="en">Chougale SIP</a></li>
-            <li><a href="services.html" data-lang="mr">लॉकर सेवा</a><a href="services.html" data-lang="en">Locker Service</a></li>
-            <li><a href="services.html" data-lang="mr">मोबाईल बँकिंग</a><a href="services.html" data-lang="en">Mobile Banking</a></li>
-          </ul>
+        <div class="process-steps reveal">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <div class="step-title" data-lang="mr">अर्ज करा</div>
+            <div class="step-title" data-lang="en">Apply</div>
+            <p class="step-desc" data-lang="mr">ऑनलाईन किंवा शाखेत भेट देऊन अर्ज करा.</p>
+            <p class="step-desc" data-lang="en">Apply online or visit the nearest branch.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <div class="step-title" data-lang="mr">कागदपत्रे</div>
+            <div class="step-title" data-lang="en">Documents</div>
+            <p class="step-desc" data-lang="mr">आवश्यक कागदपत्रे जमा करा.</p>
+            <p class="step-desc" data-lang="en">Submit the required documents.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <div class="step-title" data-lang="mr">पडताळणी</div>
+            <div class="step-title" data-lang="en">Verification</div>
+            <p class="step-desc" data-lang="mr">आमचे अधिकारी अर्जाची तपासणी करतात.</p>
+            <p class="step-desc" data-lang="en">Our officers verify your application.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <div class="step-title" data-lang="mr">रक्कम मिळवा</div>
+            <div class="step-title" data-lang="en">Get Funds</div>
+            <p class="step-desc" data-lang="mr">मंजुरी मिळाल्यावर थेट खात्यात जमा.</p>
+            <p class="step-desc" data-lang="en">Amount credited directly to your account.</p>
+          </div>
         </div>
-        <div>
-          <div class="footer-col-title" data-lang="mr">संपर्क</div>
-          <div class="footer-col-title" data-lang="en">Contact</div>
-          <div class="footer-contact-item"><svg class="icon"><use href="#i-branch"/></svg><span data-lang="mr">शिवाजी पेठ, कोल्हापूर — ४१६ ०१२</span><span data-lang="en">Shivaji Peth, Kolhapur — 416 012</span></div>
-          <div class="footer-contact-item"><svg class="icon"><use href="#i-phone"/></svg>0231-2654321</div>
-          <div class="footer-contact-item"><svg class="icon"><use href="#i-mail"/></svg>info@ndchougale.com</div>
-          <div class="footer-contact-item"><svg class="icon"><use href="#i-clock"/></svg><span data-lang="mr">सोम-शनि: सकाळी १०:०० - सायं ५:३०</span><span data-lang="en">Mon-Sat: 10AM – 5:30PM</span></div>
-          <div style="margin-top:16px;font-size:12px;color:rgba(255,255,255,0.35);">IFSC: NDCB0000102<br>Reg. No. KLH/2024/0001</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand-logo">
+              <img src="assets/images/logo1.jpeg" alt="Logo" class="footer-logo-img"
+                style="height: 50px; width: auto; object-fit: contain; margin-right: 12px;">
+            </div>
+            <p class="footer-desc" data-lang="mr">१९९६ पासून कोल्हापूर जिल्ह्यातील सर्वात विश्वसनीय सहकारी पतसंस्था. ३०+
+              वर्षांचा अखंड सेवेचा वारसा.</p>
+            <p class="footer-desc" data-lang="en">Kolhapur's most trusted cooperative financial institution since 1996.
+              30+ years of uninterrupted service legacy.</p>
+            <div class="footer-socials">
+              <a href="#" class="footer-social" aria-label="Facebook"><svg class="icon">
+                  <use href="#i-facebook" />
+                </svg></a>
+              <a href="#" class="footer-social" aria-label="Instagram"><svg class="icon">
+                  <use href="#i-instagram" />
+                </svg></a>
+              <a href="#" class="footer-social" aria-label="YouTube"><svg class="icon">
+                  <use href="#i-youtube" />
+                </svg></a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-col-title" data-lang="mr">जलद दुवे</div>
+            <div class="footer-col-title" data-lang="en">Quick Links</div>
+            <ul class="footer-links">
+              <li><a href="about.html" data-lang="mr">आमच्याबद्दल</a><a href="about.html" data-lang="en">About Us</a>
+              </li>
+              <li><a href="deposits.html" data-lang="mr">ठेव योजना</a><a href="deposits.html"
+                  data-lang="en">Deposits</a></li>
+              <li><a href="loans.html" data-lang="mr">कर्ज सेवा</a><a href="loans.html" data-lang="en">Loans</a></li>
+              <li><a href="services.html" data-lang="mr">डिजिटल सेवा</a><a href="services.html" data-lang="en">Digital
+                  Services</a></li>
+              <li><a href="sip.html" data-lang="mr">चौगुले SIP</a><a href="sip.html" data-lang="en">Chougale SIP</a>
+              </li>
+              <li><a href="gallery.html" data-lang="mr">छायाचित्र दालन</a><a href="gallery.html"
+                  data-lang="en">Gallery</a></li>
+              <li><a href="downloads.html" data-lang="mr">डाऊनलोड</a><a href="downloads.html"
+                  data-lang="en">Downloads</a></li>
+              <li><a href="contact.html" data-lang="mr">संपर्क</a><a href="contact.html" data-lang="en">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title" data-lang="mr">सेवा</div>
+            <div class="footer-col-title" data-lang="en">Services</div>
+            <ul class="footer-links">
+              <li><a href="loans.html" data-lang="mr">सुवर्ण कर्ज</a><a href="loans.html" data-lang="en">Gold Loan</a>
+              </li>
+              <li><a href="deposits.html" data-lang="mr">मुदत ठेव</a><a href="deposits.html" data-lang="en">Fixed
+                  Deposit</a></li>
+              <li><a href="deposits.html" data-lang="mr">आवर्ती ठेव</a><a href="deposits.html" data-lang="en">Recurring
+                  Deposit</a></li>
+              <li><a href="sip.html" data-lang="mr">चौगुले SIP</a><a href="sip.html" data-lang="en">Chougale SIP</a>
+              </li>
+              <li><a href="services.html" data-lang="mr">लॉकर सेवा</a><a href="services.html" data-lang="en">Locker
+                  Service</a></li>
+              <li><a href="services.html" data-lang="mr">मोबाईल बँकिंग</a><a href="services.html" data-lang="en">Mobile
+                  Banking</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title" data-lang="mr">संपर्क</div>
+            <div class="footer-col-title" data-lang="en">Contact</div>
+            <div class="footer-contact-item"><svg class="icon">
+                <use href="#i-branch" />
+              </svg><span data-lang="mr">शिवाजी पेठ, कोल्हापूर — ४१६ ०१२</span><span data-lang="en">Shivaji Peth,
+                Kolhapur — 416 012</span></div>
+            <div class="footer-contact-item"><svg class="icon">
+                <use href="#i-phone" />
+              </svg>0231-2654321</div>
+            <div class="footer-contact-item"><svg class="icon">
+                <use href="#i-mail" />
+              </svg>info@ndchougale.com</div>
+            <div class="footer-contact-item"><svg class="icon">
+                <use href="#i-clock" />
+              </svg><span data-lang="mr">सोम-शनि: सकाळी १०:०० - सायं ५:३०</span><span data-lang="en">Mon-Sat: 10AM –
+                5:30PM</span></div>
+            <div style="margin-top:16px;font-size:12px;color:rgba(255,255,255,0.35);">IFSC: NDCB0000102<br>Reg. No.
+              KLH/2024/0001</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom-strip">
-    <div class="container">
-      &copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a>
+    <div class="footer-bottom-strip">
+      <div class="container">
+        &copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a
+          href="#">Terms &amp; Conditions</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<nav class="mobile-dock">
-  <a href="index.html" class="dock-item"><svg class="icon"><use href="#i-home"/></svg><span data-lang="mr">मुख्य</span><span data-lang="en">Home</span></a>
-  <a href="loans.html" class="dock-item active dock-cta"><svg class="icon"><use href="#i-loan"/></svg><span data-lang="mr">कर्ज</span><span data-lang="en">Loans</span></a>
-  <a href="sip.html" class="dock-item"><svg class="icon"><use href="#i-growth"/></svg><span data-lang="mr">SIP</span><span data-lang="en">SIP</span></a>
-  <a href="tel:+910231265432" class="dock-item"><svg class="icon"><use href="#i-phone"/></svg><span data-lang="mr">कॉल</span><span data-lang="en">Call</span></a>
-  <a href="https://wa.me/919876543210" class="dock-item" target="_blank"><svg class="icon" style="stroke:#25D366"><use href="#i-chat"/></svg><span>WhatsApp</span></a>
-</nav>
-<div class="search-overlay"><span class="search-overlay-close">&times;</span><div class="search-overlay-box"><input type="text" class="search-overlay-input" placeholder="Search…"></div></div>
-<script src="assets/js/main.js"></script>
+  <nav class="mobile-dock">
+    <a href="index.html" class="dock-item"><svg class="icon">
+        <use href="#i-home" />
+      </svg><span data-lang="mr">मुख्य</span><span data-lang="en">Home</span></a>
+    <a href="loans.html" class="dock-item active dock-cta"><svg class="icon">
+        <use href="#i-loan" />
+      </svg><span data-lang="mr">कर्ज</span><span data-lang="en">Loans</span></a>
+    <a href="sip.html" class="dock-item"><svg class="icon">
+        <use href="#i-growth" />
+      </svg><span data-lang="mr">SIP</span><span data-lang="en">SIP</span></a>
+    <a href="tel:+910231265432" class="dock-item"><svg class="icon">
+        <use href="#i-phone" />
+      </svg><span data-lang="mr">कॉल</span><span data-lang="en">Call</span></a>
+    <a href="https://wa.me/919876543210" class="dock-item" target="_blank"><svg class="icon" style="stroke:#25D366">
+        <use href="#i-chat" />
+      </svg><span>WhatsApp</span></a>
+  </nav>
+  <div class="search-overlay"><span class="search-overlay-close">&times;</span>
+    <div class="search-overlay-box"><input type="text" class="search-overlay-input" placeholder="Search…"></div>
+  </div>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

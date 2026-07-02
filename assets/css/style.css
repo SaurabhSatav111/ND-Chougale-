@@ -56,8 +56,8 @@
   --ease-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   --ease-spring: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   --header-info-h: 0px;
-  --header-nav-h: 88px;
-  --header-total-h: 88px;
+  --header-nav-h: 105px;
+  --header-total-h: 105px;
 }
 
 body.dark {
@@ -441,10 +441,10 @@ ol {
 
 /* 7. PRELOADER */
 .preloader {
+  display: none !important;
   position: fixed;
   inset: 0;
   background: var(--primary-dark);
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -2194,12 +2194,40 @@ body.dark .digital-tile:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all var(--ease-smooth);
 }
 
 .digital-tile-icon .icon {
   width: 20px;
   height: 20px;
-  stroke: white;
+  transition: stroke var(--ease-fast);
+}
+
+/* Service Colors */
+.svc-teal { background: rgba(13, 148, 136, 0.1); }
+.svc-teal .icon { stroke: rgb(13, 148, 136) !important; }
+
+.svc-indigo { background: rgba(79, 70, 229, 0.1); }
+.svc-indigo .icon { stroke: rgb(79, 70, 229) !important; }
+
+.svc-green { background: rgba(22, 163, 74, 0.1); }
+.svc-green .icon { stroke: rgb(22, 163, 74) !important; }
+
+.svc-navy { background: rgba(15, 46, 94, 0.1); }
+.svc-navy .icon { stroke: var(--primary) !important; }
+
+.svc-orange { background: rgba(234, 88, 12, 0.1); }
+.svc-orange .icon { stroke: rgb(234, 88, 12) !important; }
+
+.svc-violet { background: rgba(124, 58, 237, 0.1); }
+.svc-violet .icon { stroke: rgb(124, 58, 237) !important; }
+
+.digital-tile:hover .digital-tile-icon {
+  background: rgba(255, 255, 255, 0.25) !important;
+}
+
+.digital-tile:hover .digital-tile-icon .icon {
+  stroke: white !important;
 }
 
 .digital-tile-label {
@@ -3430,6 +3458,7 @@ body.dark .branch-info-name {
 
 .form-select option {
   background: var(--primary-dark);
+  color: white !important;
 }
 
 .form-textarea {
@@ -4547,6 +4576,7 @@ body.dark .branch-info-name {
 #services-tabs .section-title {
   white-space: nowrap;
 }
+
 @media (max-width: 991px) {
   #services-tabs .section-title {
     white-space: normal;
@@ -4560,6 +4590,7 @@ body.dark .branch-info-name {
   object-fit: contain !important;
   border-radius: 0 !important;
 }
+
 .nav-logo-icon-wrap {
   width: auto !important;
   height: auto !important;

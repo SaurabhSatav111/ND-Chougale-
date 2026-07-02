@@ -6,7 +6,7 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  initPreloader();
+  // initPreloader();
   initTheme();
   initLanguage();
   initNavbar();
@@ -65,6 +65,11 @@ function initLanguage() {
     topLinks.forEach(link => {
       const linkLang = link.getAttribute('data-lang-set');
       link.classList.toggle('active', linkLang === lang);
+    });
+    // Dynamically update dropdown options to match selected language
+    document.querySelectorAll('select option[data-lang-mr]').forEach(opt => {
+      const translated = lang === 'mr' ? opt.getAttribute('data-lang-mr') : opt.getAttribute('data-lang-en');
+      opt.textContent = translated;
     });
   };
 
