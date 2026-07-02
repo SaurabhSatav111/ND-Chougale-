@@ -4358,8 +4358,8 @@ body.dark .branch-info-name {
 
 @media(max-width:767px) {
   :root {
-    --header-nav-h: 110px !important;
-    --header-total-h: 110px !important;
+    --header-nav-h: 92px !important;
+    --header-total-h: 92px !important;
   }
   
   .navbar {
@@ -4389,7 +4389,7 @@ body.dark .branch-info-name {
   }
   
   .nav-logo-img {
-    height: 55px !important;
+    height: 42px !important;
     width: 100% !important;
     max-width: 100% !important;
     object-fit: fill !important;
@@ -4718,8 +4718,8 @@ body.dark .drawer-lang .lang-switch-link.active {
 /* Two-Row Desktop/Laptop Header Layout with Full Width Centered Logo */
 @media (min-width: 768px) {
   :root {
-    --header-nav-h: 150px !important;
-    --header-total-h: 150px !important;
+    --header-nav-h: 130px !important;
+    --header-total-h: 130px !important;
   }
   
   .navbar {
@@ -4748,7 +4748,7 @@ body.dark .drawer-lang .lang-switch-link.active {
   }
   
   .nav-logo-img {
-    height: 80px !important;
+    height: 60px !important;
     width: 100% !important;
     max-width: 100% !important;
     object-fit: fill !important;
