@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDownloadsFilter();
   initBranchLocator();
   initGalleryLightbox();
-  initCookieNotice();
+  // initCookieNotice();
   initSearchOverlay();
   initScrollTop();
   initGalleryFilter();

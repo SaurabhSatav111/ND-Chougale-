@@ -3718,7 +3718,7 @@ body.dark .branch-info-name {
   background: var(--surface);
   border-top: 1px solid var(--text-200);
   z-index: 995;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   align-items: center;
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.07);
 }
