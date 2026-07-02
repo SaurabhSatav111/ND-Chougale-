@@ -4357,23 +4357,70 @@ body.dark .branch-info-name {
 }
 
 @media(max-width:767px) {
-  .nav-lang-top {
+  :root {
+    --header-nav-h: 105px !important;
+    --header-total-h: 105px !important;
+  }
+  
+  .navbar {
+    height: auto !important;
+    padding: 8px 0 !important;
+  }
+  
+  .nav-inner {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    height: auto !important;
+    gap: 8px 0 !important;
+    position: relative !important;
+  }
+  
+  .nav-logo {
+    grid-column: 1 / span 2 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
     display: flex !important;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 80px;
-    font-size: 11px;
-    background: var(--bg-alt);
-    padding: 4px 10px;
-    border-radius: var(--r-pill);
-    box-shadow: var(--shadow-sm);
+    justify-content: center !important;
+    margin: 0 !important;
+  }
+  
+  .nav-logo-img {
+    height: auto !important;
+    max-height: 45px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+  }
+  
+  .nav-lang-top {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+    position: static !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    font-size: 11px !important;
+    background: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
     z-index: 999;
   }
   
   body.dark .nav-lang-top {
-    background: var(--surface);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    background: none !important;
+    box-shadow: none !important;
+  }
+  
+  .nav-actions {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    border-top: none !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
   }
 
   .hero-banner-card {
