@@ -3,55 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>आमच्याबद्दल | About Us — N.D. Chougale Nagari Path Sanstha</title>
-  <meta name="description" content="N.D. Chougale Patsanstha - 30+ years of trust, financial stability and cooperative legacy in Kolhapur. View our board, vision and financial highlights.">
+  <title>चौगुले SIP | Chougale SIP — N.D. Chougale Nagari Path Sanstha</title>
+  <meta name="description" content="N.D. Chougale Patsanstha SIP - Grow your wealth systematically. Calculate returns using our interactive SIP calculator.">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     .page-hero { background:linear-gradient(180deg,#F4F6FB 0%,#EBEDF7 100%); padding:60px 0 80px; margin-top:var(--header-total-h); border-bottom:1px solid var(--text-200); }
-    body.dark .page-hero { background:linear-gradient(180deg,#1A0F00 0%,#261600 100%); border-bottom-color:var(--text-200); }
+    body.dark .page-hero { background:linear-gradient(180deg,#030A14 0%,#071424 100%); border-bottom-color:var(--text-200); }
     .page-hero-title { font-size:clamp(28px,4vw,52px); color:var(--primary); font-weight:900; margin-bottom:14px; }
     .page-hero-desc { font-size:16px; color:var(--text-600); max-width:600px; }
     .breadcrumb { display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text-400); margin-bottom:20px; }
     .breadcrumb a { color:var(--text-600); }
     .breadcrumb a:hover { color:var(--primary); }
 
-    .about-story-grid { display:grid; grid-template-columns:1.2fr 0.8fr; gap:48px; align-items:center; margin-bottom:80px; }
-    .about-story-content h3 { font-size:24px; color:var(--primary); margin-bottom:16px; }
-    .about-story-content p { color:var(--text-600); margin-bottom:16px; font-size:16px; }
-    .about-story-img-card { background:var(--surface); padding:24px; border-radius:var(--r-card); box-shadow:var(--shadow-card); border-left:5px solid var(--secondary); }
-    .about-story-stat-title { font-size:40px; font-weight:900; color:var(--primary); font-family:var(--font-head); margin-bottom:4px; }
-    .about-story-stat-desc { font-size:14px; color:var(--text-600); }
+    .sip-grid { display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; margin-bottom:80px; align-items:start; }
+    .sip-info h3 { font-size:24px; color:var(--primary); margin-bottom:16px; font-weight:800; }
+    .sip-info p { color:var(--text-600); margin-bottom:20px; font-size:16px; line-height:1.8; }
+    .sip-features { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:32px; }
+    .sip-feat-card { background:var(--surface); padding:24px; border-radius:var(--r-card); box-shadow:var(--shadow-card); border-top:4px solid var(--secondary); }
+    .sip-feat-title { font-size:16px; font-weight:700; color:var(--primary); margin-bottom:8px; }
+    .sip-feat-desc { font-size:13px; color:var(--text-600); }
 
-    .vision-mission-section { background:var(--bg-alt); padding:80px 0; border-radius:var(--r-section); margin-bottom:80px; }
-    .vm-grid { display:grid; grid-template-columns:1fr 1fr; gap:36px; }
-    .vm-card { background:var(--surface); padding:40px; border-radius:var(--r-card); box-shadow:var(--shadow-sm); transition:transform var(--ease-spring); }
-    .vm-card:hover { transform:translateY(-8px); }
-    .vm-icon-box { width:56px; height:56px; border-radius:50%; background:var(--accent-light); color:var(--accent); display:flex; align-items:center; justify-content:center; margin-bottom:24px; }
-    .vm-title { font-size:22px; font-weight:700; color:var(--primary); margin-bottom:16px; }
-    .vm-desc { font-size:15px; color:var(--text-600); line-height:1.7; }
-
-    .directors-section { margin-bottom:80px; }
-    .directors-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:28px; }
-    .director-card { background:var(--surface); border-radius:var(--r-card); overflow:hidden; box-shadow:var(--shadow-card); text-align:center; transition:all var(--ease-smooth); }
-    .director-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-premium); }
-    .director-img-placeholder { height:180px; background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%); display:flex; align-items:center; justify-content:center; color:white; }
-    .director-info { padding:20px; }
-    .director-name { font-size:16px; font-weight:700; color:var(--primary); margin-bottom:6px; }
-    .director-role { font-size:13px; color:var(--secondary); font-weight:600; text-transform:uppercase; letter-spacing:0.5px; }
-
-    .fin-table { width:100%; border-collapse:collapse; background:var(--surface); border-radius:var(--r-card); overflow:hidden; box-shadow:var(--shadow-card); }
-    .fin-table th { background:var(--primary); color:white; padding:16px 20px; text-align:left; font-size:14px; font-weight:600; }
-    .fin-table td { padding:16px 20px; border-bottom:1px solid var(--text-200); font-size:15px; color:var(--text-700); }
-    .fin-table tr:last-child td { border-bottom:none; }
-    .fin-table tr:hover td { background:var(--bg); }
+    /* Calculator */
+    .sip-calc-card { background:var(--surface); border-radius:var(--r-card); padding:36px; box-shadow:var(--shadow-premium); border:1px solid var(--text-200); }
+    .sip-calc-title { font-size:20px; font-weight:700; color:var(--primary); margin-bottom:24px; text-align:center; }
+    .calc-group { margin-bottom:20px; }
+    .calc-label { display:flex; justify-content:space-between; font-size:14px; font-weight:600; color:var(--text-700); margin-bottom:8px; }
+    .calc-range { width:100%; height:6px; background:var(--text-200); border-radius:3px; outline:none; -webkit-appearance:none; }
+    .calc-range::-webkit-slider-thumb { -webkit-appearance:none; width:18px; height:18px; border-radius:50%; background:var(--secondary); cursor:pointer; transition:transform 0.1s; }
+    .calc-range::-webkit-slider-thumb:hover { transform:scale(1.2); }
+    
+    .calc-results { background:var(--bg); border-radius:var(--r-sm); padding:20px; margin-top:28px; display:flex; flex-direction:column; gap:12px; }
+    .calc-res-row { display:flex; justify-content:space-between; font-size:14px; color:var(--text-600); }
+    .calc-res-row.highlight { font-size:18px; font-weight:800; color:var(--primary); border-top:1px solid var(--text-200); padding-top:12px; margin-top:4px; }
+    .calc-res-val { font-weight:700; color:var(--text-900); }
+    .calc-res-row.highlight .calc-res-val { color:var(--secondary-dark); }
 
     @media(max-width:991px) {
-      .vm-grid { grid-template-columns:1fr; }
-      .directors-grid { grid-template-columns:repeat(2,1fr); }
-      .about-story-grid { grid-template-columns:1fr; gap:32px; }
-    }
-    @media(max-width:575px) {
-      .directors-grid { grid-template-columns:1fr; }
+      .sip-grid { grid-template-columns:1fr; gap:36px; }
     }
   </style>
 </head>
@@ -133,10 +121,10 @@
           <div class="nav-logo-sub" data-lang="en">Nagari Sahakari Path Sanstha Ltd.</div>
         </div>
       </a>
-            <ul class="nav-links">
+      <ul class="nav-links">
         <li><a href="index.html" class="nav-link"><span data-lang="mr">मुख्यपृष्ठ</span><span data-lang="en">Home</span></a></li>
         <li>
-          <a href="about.html" class="nav-link active"><span data-lang="mr">आमच्याबद्दल</span><span data-lang="en">About Us</span><svg class="nav-link-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
+          <a href="about.html" class="nav-link"><span data-lang="mr">आमच्याबद्दल</span><span data-lang="en">About Us</span><svg class="nav-link-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
           <div class="dropdown-menu">
             <a href="about.html" class="dropdown-item"><svg class="icon"><use href="#i-team"/></svg><span><span data-lang="mr">माहिती आढावा</span><span data-lang="en">Overview</span></span></a>
             <a href="about.html#directors-section" class="dropdown-item"><svg class="icon"><use href="#i-account"/></svg><span><span data-lang="mr">संचालक मंडळ</span><span data-lang="en">Board of Directors</span></span></a>
@@ -160,7 +148,7 @@
           </div>
         </li>
         <li><a href="services.html" class="nav-link"><span data-lang="mr">डिजिटल सेवा</span><span data-lang="en">Services</span></a></li>
-        <li><a href="sip.html" class="nav-link"><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></a></li>
+        <li><a href="sip.html" class="nav-link active"><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></a></li>
         <li>
           <a href="gallery.html" class="nav-link"><span data-lang="mr">दालन</span><span data-lang="en">Gallery</span><svg class="nav-link-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg></a>
           <div class="dropdown-menu">
@@ -198,208 +186,111 @@
 <!-- PAGE HERO -->
 <div class="page-hero">
   <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html" data-lang="mr">मुख्यपृष्ठ</a>
-      <a href="index.html" data-lang="en">Home</a> › 
-      <span data-lang="mr">आमच्याबद्दल</span>
-      <span data-lang="en">About Us</span>
-    </div>
-    <span class="section-tag" data-lang="mr">आमच्याबद्दल</span>
-    <span class="section-tag" data-lang="en">ABOUT US</span>
-    <h1 class="page-hero-title">
-      <span data-lang="mr">३०+ वर्षांचा विश्वासू वारसा</span>
-      <span data-lang="en">A 30+ Year Legacy of Trust</span>
-    </h1>
+    <div class="breadcrumb"><a href="index.html" data-lang="mr">मुख्यपृष्ठ</a><a href="index.html" data-lang="en">Home</a> › <span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></div>
+    <span class="section-tag" data-lang="mr">गुंतवणूक योजना</span>
+    <span class="section-tag" data-lang="en">INVESTMENT SCHEME</span>
+    <h1 class="page-hero-title"><span data-lang="mr">चौगुले SIP योजना</span><span data-lang="en">Chougale SIP Scheme</span></h1>
     <p class="page-hero-desc">
-      <span data-lang="mr">एन. डी. चौगुले पतसंस्था मर्या. कोल्हापूर जिल्ह्यातील अग्रगण्य सहकारी वित्तीय संस्था आहे, जी तीन दशलकांपासून आपल्या सेवेत कार्यरत आहे.</span>
-      <span data-lang="en">N.D. Chougale Patsanstha Ltd. is a leading cooperative financial institution in Kolhapur district, serving with pride for over three decades.</span>
+      <span data-lang="mr">दरमहा लहान नियमित गुंतवणुकीतून मोठे ध्येय साध्य करा. चक्रवाढ व्याजाच्या सामर्थ्याने warme तुमचे भविष्य सुरक्षित करा.</span>
+      <span data-lang="en">Achieve big financial milestones with small, disciplined monthly contributions. Secure your future with the power of compounding.</span>
     </p>
   </div>
 </div>
 
 <main>
-  <!-- STORY SECTION -->
   <section class="section-py" style="background:var(--bg)">
     <div class="container">
-      <div class="about-story-grid">
-        <div class="about-story-content reveal">
-          <h3 data-lang="mr">पतसंस्थेचा इतिहास आणि वाटचाल</h3>
-          <h3 data-lang="en">Our History and Journey</h3>
-          <p data-lang="mr">एन. डी. चौगुले नागरी सहकारी पतसंस्था मर्यादित, कोल्हापूरची स्थापना १९९६ साली झाली. सहकाराच्या माध्यमातून सर्वसामान्य जनतेचा आर्थिक विकास साधणे हा या पतसंस्थेचा मुख्य उद्देश आहे. गेली ३० वर्षे आम्ही आमच्या सभासदांना पारदर्शक, सुरक्षित आणि आधुनिक बँकिंग सेवा पुरवत आहोत.</p>
-          <p data-lang="en">Established in 1996, N.D. Chougale Nagari Sahakari Path Sanstha Ltd. has been at the forefront of driving economic growth through cooperative principles. For 30+ years, we have provided transparent, secure, and modern financial services to our members.</p>
-          <p data-lang="mr">पतसंस्थेने नेहमीच रिझर्व्ह बँक आणि सहकार खात्याच्या सर्व नियमांचे काटेकोरपणे पालन केले आहे. यामुळेच आज आमच्याकडे २५,००० हून अधिक सुखी सभासदांचे कुटुंब आहे आणि आमच्या ठेवींचे प्रमाण सातत्याने वाढत आहे.</p>
-          <p data-lang="en">Adhering strictly to cooperative rules and regulations, we have built a family of over 25,000 satisfied members, maintaining stable financial growth year after year.</p>
-        </div>
-        <div class="reveal reveal-d2">
-          <div class="about-story-img-card">
-            <div class="about-story-stat-title" data-target="30" data-suffix="+">30+</div>
-            <div class="about-story-stat-desc" data-lang="mr">अखंड सेवेची वर्षे</div>
-            <div class="about-story-stat-desc" data-lang="en">Years of Service</div>
-            <hr style="margin:20px 0; border:0; border-top:1px solid var(--text-200);">
-            <div class="about-story-stat-title" data-target="25000" data-suffix="+">25,000+</div>
-            <div class="about-story-stat-desc" data-lang="mr">विश्वसनीय सभासद</div>
-            <div class="about-story-stat-desc" data-lang="en">Active Members</div>
+      <div class="sip-grid">
+        
+        <!-- Info Content -->
+        <div class="sip-info reveal">
+          <h3>
+            <span data-lang="mr">सिस्टमॅटिक इन्व्हेस्टमेंट प्लॅन (SIP) म्हणजे काय?</span>
+            <span data-lang="en">What is a Systematic Investment Plan (SIP)?</span>
+          </h3>
+          <p>
+            <span data-lang="mr">चौगुले SIP ही अशी योजना आहे जिथे आपण प्रत्येक महिन्याला एक निश्चित रक्कम नियमितपणे गुंतवू शकता. ही योजना नियमित बचतीची शिस्त लावते आणि दीर्घकाळात चक्रवाढ व्याजाचा फायदा मिळवून देते.</span>
+            <span data-lang="en">Chougale SIP is a structured program that allows you to invest fixed amounts regularly at monthly intervals. It builds disciplined saving habits and leverages compounding to grow your wealth steadily.</span>
+          </p>
+          <p>
+            <span data-lang="mr">लहान व्यवसाय मालक, नोकरदार व्यक्ती आणि शेतकरी यांच्यासाठी ही एक सुवर्णसंधी आहे. दरमहा किमान ₹५०० पासून आपण आपल्या मुलांचे शिक्षण, लग्न किंवा सेवानिवृत्तीच्या नियोजनासाठी सुरुवात करू शकता.</span>
+            <span data-lang="en">This is an ideal solution for small business owners, salaried professionals, and farmers. Starting with as little as ₹500 per month, you can accumulate a substantial fund for education, marriage, or retirement goals.</span>
+          </p>
+          
+          <div class="sip-features">
+            <div class="sip-feat-card">
+              <div class="sip-feat-title" data-lang="mr">शिस्तबद्ध बचत</div>
+              <div class="sip-feat-title" data-lang="en">Disciplined Saving</div>
+              <div class="sip-feat-desc" data-lang="mr">दरमहा स्वयंचलित किंवा थेट ठेव सुविधेने नियमित गुंतवणूक.</div>
+              <div class="sip-feat-desc" data-lang="en">Auto-debit options make monthly investing completely hassle-free.</div>
+            </div>
+            <div class="sip-feat-card">
+              <div class="sip-feat-title" data-lang="mr">चक्रवाढ परतावा</div>
+              <div class="sip-feat-title" data-lang="en">Compounded Growth</div>
+              <div class="sip-feat-desc" data-lang="mr">तुमच्या पैशावर सतत व्याज मिळवून जलद वृद्धी.</div>
+              <div class="sip-feat-desc" data-lang="en">Reinvested interest accelerates wealth creation through compounding.</div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+        
+        <!-- Live Calculator -->
+        <div class="sip-calc-card reveal">
+          <div class="sip-calc-title">
+            <span data-lang="mr">SIP परतावा कॅल्क्युलेटर</span>
+            <span data-lang="en">SIP Growth Calculator</span>
+          </div>
+          
+          <div class="calc-group">
+            <div class="calc-label">
+              <span data-lang="mr">दरमहा गुंतवणूक (₹)</span>
+              <span data-lang="en">Monthly Investment (₹)</span>
+              <span id="sip-amount-txt">₹2,000</span>
+            </div>
+            <input type="range" class="calc-range" id="sip-amount" min="500" max="50000" step="500" value="2000">
+          </div>
 
-  <!-- VISION & MISSION -->
-  <section class="vision-mission-section">
-    <div class="container">
-      <div class="vm-grid">
-        <div class="vm-card reveal">
-          <div class="vm-icon-box">
-            <svg class="icon" style="width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2"><use href="#i-shield"/></svg>
+          <div class="calc-group">
+            <div class="calc-label">
+              <span data-lang="mr">अपेक्षित व्याजदर (% प्रतिवर्ष)</span>
+              <span data-lang="en">Expected Rate (% p.a.)</span>
+              <span id="sip-rate-txt">9.0%</span>
+            </div>
+            <input type="range" class="calc-range" id="sip-rate" min="5" max="15" step="0.5" value="9">
           </div>
-          <h4 class="vm-title" data-lang="mr">ध्येय (Vision)</h4>
-          <h4 class="vm-title" data-lang="en">Our Vision</h4>
-          <p class="vm-desc" data-lang="mr">सहकारी क्षेत्रातील एक आदर्श, सुरक्षित आणि तंत्रज्ञानस्नेही पतसंस्था म्हणून नावारूपास येणे, ज्यामुळे कोल्हापूर जिल्ह्यातील प्रत्येक घटकाला आर्थिक स्थैर्य व समृद्धी मिळेल.</p>
-          <p class="vm-desc" data-lang="en">To emerge as a model, highly secure, and technology-driven cooperative society, delivering financial growth and prosperity to every individual and business in Kolhapur.</p>
-        </div>
-        <div class="vm-card reveal reveal-d2">
-          <div class="vm-icon-box">
-            <svg class="icon" style="width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2"><use href="#i-growth"/></svg>
-          </div>
-          <h4 class="vm-title" data-lang="mr">उद्दिष्ट (Mission)</h4>
-          <h4 class="vm-title" data-lang="en">Our Mission</h4>
-          <p class="vm-desc" data-lang="mr">सभासदांच्या ठेवींना सर्वोच्च सुरक्षा देणे, सुलभ दरात व जलद गतीने कर्जपुरवठा करणे, तसेच आधुनिक डिजिटल बँकिंग सेवांच्या माध्यमातून ग्रामीण आणि नागरी भागातील ग्राहकांशी थेट जोडले जाणे.</p>
-          <p class="vm-desc" data-lang="en">To offer maximum safety for deposits, provide prompt and hassle-free credit options, and utilize state-of-the-art digital channels to connect directly with rural and urban communities.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- BOARD OF DIRECTORS -->
-  <section class="directors-section">
-    <div class="container">
-      <div class="section-header reveal" style="margin-bottom:48px;">
-        <span class="section-tag" data-lang="mr">आमचे मार्गदर्शक</span>
-        <span class="section-tag" data-lang="en">OUR LEADERSHIP</span>
-        <h2 class="section-title">
-          <span data-lang="mr">संचालक मंडळ</span>
-          <span data-lang="en">Board of Directors</span>
-        </h2>
-      </div>
+          <div class="calc-group">
+            <div class="calc-label">
+              <span data-lang="mr">कालावधी (वर्षे)</span>
+              <span data-lang="en">Tenure (Years)</span>
+              <span id="sip-tenure-txt">5 Yr</span>
+            </div>
+            <input type="range" class="calc-range" id="sip-tenure" min="1" max="25" step="1" value="5">
+          </div>
 
-      <div class="directors-grid">
-        <!-- President -->
-        <div class="director-card reveal">
-          <div class="director-img-placeholder">
-            <svg class="icon" style="width:64px;height:64px;stroke:white;fill:none;stroke-width:1.5"><use href="#i-account"/></svg>
+          <div class="calc-results">
+            <div class="calc-res-row">
+              <span data-lang="mr">एकूण गुंतवलेली रक्कम</span>
+              <span data-lang="en">Total Invested Amount</span>
+              <span class="calc-res-val" id="sip-total-invested">₹1,20,000</span>
+            </div>
+            <div class="calc-res-row">
+              <span data-lang="mr">मिळालेले एकूण व्याज</span>
+              <span data-lang="en">Estimated Returns (Interest)</span>
+              <span class="calc-res-val" id="sip-total-interest">₹32,323</span>
+            </div>
+            <div class="calc-res-row highlight">
+              <span data-lang="mr">परिपक्वता मूल्य</span>
+              <span data-lang="en">Maturity Value</span>
+              <span class="calc-res-val" id="sip-maturity-val">₹1,52,323</span>
+            </div>
           </div>
-          <div class="director-info">
-            <div class="director-name" data-lang="mr">श्री. एन. डी. चौगुले</div>
-            <div class="director-name" data-lang="en">Shri. N.D. Chougale</div>
-            <div class="director-role" data-lang="mr">संस्थापक अध्यक्ष</div>
-            <div class="director-role" data-lang="en">Founder Chairman</div>
-          </div>
-        </div>
-
-        <!-- Vice President -->
-        <div class="director-card reveal reveal-d1">
-          <div class="director-img-placeholder">
-            <svg class="icon" style="width:64px;height:64px;stroke:white;fill:none;stroke-width:1.5"><use href="#i-account"/></svg>
-          </div>
-          <div class="director-info">
-            <div class="director-name" data-lang="mr">श्रीमती. एस. एन. चौगुले</div>
-            <div class="director-name" data-lang="en">Smt. S.N. Chougale</div>
-            <div class="director-role" data-lang="mr">उपाध्यक्ष</div>
-            <div class="director-role" data-lang="en">Vice Chairperson</div>
-          </div>
+          
+          <a href="contact.html" class="btn btn-secondary btn-full btn-lg" style="margin-top:24px;">
+            <span data-lang="mr">SIP सुरु करा</span>
+            <span data-lang="en">Start Your SIP</span>
+          </a>
         </div>
 
-        <!-- Director 1 -->
-        <div class="director-card reveal reveal-d2">
-          <div class="director-img-placeholder">
-            <svg class="icon" style="width:64px;height:64px;stroke:white;fill:none;stroke-width:1.5"><use href="#i-account"/></svg>
-          </div>
-          <div class="director-info">
-            <div class="director-name" data-lang="mr">श्री. आर. ए. पाटील</div>
-            <div class="director-name" data-lang="en">Shri. R.A. Patil</div>
-            <div class="director-role" data-lang="mr">संचालक</div>
-            <div class="director-role" data-lang="en">Director</div>
-          </div>
-        </div>
-
-        <!-- Director 2 -->
-        <div class="director-card reveal reveal-d3">
-          <div class="director-img-placeholder">
-            <svg class="icon" style="width:64px;height:64px;stroke:white;fill:none;stroke-width:1.5"><use href="#i-account"/></svg>
-          </div>
-          <div class="director-info">
-            <div class="director-name" data-lang="mr">श्री. व्ही. एस. माने</div>
-            <div class="director-name" data-lang="en">Shri. V.S. Mane</div>
-            <div class="director-role" data-lang="mr">संचालक</div>
-            <div class="director-role" data-lang="en">Director</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINANCIAL HIGHLIGHTS -->
-  <section class="section-py" style="background:var(--bg-alt); padding:80px 0;">
-    <div class="container">
-      <div class="section-header reveal" style="margin-bottom:48px;">
-        <span class="section-tag" data-lang="mr">वित्तीय प्रगती</span>
-        <span class="section-tag" data-lang="en">FINANCIAL STATUS</span>
-        <h2 class="section-title">
-          <span data-lang="mr">वित्तीय ठळक वैशिष्ट्ये</span>
-          <span data-lang="en">Financial Highlights</span>
-        </h2>
-      </div>
-
-      <div class="reveal" style="overflow-x:auto;">
-        <table class="fin-table">
-          <thead>
-            <tr>
-              <th data-lang="mr">तपशील (रुपये कोटीत)</th>
-              <th data-lang="en">Particulars (Rs. In Crores)</th>
-              <th>2022-23</th>
-              <th>2023-24</th>
-              <th>2024-25</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-lang="mr">एकूण भागभांडवल</td>
-              <td data-lang="en">Share Capital</td>
-              <td>2.45</td>
-              <td>2.90</td>
-              <td>3.20</td>
-            </tr>
-            <tr>
-              <td data-lang="mr">एकूण ठेवी</td>
-              <td data-lang="en">Total Deposits</td>
-              <td>42.10</td>
-              <td>48.50</td>
-              <td>55.30</td>
-            </tr>
-            <tr>
-              <td data-lang="mr">एकूण कर्ज वाटप</td>
-              <td data-lang="en">Total Advances / Loans</td>
-              <td>29.40</td>
-              <td>33.80</td>
-              <td>38.90</td>
-            </tr>
-            <tr>
-              <td data-lang="mr">राखीव व इतर निधी</td>
-              <td data-lang="en">Reserve Funds</td>
-              <td>1.85</td>
-              <td>2.10</td>
-              <td>2.45</td>
-            </tr>
-            <tr>
-              <td data-lang="mr">ऑडिट वर्ग (वर्गीकरण)</td>
-              <td data-lang="en">Audit Class</td>
-              <td style="font-weight:bold;color:var(--secondary)">'A'</td>
-              <td style="font-weight:bold;color:var(--secondary)">'A'</td>
-              <td style="font-weight:bold;color:var(--secondary)">'A'</td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </section>
@@ -470,42 +361,67 @@
       </div>
     </div>
   </div>
-  <div class="container">
-    <div class="footer-bottom">
-      <div>&copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved.</div>
-      <div class="footer-bottom-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms &amp; Conditions</a>
-        <a href="#">Grievance</a>
-      </div>
+  <div class="footer-bottom-strip">
+    <div class="container">
+      &copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms &amp; Conditions</a>
     </div>
   </div>
 </footer>
 
-<!-- FLOATING CTAs -->
-<div class="float-actions">
-  <a href="https://wa.me/919876543210" class="float-btn float-wa" target="_blank" aria-label="WhatsApp"><svg class="icon" style="width:22px;height:22px;stroke:white;fill:none;stroke-width:2"><use href="#i-chat"/></svg></a>
-  <a href="tel:+910231265432" class="float-btn float-call" aria-label="Call"><svg class="icon" style="width:22px;height:22px;stroke:white;fill:none;stroke-width:2"><use href="#i-phone"/></svg></a>
-</div>
 
-
-<!-- MOBILE BOTTOM DOCK -->
 <nav class="mobile-dock">
   <a href="index.html" class="dock-item"><svg class="icon"><use href="#i-home"/></svg><span data-lang="mr">मुख्य</span><span data-lang="en">Home</span></a>
-  <a href="loans.html" class="dock-item dock-cta"><svg class="icon"><use href="#i-loan"/></svg><span data-lang="mr">कर्ज</span><span data-lang="en">Loans</span></a>
-  <a href="sip.html" class="dock-item"><svg class="icon"><use href="#i-growth"/></svg><span data-lang="mr">SIP</span><span data-lang="en">SIP</span></a>
+  <a href="loans.html" class="dock-item dock-cta"><svg class="icon" style="width:20px;height:20px"><use href="#i-rates"/></svg><span data-lang="mr">कर्ज</span><span data-lang="en">Loans</span></a>
+  <a href="sip.html" class="dock-item active"><svg class="icon"><use href="#i-growth"/></svg><span data-lang="mr">SIP</span><span data-lang="en">SIP</span></a>
   <a href="tel:+910231265432" class="dock-item"><svg class="icon"><use href="#i-phone"/></svg><span data-lang="mr">कॉल</span><span data-lang="en">Call</span></a>
   <a href="https://wa.me/919876543210" class="dock-item" target="_blank"><svg class="icon" style="stroke:#25D366"><use href="#i-chat"/></svg><span>WhatsApp</span></a>
 </nav>
-
-<!-- SEARCH OVERLAY -->
-<div class="search-overlay">
-  <span class="search-overlay-close">&times;</span>
-  <div class="search-overlay-box">
-    <input type="text" class="search-overlay-input" placeholder="Search… e.g. Gold Loan, FD Rates, Branches">
-  </div>
-</div>
+<div class="search-overlay"><span class="search-overlay-close">&times;</span><div class="search-overlay-box"><input type="text" class="search-overlay-input" placeholder="Search…"></div></div>
 
 <script src="assets/js/main.js"></script>
+<script>
+  // Dedicated script for SIP calculator page
+  document.addEventListener('DOMContentLoaded', () => {
+    const amountSlider = document.getElementById('sip-amount');
+    const rateSlider = document.getElementById('sip-rate');
+    const tenureSlider = document.getElementById('sip-tenure');
+
+    const amountTxt = document.getElementById('sip-amount-txt');
+    const rateTxt = document.getElementById('sip-rate-txt');
+    const tenureTxt = document.getElementById('sip-tenure-txt');
+
+    const investedTxt = document.getElementById('sip-total-invested');
+    const interestTxt = document.getElementById('sip-total-interest');
+    const maturityTxt = document.getElementById('sip-maturity-val');
+
+    function calculateSIP() {
+      const P = parseFloat(amountSlider.value);
+      const annualRate = parseFloat(rateSlider.value);
+      const years = parseFloat(tenureSlider.value);
+
+      const months = years * 12;
+      const i = (annualRate / 12) / 100;
+
+      // SIP Formula: M = P * [ ( (1 + i)^n - 1 ) / i ] * (1 + i)
+      const maturityValue = P * ((Math.pow(1 + i, months) - 1) / i) * (1 + i);
+      const totalInvested = P * months;
+      const totalInterest = Math.max(0, maturityValue - totalInvested);
+
+      amountTxt.textContent = '₹' + P.toLocaleString('en-IN');
+      rateTxt.textContent = annualRate.toFixed(1) + '%';
+      tenureTxt.textContent = years + ' Yr';
+
+      investedTxt.textContent = '₹' + Math.round(totalInvested).toLocaleString('en-IN');
+      interestTxt.textContent = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
+      maturityTxt.textContent = '₹' + Math.round(maturityValue).toLocaleString('en-IN');
+    }
+
+    [amountSlider, rateSlider, tenureSlider].forEach(slider => {
+      slider.addEventListener('input', calculateSIP);
+    });
+
+    calculateSIP();
+  });
+</script>
 </body>
 </html>

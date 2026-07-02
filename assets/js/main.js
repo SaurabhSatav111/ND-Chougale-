@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   initGalleryFilter();
   initQuickTabs();
+  initHeroSlider();
 });
 
 /* ============================================================
@@ -44,29 +45,8 @@ function initPreloader() {
    2. THEME (Dark / Light) — persisted in localStorage
    ============================================================ */
 function initTheme() {
-  const btn = document.querySelector('.theme-btn');
   const root = document.body;
-  const stored = localStorage.getItem('theme') || 'light';
-
-  const apply = (theme) => {
-    root.classList.toggle('dark', theme === 'dark');
-    if (btn) {
-      btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode');
-      btn.innerHTML = theme === 'dark'
-        ? '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>'
-        : '<svg class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    }
-  };
-
-  apply(stored);
-
-  if (btn) {
-    btn.addEventListener('click', () => {
-      const next = root.classList.contains('dark') ? 'light' : 'dark';
-      localStorage.setItem('theme', next);
-      apply(next);
-    });
-  }
+  root.classList.remove('dark');
 }
 
 /* ============================================================
@@ -546,4 +526,90 @@ function initQuickTabs() {
       });
     });
   });
+}
+
+/* ============================================================
+   19. HERO CAROUSEL SLIDER
+   ============================================================ */
+function initHeroSlider() {
+  const slider = document.querySelector('.hero-slider');
+  if (!slider) return;
+
+  const slides = slider.querySelectorAll('.hero-slide');
+  const dots = slider.querySelectorAll('.hero-slider-dot');
+  const prevBtn = slider.querySelector('.hero-slider-prev');
+  const nextBtn = slider.querySelector('.hero-slider-next');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer = null;
+  const intervalTime = 5000; // 5 seconds autoplay
+
+  const goTo = (idx) => {
+    current = (idx + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === current);
+    });
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  };
+
+  const next = () => goTo(current + 1);
+  const prev = () => goTo(current - 1);
+
+  const startAutoplay = () => {
+    stopAutoplay();
+    timer = setInterval(next, intervalTime);
+  };
+
+  const stopAutoplay = () => {
+    if (timer) clearInterval(timer);
+  };
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prev();
+      startAutoplay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      next();
+      startAutoplay();
+    });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      goTo(i);
+      startAutoplay();
+    });
+  });
+
+  slider.addEventListener('mouseenter', stopAutoplay);
+  slider.addEventListener('mouseleave', startAutoplay);
+
+  let startX = 0;
+  slider.addEventListener('touchstart', e => { 
+    startX = e.touches[0].clientX; 
+  }, { passive: true });
+
+  slider.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) {
+        next();
+      } else {
+        prev();
+      }
+      startAutoplay();
+    }
+  });
+
+  startAutoplay();
 }
