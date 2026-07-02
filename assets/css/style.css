@@ -4392,7 +4392,7 @@ body.dark .branch-info-name {
     height: 30px !important;
     width: 100% !important;
     max-width: 100% !important;
-    object-fit: fill !important;
+    object-fit: contain !important;
     border-radius: 0 !important;
   }
   
@@ -4752,7 +4752,7 @@ body.dark .drawer-lang .lang-switch-link.active {
     height: 60px !important;
     width: 100% !important;
     max-width: 100% !important;
-    object-fit: fill !important;
+    object-fit: contain !important;
     border-radius: 0 !important;
   }
   
