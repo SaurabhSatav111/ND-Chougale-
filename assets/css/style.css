@@ -4390,7 +4390,7 @@ body.dark .branch-info-name {
   
   .nav-logo-img {
     height: 30px !important;
-    width: 100% !important;
+    width: auto !important;
     max-width: 100% !important;
     object-fit: contain !important;
     border-radius: 0 !important;
@@ -4661,7 +4661,9 @@ body.dark .branch-info-name {
   width: 100% !important;
   height: auto !important;
   background: none !important;
-  display: block !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 /* Mobile Drawer Language Switcher Styling */
@@ -4750,7 +4752,7 @@ body.dark .drawer-lang .lang-switch-link.active {
   
   .nav-logo-img {
     height: 60px !important;
-    width: 100% !important;
+    width: auto !important;
     max-width: 100% !important;
     object-fit: contain !important;
     border-radius: 0 !important;
