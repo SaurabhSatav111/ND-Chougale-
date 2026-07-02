@@ -4663,3 +4663,69 @@ body.dark .drawer-lang .lang-switch-link {
 body.dark .drawer-lang .lang-switch-link.active {
   color: var(--secondary) !important;
 }
+
+/* Two-Row Desktop/Laptop Header Layout with Full Width Centered Logo */
+@media (min-width: 768px) {
+  :root {
+    --header-nav-h: 170px !important;
+    --header-total-h: 170px !important;
+  }
+  
+  .navbar {
+    height: auto !important;
+    padding: 12px 0 !important;
+  }
+  
+  .nav-inner {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    height: auto !important;
+    gap: 12px 0 !important;
+  }
+  
+  .nav-logo {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .nav-logo-img {
+    height: 80px !important;
+    width: 100% !important;
+    max-width: 750px !important;
+    object-fit: contain !important;
+  }
+  
+  .nav-links {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    border-top: 1px solid var(--text-200);
+    padding-top: 12px !important;
+    margin-top: 4px !important;
+    width: 100% !important;
+  }
+  
+  body.dark .nav-links {
+    border-top-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  
+  .nav-actions {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    border-top: 1px solid var(--text-200);
+    padding-top: 12px !important;
+    margin-top: 4px !important;
+  }
+  
+  body.dark .nav-actions {
+    border-top-color: rgba(255, 255, 255, 0.08) !important;
+  }
+}
