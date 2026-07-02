@@ -4389,8 +4389,7 @@ body.dark .branch-info-name {
   }
   
   .nav-logo-img {
-    height: auto !important;
-    max-height: 55px !important;
+    height: 55px !important;
     width: 100% !important;
     max-width: 100% !important;
     object-fit: fill !important;
@@ -4749,8 +4748,7 @@ body.dark .drawer-lang .lang-switch-link.active {
   }
   
   .nav-logo-img {
-    height: auto !important;
-    max-height: 80px !important;
+    height: 80px !important;
     width: 100% !important;
     max-width: 100% !important;
     object-fit: fill !important;
