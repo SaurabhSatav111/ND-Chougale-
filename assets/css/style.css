@@ -4596,3 +4596,49 @@ body.dark .branch-info-name {
   height: auto !important;
   background: none !important;
 }
+
+/* Mobile Drawer Language Switcher Styling */
+.drawer-lang {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--text-200);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--bg-alt);
+}
+
+body.dark .drawer-lang {
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.drawer-lang span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-700);
+}
+
+body.dark .drawer-lang span {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.drawer-lang .lang-switch-link {
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--text-600);
+  transition: color var(--ease-fast);
+}
+
+body.dark .drawer-lang .lang-switch-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.drawer-lang .lang-switch-link.active {
+  color: var(--primary) !important;
+}
+
+body.dark .drawer-lang .lang-switch-link.active {
+  color: var(--secondary) !important;
+}
