@@ -4787,9 +4787,9 @@ body.dark .drawer-lang .lang-switch-link.active {
     justify-content: center !important;
     align-items: center !important;
     border-top: 1px solid var(--text-200);
-    padding-top: 12px !important;
-    padding-left: 40px !important;
-    margin-top: 4px !important;
+    padding: 0 0 0 40px !important;
+    margin: 0 !important;
+    height: 50px !important;
     width: 100% !important;
   }
   
@@ -4804,9 +4804,9 @@ body.dark .drawer-lang .lang-switch-link.active {
     justify-content: flex-end !important;
     align-items: center !important;
     border-top: 1px solid var(--text-200);
-    padding-top: 12px !important;
-    padding-right: 40px !important;
-    margin-top: 4px !important;
+    padding: 0 40px 0 0 !important;
+    margin: 0 !important;
+    height: 50px !important;
   }
   
   body.dark .nav-actions {
