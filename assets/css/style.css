@@ -5772,3 +5772,42 @@ body.dark .chart-title-lbl {
     gap: 32px;
   }
 }
+
+/* ============================================================
+   DEPOSITS DROPDOWN REDESIGN
+   ============================================================ */
+
+.dropdown-menu-deposits {
+  border-radius: 0 0 var(--r-sm) var(--r-sm) !important;
+  padding: 0 !important;
+  border-top: none !important;
+}
+
+.dropdown-menu-deposits .dropdown-item {
+  padding: 14px 20px !important;
+  border-bottom: 1px solid #e0ebd0 !important;
+  font-weight: 500 !important;
+  color: var(--secondary) !important;
+  font-family: var(--font-body);
+}
+
+body.dark .dropdown-menu-deposits .dropdown-item {
+  color: #ffffff !important;
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+.dropdown-menu-deposits .dropdown-item:last-child {
+  border-bottom: none !important;
+}
+
+/* Keep main nav item underlined when dropdown is active/hovered */
+.nav-links li:hover > .nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--secondary);
+  border-radius: 2px 2px 0 0;
+}
