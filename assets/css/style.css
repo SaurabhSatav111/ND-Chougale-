@@ -5379,3 +5379,396 @@ body.dark .initiative-btn:hover {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   ABOUT PAGE OVERVIEW REDESIGN
+   ============================================================ */
+
+.about-page-hero {
+  position: relative;
+  padding: 120px 0 80px;
+  background: var(--secondary); /* Dark blue */
+  color: #ffffff;
+  overflow: hidden;
+  margin-top: var(--header-total-h);
+}
+.about-page-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(11, 26, 48, 0.95) 100%);
+  z-index: 1;
+}
+.about-page-hero .container {
+  position: relative;
+  z-index: 2;
+}
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+.about-hero-title {
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.about-hero-title span {
+  color: var(--primary);
+}
+.about-hero-sub {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 24px;
+}
+.about-hero-image {
+  display: flex;
+  justify-content: center;
+}
+.about-hero-image img {
+  max-height: 380px;
+  width: auto;
+  display: block;
+}
+
+/* About Story Section */
+.about-story-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+body.dark .about-story-section {
+  background: var(--bg);
+}
+.about-story-title {
+  font-size: clamp(28px, 4vw, 36px);
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 16px;
+}
+body.dark .about-story-title {
+  color: #ffffff;
+}
+.about-story-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+}
+.about-story-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-600);
+  margin-bottom: 20px;
+}
+
+/* Founder / Kaka Koyate layout style */
+.founder-spotlight-section {
+  background: var(--secondary);
+  padding: 80px 0;
+  color: #ffffff;
+}
+.founder-spotlight-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 48px;
+  align-items: center;
+}
+.founder-portrait-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+  background: #0f172a;
+}
+.founder-portrait-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.founder-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.founder-name-heading {
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.founder-roles-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.founder-role-card-white {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all var(--ease-smooth);
+}
+.founder-role-card-white:hover {
+  transform: translateY(-4px);
+}
+.founder-role-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 125, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.founder-role-content {
+  display: flex;
+  flex-direction: column;
+}
+.founder-role-title-main {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--secondary);
+}
+.founder-role-subtext {
+  font-size: 13px;
+  color: var(--text-500);
+  margin-top: 4px;
+}
+
+/* Board of directors slide-scroll layout */
+.directors-redesign-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+body.dark .directors-redesign-section {
+  background: var(--bg);
+}
+.directors-scroll-row {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 20px 4px 40px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+.directors-scroll-row::-webkit-scrollbar {
+  height: 6px;
+}
+.directors-scroll-row::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+.director-redesign-card {
+  flex: 0 0 280px;
+  background: #ffffff;
+  border: 1px solid var(--text-200);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--ease-smooth);
+}
+body.dark .director-redesign-card {
+  background: var(--surface);
+}
+.director-redesign-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-premium);
+  border-color: var(--primary);
+}
+.director-redesign-img-wrap {
+  width: 100%;
+  aspect-ratio: 1 / 1.1;
+  overflow: hidden;
+}
+.director-redesign-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.director-redesign-info {
+  padding: 20px;
+  text-align: center;
+}
+.director-redesign-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--secondary);
+}
+body.dark .director-redesign-name {
+  color: #ffffff;
+}
+.director-redesign-role {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 6px 0;
+  text-transform: uppercase;
+}
+.director-redesign-profile {
+  font-size: 12px;
+  color: var(--text-500);
+}
+
+/* Our Mission / Vision Redesign */
+.mv-dark-section {
+  background: #f8fafc;
+  padding: 80px 0;
+}
+body.dark .mv-dark-section {
+  background: var(--bg-alt);
+}
+.mv-dark-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+}
+.mv-dark-card {
+  background: var(--secondary);
+  border-radius: 24px;
+  padding: 40px;
+  color: #ffffff;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  transition: all var(--ease-smooth);
+}
+.mv-dark-card:hover {
+  transform: translateY(-6px);
+}
+.mv-dark-icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+.mv-dark-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.mv-dark-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+}
+.mv-dark-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Financial Scenario Graph & Table */
+.financial-scenario-section {
+  padding: 80px 0;
+  background: #ffffff;
+}
+body.dark .financial-scenario-section {
+  background: var(--bg);
+}
+.financial-scenario-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+.financial-chart-card {
+  background: #ffffff;
+  border: 1px solid var(--text-200);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+}
+body.dark .financial-chart-card {
+  background: var(--surface);
+}
+.financial-chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.chart-title-lbl {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+body.dark .chart-title-lbl {
+  color: #ffffff;
+}
+.chart-legends {
+  display: flex;
+  gap: 12px;
+}
+.chart-legend-dot {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.bar-chart-visual {
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--text-200);
+  padding-bottom: 12px;
+  gap: 12px;
+}
+.bar-chart-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+  position: relative;
+}
+.bar-bars-group {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 100%;
+}
+.bar-fill {
+  flex: 1;
+  border-radius: 4px 4px 0 0;
+  transition: height 1s ease;
+}
+.bar-fill.dep { background: #3b82f6; }
+.bar-fill.loan { background: #eab308; }
+.bar-fill.inv { background: #10b981; }
+
+.bar-col-year {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-500);
+  transform: rotate(-35deg);
+  margin-top: 10px;
+}
+
+/* Responsive Overrides */
+@media(max-width: 991px) {
+  .about-hero-grid,
+  .founder-spotlight-grid,
+  .mv-dark-grid,
+  .financial-scenario-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
