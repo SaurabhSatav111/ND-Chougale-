@@ -4371,7 +4371,7 @@ body.dark .branch-info-name {
   .top-bar-inner {
     display: flex !important;
     justify-content: center !important;
-    gap: 16px !important;
+    gap: 28px !important;
     flex-wrap: wrap !important;
   }
   
@@ -4392,6 +4392,8 @@ body.dark .branch-info-name {
     height: 14px !important;
     stroke-width: 2.2 !important;
     flex-shrink: 0 !important;
+    stroke: var(--primary) !important;
+    fill: none !important;
   }
   
   .navbar {
