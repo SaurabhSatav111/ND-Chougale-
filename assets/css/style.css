@@ -7078,11 +7078,247 @@ body.dark .locker-table tr:hover td {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media(max-width: 575px) {
   .mobile-steps-grid {
     grid-template-columns: 1fr;
   }
   .transfer-methods-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
+   CHOUGALE/SAMATA SIP PAGE REDESIGN
+   ============================================================ */
+.sip-hero {
+  position: relative;
+  background: linear-gradient(135deg, #0b1a30 0%, #152c4e 100%);
+  padding: 100px 0 0 0;
+  color: #ffffff;
+  overflow: hidden;
+  margin-top: var(--header-total-h);
+}
+.sip-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 80% 20%, rgba(128, 180, 53, 0.15) 0%, transparent 50%);
+  z-index: 1;
+}
+.sip-hero-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 40px;
+  align-items: flex-end;
+  position: relative;
+  z-index: 2;
+}
+.sip-hero-text {
+  padding-bottom: 80px;
+}
+.sip-hero-title {
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.sip-hero-img-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.sip-hero-img-wrap img {
+  max-height: 480px;
+  width: auto;
+  display: block;
+}
+
+/* Why choose SIP card left side */
+.sip-why-card {
+  background: linear-gradient(135deg, #101c36 0%, #1c315e 100%);
+  border-radius: 24px;
+  padding: 40px;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+}
+.sip-why-card h3 {
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+.sip-why-card .sip-sub-label {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* Steps grid for SIP */
+.sip-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.sip-step-box {
+  background: var(--secondary);
+  border-radius: 16px;
+  padding: 30px 24px;
+  color: #ffffff;
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: var(--shadow-card);
+}
+.sip-step-box:hover {
+  transform: translateY(-4px);
+}
+.sip-step-num {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--primary);
+  opacity: 0.7;
+  margin-bottom: 12px;
+  text-align: right;
+}
+.sip-step-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.sip-step-desc {
+  font-size: 13.5px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+/* Table styling for benefits */
+.sip-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.sip-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.sip-table th {
+  background: var(--secondary);
+  color: #ffffff;
+  padding: 16px 20px;
+  font-weight: 700;
+  text-align: left;
+  font-size: 14px;
+}
+.sip-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--text-200);
+  background: #ffffff;
+  font-size: 14px;
+  color: var(--text-700);
+  line-height: 1.5;
+}
+body.dark .sip-table td {
+  background: var(--surface);
+  color: rgba(255,255,255,0.8);
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+/* CTA Banner strip */
+.sip-cta-banner {
+  background: #e2f0fd;
+  border-radius: 24px;
+  padding: 40px 60px;
+  margin: 60px 0;
+  color: var(--secondary);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.08);
+}
+body.dark .sip-cta-banner {
+  background: #0f1e36;
+  color: #ffffff;
+}
+.sip-cta-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+.sip-cta-text h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.sip-cta-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  position: relative;
+}
+.sip-cta-img-wrap img {
+  max-height: 180px;
+  border-radius: 16px;
+  object-fit: cover;
+}
+.sip-round-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--primary);
+  border: 4px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+@media(max-width: 991px) {
+  .sip-hero-grid,
+  .sip-cta-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .sip-hero-text {
+    padding-bottom: 40px;
+  }
+  .sip-hero-img-wrap {
+    justify-content: center;
+  }
+  .sip-cta-banner {
+    padding: 30px;
+  }
+  .sip-cta-img-wrap {
+    justify-content: center;
+  }
+  .sip-round-logo {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+    margin: 0 auto;
+  }
+}
+@media(max-width: 575px) {
+  .sip-steps-grid {
     grid-template-columns: 1fr;
   }
 }
