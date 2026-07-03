@@ -4380,6 +4380,10 @@ body.dark .branch-info-name {
     display: none !important;
   }
   
+  .top-bar-item:nth-child(2) {
+    margin-right: 20px !important;
+  }
+  
   .top-bar-item {
     display: inline-flex !important;
     align-items: center !important;
