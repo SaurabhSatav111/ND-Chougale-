@@ -8,258 +8,6 @@
   <meta name="description"
     content="Explore digital and banking services of N.D. Chougale Patsanstha - Mobile Banking App, Lockers, RTGS/NEFT, UPI Payments, ATM card services.">
   <link rel="stylesheet" href="assets/css/style.css">
-  <style>
-    .page-hero {
-      background: linear-gradient(180deg, #F4F6FB 0%, #E6F5D5 100%);
-      padding: 60px 0 80px;
-      margin-top: var(--header-total-h);
-      border-bottom: 1px solid var(--text-200);
-    }
-
-    body.dark .page-hero {
-      background: linear-gradient(180deg, #1A0F00 0%, #06140A 100%);
-      border-bottom-color: var(--text-200);
-    }
-
-    .page-hero-title {
-      font-size: clamp(28px, 4vw, 52px);
-      color: var(--primary);
-      font-weight: 900;
-      margin-bottom: 14px;
-    }
-
-    .page-hero-desc {
-      font-size: 16px;
-      color: var(--text-600);
-      max-width: 600px;
-    }
-
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      color: var(--text-400);
-      margin-bottom: 20px;
-    }
-
-    .breadcrumb a {
-      color: var(--text-600);
-    }
-
-    .breadcrumb a:hover {
-      color: var(--primary);
-    }
-
-    .services-full-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-bottom: 60px;
-    }
-
-    .service-detail-card {
-      background: var(--surface);
-      border-radius: var(--r-card);
-      overflow: hidden;
-      box-shadow: var(--shadow-card);
-      display: flex;
-      flex-direction: column;
-      transition: transform var(--ease-spring), box-shadow var(--ease-smooth);
-    }
-
-    .service-detail-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-premium);
-    }
-
-    .sdc-header {
-      padding: 32px 32px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .sdc-icon-wrap {
-      width: 56px;
-      height: 56px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .sdc-navy {
-      background: rgba(255, 125, 0, 0.1);
-      color: var(--primary);
-    }
-
-    .sdc-green {
-      background: rgba(109, 179, 63, 0.1);
-      color: var(--secondary);
-    }
-
-    .sdc-gold {
-      background: rgba(242, 177, 52, 0.1);
-      color: #F2B134;
-    }
-
-    .sdc-teal {
-      background: rgba(20, 184, 166, 0.1);
-      color: #14b8a6;
-    }
-
-    .sdc-rose {
-      background: rgba(244, 63, 94, 0.1);
-      color: #f43f5e;
-    }
-
-    .sdc-purple {
-      background: rgba(139, 92, 246, 0.1);
-      color: #8b5cf6;
-    }
-
-    .sdc-body {
-      padding: 0 32px 32px;
-      flex-grow: 1;
-    }
-
-    .sdc-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 12px;
-    }
-
-    .sdc-desc {
-      font-size: 14.5px;
-      color: var(--text-600);
-      line-height: 1.7;
-      margin-bottom: 20px;
-    }
-
-    .sdc-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .sdc-list-item {
-      font-size: 13.5px;
-      color: var(--text-700);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .sdc-list-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--secondary);
-    }
-
-    .app-section {
-      background: var(--primary);
-      color: white;
-      padding: 80px 0;
-      border-radius: var(--r-section);
-      margin-bottom: 80px;
-      overflow: hidden;
-    }
-
-    .app-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .app-content h2 {
-      color: white;
-      font-size: 32px;
-      margin-bottom: 16px;
-    }
-
-    .app-content p {
-      color: rgba(255, 255, 255, 0.75);
-      font-size: 16px;
-      margin-bottom: 28px;
-      line-height: 1.8;
-    }
-
-    .app-features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-bottom: 32px;
-    }
-
-    .app-feat-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background: rgba(255, 255, 255, 0.06);
-      padding: 16px;
-      border-radius: var(--r-card);
-    }
-
-    .app-feat-text {
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .app-dl-btns {
-      display: flex;
-      gap: 16px;
-    }
-
-    .app-dl-btn {
-      background: white;
-      color: var(--primary);
-      padding: 12px 24px;
-      border-radius: var(--r-pill);
-      font-weight: 700;
-      font-size: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-      transition: background var(--ease-smooth);
-    }
-
-    .app-dl-btn:hover {
-      background: var(--secondary);
-      color: white;
-    }
-
-    @media(max-width:991px) {
-      .services-full-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .app-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media(max-width:767px) {
-      .services-full-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .app-features {
-        grid-template-columns: 1fr;
-      }
-
-      .app-dl-btns {
-        flex-direction: column;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -370,7 +118,7 @@
       <line x1="5" y1="12" x2="19" y2="12" />
     </symbol>
     <symbol id="i-neft" viewBox="0 0 24 24">
-      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+      <path d="M3 11h18M12 2v18M8 5l4-3 4 3" />
     </symbol>
     <symbol id="i-atm" viewBox="0 0 24 24">
       <rect x="2" y="5" width="20" height="14" rx="2" />
@@ -418,6 +166,22 @@
     </symbol>
   </svg>
 
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <svg class="preloader-logo" viewBox="0 0 80 80" fill="none">
+      <circle cx="40" cy="40" r="36" stroke="currentColor" stroke-width="3" opacity="0.2" />
+      <path d="M40 14 L62 30 L62 58 L18 58 L18 30 Z" stroke="currentColor" stroke-width="5" stroke-linejoin="round"
+        fill="none" />
+      <rect x="28" y="38" width="24" height="20" stroke="currentColor" stroke-width="3" fill="none" />
+      <line x1="40" y1="14" x2="40" y2="58" stroke="currentColor" stroke-width="3" />
+      <line x1="28" y1="48" x2="52" y2="48" stroke="currentColor" stroke-width="3" />
+    </svg>
+    <div class="preloader-text" data-lang="mr">एन. डी. चौगुले</div>
+    <div class="preloader-text" data-lang="en">N.D. Chougale</div>
+    <div class="preloader-bar"></div>
+  </div>
+
+  <!-- HEADER -->
   <header class="site-header" id="site-header">
     <div class="top-bar">
       <div class="container top-bar-inner">
@@ -501,411 +265,520 @@
                 data-lang="en">Services</span></a></li>
           <li><a href="sip.html" class="nav-link"><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale
                 SIP</span></a></li>
-          <li>
-            <a href="gallery.html" class="nav-link"><span data-lang="mr">दालन</span><span
-                data-lang="en">Gallery</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
-                <path d="M6 9l6 6 6-6" />
-              </svg></a>
-            <div class="dropdown-menu">
-              <a href="gallery.html" class="dropdown-item"><svg class="icon">
-                  <use href="#i-award" />
-                </svg><span><span data-lang="mr">छायाचित्र दालन</span><span data-lang="en">Photo
-                    Gallery</span></span></a>
-              <a href="downloads.html" class="dropdown-item"><svg class="icon">
-                  <use href="#i-download" />
-                </svg><span><span data-lang="mr">माहितीपत्रक/डाउनलोड</span><span
-                    data-lang="en">Downloads</span></span></a>
-            </div>
-          </li>
-          <li><a href="contact.html" class="nav-link"><span data-lang="mr">संपर्क</span><span data-lang="en">Contact
-                Us</span></a></li>
+          <li><a href="contact.html" class="nav-link"><span data-lang="mr">संपर्क</span><span
+                data-lang="en">Contact</span></a></li>
         </ul>
         <div class="nav-actions">
-          <button class="nav-icon-btn search-trigger" aria-label="Search"><svg class="icon">
-              <use href="#i-search" />
-            </svg></button>
-          <button class="nav-icon-btn theme-btn" aria-label="Toggle Theme"><svg class="icon">
+          <div class="nav-lang">
+            <a href="#" class="lang-switch-link active" data-lang-set="mr">मराठी</a>
+            <span>|</span>
+            <a href="#" class="lang-switch-link" data-lang-set="en">English</a>
+          </div>
+          <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme"><svg class="icon">
               <use href="#i-moon" />
             </svg></button>
-          <button class="hamburger" id="hamburger" aria-label="Menu">
-            <span></span><span></span><span></span>
-          </button>
+          <button class="nav-search-btn" id="nav-search" aria-label="Search"><svg class="icon">
+              <use href="#i-search" />
+            </svg></button>
+          <button class="mobile-menu-btn" id="mobile-menu-trigger" aria-label="Menu"><svg class="icon">
+              <use href="#i-menu" />
+            </svg></button>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- MOBILE DRAWER -->
-  <div class="mobile-drawer" id="mobile-drawer">
-    <div class="drawer-lang">
-      <span><span data-lang="mr">भाषा:</span><span data-lang="en">Language:</span></span>
-      <a href="#" class="lang-switch-link active" data-lang-set="mr">मराठी</a>
-      <span style="color:var(--text-200); opacity: 0.5;">|</span>
-      <a href="#" class="lang-switch-link" data-lang-set="en">English</a>
-    </div>
-    <a href="index.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-home" />
-      </svg><span data-lang="mr">मुख्यपृष्ठ</span><span data-lang="en">Home</span></a>
-    <a href="about.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-team" />
-      </svg><span data-lang="mr">आमच्याबद्दल</span><span data-lang="en">About</span></a>
-    <a href="deposits.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-deposit" />
-      </svg><span data-lang="mr">ठेव योजना</span><span data-lang="en">Deposits</span></a>
-    <a href="loans.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-loan" />
-      </svg><span data-lang="mr">कर्ज सेवा</span><span data-lang="en">Loans</span></a>
-    <a href="services.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-mobile" />
-      </svg><span data-lang="mr">डिजिटल सेवा</span><span data-lang="en">Services</span></a>
-    <a href="sip.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-growth" />
-      </svg><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></a>
-    <a href="gallery.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-award" />
-      </svg><span data-lang="mr">दालन</span><span data-lang="en">Gallery</span></a>
-    <a href="contact.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-phone" />
-      </svg><span data-lang="mr">संपर्क</span><span data-lang="en">Contact</span></a>
-    <a href="loans.html" class="mobile-drawer-link drawer-cta"><span data-lang="mr">कर्ज अर्ज करा</span><span
-        data-lang="en">Apply for Loan</span></a>
-  </div>
-  <div class="drawer-overlay" id="drawer-overlay"></div>
-
-  <!-- PAGE HERO -->
-  <div class="page-hero">
-    <div class="container">
-      <div class="breadcrumb">
-        <a href="index.html" data-lang="mr">मुख्यपृष्ठ</a>
-        <a href="index.html" data-lang="en">Home</a> ›
-        <span data-lang="mr">डिजिटल सेवा</span>
-        <span data-lang="en">Services</span>
-      </div>
-      <span class="section-tag" data-lang="mr">बँकिंग सेवा</span>
-      <span class="section-tag" data-lang="en">DIGITAL SERVICES</span>
-      <h1 class="page-hero-title">
-        <span data-lang="mr">आधुनिक सेवा, डिजिटल बँकिंग</span>
-        <span data-lang="en">Modern Services, Digital Banking</span>
-      </h1>
-      <p class="page-hero-desc">
-        <span data-lang="mr">मोबाईल बँकिंग ॲपपासून ते सुरक्षित लॉकर सेवेपर्यंत — आम्ही आपल्या आर्थिक व्यवहारांना अधिक
-          जलद आणि सोपे बनवतो.</span>
-        <span data-lang="en">From our specialized Mobile App to ultra-safe Locker systems — we make all your financial
-          transactions faster and simpler.</span>
-      </p>
-    </div>
-  </div>
-
+  <!-- MAIN -->
   <main>
-    <!-- SERVICES GRID -->
-    <section class="section-py" style="background:var(--bg)">
+    <!-- HERO SECTION -->
+    <section class="services-hero">
       <div class="container">
-        <div class="services-full-grid">
-
-          <!-- Mobile App -->
-          <div class="service-detail-card reveal">
-            <div class="sdc-header">
-              <div class="sdc-icon-wrap sdc-navy">
-                <svg class="icon" style="width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2">
-                  <use href="#i-mobile" />
-                </svg>
-              </div>
-            </div>
-            <div class="sdc-body">
-              <h3 class="sdc-title" data-lang="mr">मोबाईल बँकिंग</h3>
-              <h3 class="sdc-title" data-lang="en">Mobile Banking App</h3>
-              <p class="sdc-desc" data-lang="mr">आमच्या मोबाईल ॲपद्वारे २४/७ बँक खात्याचे नियंत्रण करा. शिल्लक चौकशी,
-                फंड ट्रान्सफर आणि स्टेटमेंट सहज मिळवा.</p>
-              <p class="sdc-desc" data-lang="en">Manage your accounts 24/7 with our secure app. Check balance, transfer
-                funds, and view account statements instantly.</p>
-              <ul class="sdc-list">
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">२४/७ तत्पर निधी हस्तांतरण</span><span
-                    data-lang="en">24/7 Instant Fund Transfer</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">बायोमेट्रिक फिंगरप्रिंट लॉक</span><span
-                    data-lang="en">Biometric Login Security</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">मोफत मोबाईल रिचार्ज व बिल पे</span><span
-                    data-lang="en">Bill Payments & Utility Recharge</span>
-                </li>
-              </ul>
-            </div>
+        <div class="services-hero-grid">
+          <div class="services-hero-text reveal">
+            <h1 class="services-hero-title">
+              <span data-lang="mr">विविध सेवा. एकच वचन.<br>१००% विश्वास आणि सुविधा.</span>
+              <span data-lang="en">MANY SERVICES. ONE PROMISE.<br>100% TRUST & CONVENIENCE.</span>
+            </h1>
+            <p style="font-size: 16px; opacity: 0.85; line-height: 1.6; margin-bottom: 0; max-width: 600px;">
+              <span data-lang="mr">तुमच्या पैशांची सुरक्षा आणि डिजिटल बँकिंगचा अत्याधुनिक अनुभव आम्ही देतो. २४/७ ॲक्सेस, सुलभ मनी ट्रान्सफर आणि अत्यंत सुरक्षित सेवा.</span>
+              <span data-lang="en">Providing top-tier security for your funds and state-of-the-art digital experience. 24/7 account access, seamless cash transfers, and completely certified locker safety.</span>
+            </p>
           </div>
-
-          <!-- Locker Service -->
-          <div class="service-detail-card reveal reveal-d1">
-            <div class="sdc-header">
-              <div class="sdc-icon-wrap sdc-gold">
-                <svg class="icon" style="width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2">
-                  <use href="#i-locker" />
-                </svg>
-              </div>
-            </div>
-            <div class="sdc-body">
-              <h3 class="sdc-title" data-lang="mr">लॉकर सेवा</h3>
-              <h3 class="sdc-title" data-lang="en">Locker Services</h3>
-              <p class="sdc-desc" data-lang="mr">तुमचे दागिने, महत्त्वाचे दस्तऐवज आणि मौल्यवान वस्तू आमच्या अत्याधुनिक
-                सुरक्षा असलेल्या लॉकर्समध्ये सुरक्षित ठेवा.</p>
-              <p class="sdc-desc" data-lang="en">Protect your gold ornaments, property documents, and precious valuables
-                in our state-of-the-art secure vaults.</p>
-              <ul class="sdc-list">
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">विविध आकारांचे लॉकर्स उपलब्ध</span><span
-                    data-lang="en">Multiple Sizes Available</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">CCTV आणि २४ तास सुरक्षा रक्षक</span><span
-                    data-lang="en">24/7 Security & CCTV Monitoring</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">अल्प व किफायतशीर वार्षिक भाडे</span><span
-                    data-lang="en">Affordable Annual Rentals</span>
-                </li>
-              </ul>
-            </div>
+          <div class="services-hero-img-wrap reveal">
+            <img src="assets/images/bank_ambassador_transparent.png" alt="Ambassador">
           </div>
-
-          <!-- NEFT/RTGS -->
-          <div class="service-detail-card reveal reveal-d2">
-            <div class="sdc-header">
-              <div class="sdc-icon-wrap sdc-green">
-                <svg class="icon" style="width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2">
-                  <use href="#i-neft" />
-                </svg>
-              </div>
-            </div>
-            <div class="sdc-body">
-              <h3 class="sdc-title" data-lang="mr">NEFT & RTGS</h3>
-              <h3 class="sdc-title" data-lang="en">NEFT & RTGS</h3>
-              <p class="sdc-desc" data-lang="mr">भारतातील कोणत्याही बँकेत मोठ्या रकमेचे सुरक्षित आणि जलद निधी हस्तांतरण
-                (Fund Transfer) करण्यासाठी योग्य सेवा.</p>
-              <p class="sdc-desc" data-lang="en">Fast and highly secure nationwide money transfer service to any bank
-                across India using NEFT and RTGS systems.</p>
-              <ul class="sdc-list">
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">जलद आणि सुरक्षित व्यवहार</span><span
-                    data-lang="en">Quick and Safe Clearing</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">सर्व राष्ट्रीयीकृत बँकांशी थेट जोडणी</span><span
-                    data-lang="en">Direct Connection with Nationalised Banks</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">किमान व्यवहाराची अट नाही</span><span
-                    data-lang="en">No Minimum Transaction Limits</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- RuPay ATM Card -->
-          <div class="service-detail-card reveal">
-            <div class="sdc-header">
-              <div class="sdc-icon-wrap sdc-teal">
-                <svg class="icon" style="width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2">
-                  <use href="#i-atm" />
-                </svg>
-              </div>
-            </div>
-            <div class="sdc-body">
-              <h3 class="sdc-title" data-lang="mr">ATM / RuPay कार्ड</h3>
-              <h3 class="sdc-title" data-lang="en">ATM & RuPay Cards</h3>
-              <p class="sdc-desc" data-lang="mr">आमचे RuPay ATM डेबिट कार्ड मिळवा आणि भारतातील कोणत्याही बँकेच्या एटीएम
-                मशीनमधून कधीही पैसे काढा.</p>
-              <p class="sdc-desc" data-lang="en">Get our co-branded RuPay ATM Debit Card and withdraw cash from any bank
-                ATM machine anywhere in India, anytime.</p>
-              <ul class="sdc-list">
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">सर्व एटीएम मशिनवर चालणारे</span><span
-                    data-lang="en">Accepted Nationwide</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">सुरक्षित ऑनलाइन खरेदी (E-com)</span><span
-                    data-lang="en">Secure Online Shopping Enabled</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">अपघात विमा संरक्षण उपलब्ध</span><span
-                    data-lang="en">Accidental Insurance Benefits</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- UPI Payments -->
-          <div class="service-detail-card reveal reveal-d1">
-            <div class="sdc-header">
-              <div class="sdc-icon-wrap sdc-purple">
-                <svg class="icon" style="width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2">
-                  <use href="#i-upi" />
-                </svg>
-              </div>
-            </div>
-            <div class="sdc-body">
-              <h3 class="sdc-title" data-lang="mr">UPI Payments (QR)</h3>
-              <h3 class="sdc-title" data-lang="en">UPI QR Payments</h3>
-              <p class="sdc-desc" data-lang="mr">भीम UPI द्वारे थेट तुमच्या बँक खात्यातून कुठल्याही मोबाईल नंबरवर किंवा
-                QR कोडवर झटपट पेमेंट करा.</p>
-              <p class="sdc-desc" data-lang="en">Make instant payments directly from your bank account to any mobile
-                number or merchant QR code using BHIM UPI.</p>
-              <ul class="sdc-list">
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">सर्व प्रसिद्ध ॲप्स (GPay, PhonePe)
-                    चालणारे</span><span data-lang="en">Compatible with Google Pay, PhonePe, etc.</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">मोफत मर्चंट QR स्टँड सुविधा</span><span
-                    data-lang="en">Free Merchant QR Stands</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">१ सेकंदात यशस्वी व्यवहार</span><span
-                    data-lang="en">Real-time Settled Payments</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- SMS Banking & Passbook -->
-          <div class="service-detail-card reveal reveal-d2">
-            <div class="sdc-header">
-              <div class="sdc-icon-wrap sdc-rose">
-                <svg class="icon" style="width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:2">
-                  <use href="#i-support" />
-                </svg>
-              </div>
-            </div>
-            <div class="sdc-body">
-              <h3 class="sdc-title" data-lang="mr">SMS आणि पासबुक</h3>
-              <h3 class="sdc-title" data-lang="en">SMS & Passbook Services</h3>
-              <p class="sdc-desc" data-lang="mr">प्रत्येक व्यवहाराचे त्वरित मोफत SMS अलर्ट्स आणि तुमच्या जवळील शाखेत
-                स्वयंचलित पासबुक प्रिंटिंगची सोय.</p>
-              <p class="sdc-desc" data-lang="en">Get instant free SMS notifications for every transaction and enjoy
-                barcoded automatic passbook printing at our branches.</p>
-              <ul class="sdc-list">
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">सुरक्षित व्यवहार अलर्ट्स</span><span
-                    data-lang="en">Transactional Fraud Alert System</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">बारकोड आधारित पासबुक प्रिंटर</span><span
-                    data-lang="en">Barcode-based Smart Printers</span>
-                </li>
-                <li class="sdc-list-item">
-                  <div class="sdc-list-dot"></div><span data-lang="mr">मासिक ईमेल ई-स्टेटमेंट (मोफत)</span><span
-                    data-lang="en">Free Monthly E-Statement Email</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- MOBILE APP PROMO SECTION -->
-    <section class="container" style="margin-bottom:80px;">
-      <div class="app-section reveal">
-        <div class="container app-grid">
-          <div class="app-content">
-            <h2 data-lang="mr">एन. डी. चौगुले मोबाईल बँकिंग ॲप</h2>
-            <h2 class="mr-heading" data-lang="en">N.D. Chougale Mobile Banking</h2>
-            <p data-lang="mr">तुमच्या खिशात बँक! आमचे अधिकृत आणि सुरक्षित मोबाईल ॲप आजच तुमच्या Android किंवा iOS
-              डिव्हाइसवर डाउनलोड करा आणि कधीही, कोठूनही बँकिंगचा आनंद घ्या. पैसे ट्रान्सफर करणे किंवा मुदत ठेवींचे
-              मॅनेजमेंट करणे आता अत्यंत सोपे झाले आहे.</p>
-            <p data-lang="en">Keep your bank in your pocket! Download our official and highly secure mobile banking
-              application for Android or iOS today. Make transfers, check statement records, and manage fixed deposits
-              on-the-go.</p>
-            <div class="app-features">
-              <div class="app-feat-item">
-                <svg class="icon" style="width:24px;height:24px;stroke:#6DB33F;fill:none;stroke-width:2">
-                  <use href="#i-check" />
-                </svg>
-                <div class="app-feat-text" data-lang="mr">जलद IMPS फंड ट्रान्सफर</div>
-                <div class="app-feat-text" data-lang="en">Quick IMPS Fund Transfer</div>
-              </div>
-              <div class="app-feat-item">
-                <svg class="icon" style="width:24px;height:24px;stroke:#6DB33F;fill:none;stroke-width:2">
-                  <use href="#i-check" />
-                </svg>
-                <div class="app-feat-text" data-lang="mr">ऑनलाइन मुदत ठेव (FD) निर्मिती</div>
-                <div class="app-feat-text" data-lang="en">Instant Online FDs</div>
-              </div>
-              <div class="app-feat-item">
-                <svg class="icon" style="width:24px;height:24px;stroke:#6DB33F;fill:none;stroke-width:2">
-                  <use href="#i-check" />
-                </svg>
-                <div class="app-feat-text" data-lang="mr">लोन हप्ते EMI ट्रॅकर</div>
-                <div class="app-feat-text" data-lang="en">Loan Repayment EMI Tracker</div>
-              </div>
-              <div class="app-feat-item">
-                <svg class="icon" style="width:24px;height:24px;stroke:#6DB33F;fill:none;stroke-width:2">
-                  <use href="#i-check" />
-                </svg>
-                <div class="app-feat-text" data-lang="mr">मिनी व सविस्तर खात्याचा उतारा</div>
-                <div class="app-feat-text" data-lang="en">Mini & Detailed Statements</div>
+    <!-- MOBILE BANKING SECTION -->
+    <section class="service-block-py">
+      <div class="container">
+        <div class="service-grid-2col reveal">
+          <div class="service-content-col">
+            <h2>
+              <span data-lang="mr">मोबाईल बँकिंग</span>
+              <span data-lang="en">MOBILE BANKING</span>
+            </h2>
+            <p>
+              <span data-lang="mr">आता बँकिंग तुमच्या बोटांवर आहे. एन. डी. चौगुले पतसंस्थेचे अधिकृत मोबाईल ॲप तुमच्यासाठी घेऊन आले आहे सुरक्षित आणि जलद व्यवहार. कोणत्याही वेळी, कुठूनही तुमच्या खात्यातील शिल्लक तपासा, मुदत ठेवींचे व्यवस्थापन करा किंवा फंड ट्रान्सफर करा.</span>
+              <span data-lang="en">The world of banking and transactions is now at everyone's fingertips. And so, we at Samata, have also brought the same ease and convenience for our customers. Presenting Samata Mobile Banking App - from deposits to fund transfers like RTGS, IMPS and NEFT to downloading statements, everything is now just a click away, on your phone.</span>
+            </p>
+            <p style="font-weight: 700; color: var(--secondary);">
+              <span data-lang="mr">समता मोबाईल बँकिंग ॲप आता गुगल प्ले स्टोअरवर उपलब्ध आहे.</span>
+              <span data-lang="en">Samata Mobile Banking App is now available on Playstore.</span>
+            </p>
+          </div>
+          
+          <div class="phone-mockup-stack">
+            <div class="phone-mockup-item phone-back-left">
+              <div class="phone-screen-inner" style="background: linear-gradient(135deg, #10b981 0%, #047857 100%);">
+                <img src="assets/images/logo1.jpeg" alt="Logo" class="logo-small">
+                <div style="font-size: 11px; font-weight: bold; text-align: center; color: white;">UPI Scan QR</div>
               </div>
             </div>
-            <div class="app-dl-btns">
-              <a href="#" class="app-dl-btn"
-                onclick="alert('ॲप लवकरच प्ले स्टोअरवर उपलब्ध होईल! / App will be on Play Store soon!'); return false;">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                  <path
-                    d="M5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3M17.5,18H15.5V11H17.5V18M14.5,18H12.5V8H14.5V18M11.5,18H9.5V13H11.5V18M8.5,18H6.5V15H8.5V18Z" />
-                </svg>
-                <span>Google Play Store</span>
-              </a>
-              <a href="#" class="app-dl-btn"
-                onclick="alert('ॲप लवकरच ॲप स्टोअरवर उपलब्ध होईल! / App will be on App Store soon!'); return false;">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
-                  <path
-                    d="M18.71,19.5C17.88,20.74 17,21.95 15.66,22C14.32,22.05 13.89,21.24 12.37,21.24C10.84,21.24 10.37,21.97 9.1,22C7.79,22.05 6.8,20.68 5.96,19.5C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.1,16.67C20.08,16.74 19.67,18.11 18.71,19.5M15.97,4.17C16.63,3.37 17.07,2.28 16.95,1C16,1.04 14.9,1.6 14.24,2.38C13.68,3.04 13.19,4.14 13.34,5.39C14.39,5.47 15.4,4.88 15.97,4.17Z" />
-                </svg>
-                <span>Apple App Store</span>
-              </a>
+            <div class="phone-mockup-item phone-center">
+              <div class="phone-screen-inner">
+                <img src="assets/images/logo1.jpeg" alt="Logo" class="logo-small" style="height: 30px;">
+                <div style="text-align: center; padding: 20px 0;">
+                  <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--primary); margin: 0 auto 12px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: bold;">समता</div>
+                  <div style="font-size: 14px; font-weight: 800;">मोबाईल बँकिंग</div>
+                </div>
+                <div style="font-size: 10px; opacity: 0.7; text-align: center;">१००% सुरक्षित व्यवहार</div>
+              </div>
+            </div>
+            <div class="phone-mockup-item phone-back-right">
+              <div class="phone-screen-inner" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);">
+                <img src="assets/images/logo1.jpeg" alt="Logo" class="logo-small">
+                <div style="font-size: 11px; font-weight: bold; text-align: center; color: white;">Transfer Money</div>
+              </div>
             </div>
           </div>
-          <div class="reveal reveal-d2" style="display:flex; justify-content:center;">
-            <!-- Smartphone graphic inside canvas or custom styled CSS -->
-            <div
-              style="width:220px; height:420px; border-radius:36px; border:8px solid #334155; background:#1e293b; position:relative; box-shadow:0 24px 48px rgba(0,0,0,0.4)">
-              <div
-                style="width:100px; height:20px; background:#334155; border-bottom-left-radius:12px; border-bottom-right-radius:12px; position:absolute; top:0; left:50%; transform:translateX(-50%); z-index:2">
-              </div>
-              <div
-                style="position:absolute; top:40px; left:20px; right:20px; bottom:20px; background:linear-gradient(135deg,#B85A00 0%,#FF7D00 100%); border-radius:20px; padding:20px; display:flex; flex-direction:column; justify-content:space-between; color:white; font-family:var(--font-head)">
-                <div>
-                  <div style="font-size:12px; opacity:0.6; text-transform:uppercase" data-lang="mr">आपले खाते</div>
-                  <div style="font-size:12px; opacity:0.6; text-transform:uppercase" data-lang="en">Your Account</div>
-                  <div style="font-size:22px; font-weight:800; margin-top:4px">₹45,280.50</div>
-                </div>
-                <div style="background:rgba(255,255,255,0.1); border-radius:10px; padding:12px; font-size:11px;">
-                  <div style="font-weight:700; margin-bottom:4px;" data-lang="mr">त्वरित व्यवहार</div>
-                  <div style="font-weight:700; margin-bottom:4px;" data-lang="en">Quick Send</div>
-                  <div style="display:flex; gap:8px;">
-                    <div
-                      style="width:24px; height:24px; border-radius:50%; background:var(--secondary); display:flex; align-items:center; justify-content:center; font-weight:900">
-                      A</div>
-                    <div
-                      style="width:24px; height:24px; border-radius:50%; background:#F2B134; display:flex; align-items:center; justify-content:center; font-weight:900">
-                      B</div>
-                    <div
-                      style="width:24px; height:24px; border-radius:50%; background:#f43f5e; display:flex; align-items:center; justify-content:center; font-weight:900">
-                      C</div>
-                  </div>
-                </div>
-                <div style="font-size:12px; font-weight:bold; color:var(--secondary); text-align:center" data-lang="mr">
-                  एन. डी. चौगुले डिजिटल</div>
-                <div style="font-size:12px; font-weight:bold; color:var(--secondary); text-align:center" data-lang="en">
-                  N.D. Chougale Secure</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOBILE BANKING STEPS -->
+    <section class="mobile-steps-section">
+      <div class="container reveal">
+        <div class="steps-header">
+          <h3>
+            <span data-lang="mr">मोबाईल बँकिंग करणे आता अधिक सोपे!</span>
+            <span data-lang="en">MOBILE BANKING MADE EASIER!</span>
+          </h3>
+          <p>
+            <span data-lang="mr">समता मोबाईल बँकिंग ॲप वापरण्यासाठी ४ सोप्या पायऱ्या</span>
+            <span data-lang="en">4 Simple steps to use Samata Mobile Banking App</span>
+          </p>
+        </div>
+
+        <div class="mobile-steps-grid">
+          <div class="step-card">
+            <div class="step-phone-outline">
+              <div class="step-phone-screen">
+                <img src="assets/images/logo1.jpeg" alt="App Store">
               </div>
             </div>
+            <div class="step-number">Step 1</div>
+            <div class="step-desc">
+              <span data-lang="mr">प्ले स्टोअरवरून अधिकृत ॲप डाऊनलोड करा</span>
+              <span data-lang="en">Download the app from Playstore</span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-phone-outline">
+              <div class="step-phone-screen">
+                <div style="font-size: 9px; font-weight: 800; color: var(--secondary); padding: 4px; text-align: center;">New User? Register</div>
+              </div>
+            </div>
+            <div class="step-number">Step 2</div>
+            <div class="step-desc">
+              <span data-lang="mr">'नवीन वापरकर्ता नोंदणी' (New User) लिंकवर क्लिक करा</span>
+              <span data-lang="en">Click on the New User registration link</span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-phone-outline">
+              <div class="step-phone-screen">
+                <div style="font-size: 9px; font-weight: 800; color: var(--primary); padding: 4px; text-align: center;">Select Registration Mode</div>
+              </div>
+            </div>
+            <div class="step-number">Step 3</div>
+            <div class="step-desc">
+              <span data-lang="mr">मोबाईल ॲपसाठी ऑनलाइन नोंदणी निवडा</span>
+              <span data-lang="en">Select Online Registration for Mobile Banking App</span>
+            </div>
+          </div>
+
+          <div class="step-card">
+            <div class="step-phone-outline">
+              <div class="step-phone-screen">
+                <div style="font-size: 9px; font-weight: 800; color: #10b981; padding: 4px; text-align: center;">ID & PIN Generated</div>
+              </div>
+            </div>
+            <div class="step-number">Step 4</div>
+            <div class="step-desc">
+              <span data-lang="mr">वापरकर्ता आयडी आणि पासवर्ड तयार करण्यासाठी तुमचे तपशील भरा</span>
+              <span data-lang="en">Fill in your details to generate User ID and password</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MONEY TRANSFER SECTION -->
+    <section class="service-block-py" style="background:#ffffff;">
+      <div class="container">
+        <div class="money-transfer-card reveal">
+          <div class="money-transfer-grid">
+            <div class="transfer-img-wrap">
+              <img src="assets/images/bank_ambassador.png" alt="Money Transfer">
+            </div>
+
+            <div>
+              <h2 style="font-size: 36px; font-weight: 900; color: #ffffff; margin-bottom: 20px;">
+                <span data-lang="mr">मनी ट्रान्सफर (Money Transfer)</span>
+                <span data-lang="en">MONEY TRANSFER</span>
+              </h2>
+              <p style="color: rgba(255,255,255,0.85); line-height: 1.7; font-size: 15px; margin-bottom: 24px;">
+                <span data-lang="mr">डिजिटल व्यवहारांच्या युगात पैशांचे सुरक्षित हस्तांतरण महत्त्वाचे आहे. समता नागरी पतसंस्था तुम्हाला अतिशय सुलभ आणि सुरक्षित मनी ट्रान्सफर गेटवे पुरवते. ग्राहकांच्या गरजा लक्षात घेऊन RTGS, IMPS आणि NEFT द्वारे निधी त्वरित पाठवण्याची सुविधा उपलब्ध आहे.</span>
+                <span data-lang="en">As online transactions continue to rise exponentially, people need easier and trusted ways to transfer money online. Digital frauds make everyone a bit more skeptical about using online transfer gateways. In this scenario, Samata provides the trusted solution. It brings to its customers a simple interface that further simplifies online money transfer for them.</span>
+              </p>
+
+              <div class="transfer-methods-grid">
+                <div class="transfer-method-card" onclick="showTransferDetail('neft')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                  <span>NEFT</span>
+                </div>
+                <div class="transfer-method-card" onclick="showTransferDetail('rtgs')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" />
+                    <path d="M12 2v9M8 5l4-3 4 3" />
+                  </svg>
+                  <span>RTGS</span>
+                </div>
+                <div class="transfer-method-card" onclick="showTransferDetail('imps')">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                  <span>IMPS</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Money Transfer Detail Box -->
+        <div class="details-gray-box reveal" id="transfer-detail-box">
+          <div class="details-box-inner">
+            <div class="details-box-left">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 11h18M12 2v18M8 5l4-3 4 3" />
+              </svg>
+              <h4 id="detail-title-main">NEFT</h4>
+            </div>
+
+            <div class="details-box-right">
+              <h3 id="detail-title-desc">
+                <span data-lang="mr">नॅशनल इलेक्ट्रॉनिक फंड ट्रान्सफर (NEFT)</span>
+                <span data-lang="en">National Electronic Fund Transfer (NEFT)</span>
+              </h3>
+              <p style="font-weight: 700; color: var(--secondary); margin-bottom: 15px;" id="detail-key-features">
+                <span data-lang="mr">NEFT सुविधेची प्रमुख वैशिष्ट्ये:</span>
+                <span data-lang="en">Key features of NEFT facility</span>
+              </p>
+              <ul class="savings-checklist-ul" id="detail-list-points">
+                <li>
+                  <span data-lang="mr">निधी हस्तांतरणाची अत्यंत किफायतशीर पद्धत</span>
+                  <span data-lang="en">An economical method of money transfer</span>
+                </li>
+                <li>
+                  <span data-lang="mr">अतिशय सुरक्षित आणि खात्रीशीर प्रणाली</span>
+                  <span data-lang="en">Built on a secure platform</span>
+                </li>
+                <li>
+                  <span data-lang="mr">बँक खात्यामध्ये त्वरित पैसे जमा होतात</span>
+                  <span data-lang="en">Money can be sent/received to customer's own account as well</span>
+                </li>
+                <li>
+                  <span data-lang="mr">सुविधाजनक आणि जलद व्यवहार वेळ</span>
+                  <span data-lang="en">Faster transactions with more convenience</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCKER FACILITY SECTION -->
+    <section class="service-block-py" style="background:#f8fafc;">
+      <div class="container reveal">
+        <div class="service-grid-2col">
+          <div class="service-content-col">
+            <h2>
+              <span data-lang="mr">लॉकर सुविधा</span>
+              <span data-lang="en">LOCKER FACILITY</span>
+            </h2>
+            <p>
+              <span data-lang="mr">तुमच्या दागिन्यांची आणि महत्त्वाच्या मालमत्तेच्या कागदपत्रांची काळजी आता मिटली. आमच्या बहुतांश शाखांमध्ये आधुनिक डबल-की बँक सुरक्षित लॉकर सुविधा उपलब्ध आहे. आधुनिक सुरक्षा आणि अग्नीरोधक लॉकर सिस्टिममुळे तुमच्या वस्तू सुरक्षित राहतील.</span>
+              <span data-lang="en">People own lots of assets, including gold and jewellery, which comes from their hard-earned money. But keeping them at home can both be a security risk due to robberies or a safety issue due to natural calamities. In such a scenario, the wiser thing to do is to keep the valuables in the safe lockers at Samata.</span>
+            </p>
+
+            <h3 class="savings-checklist-title">
+              <span data-lang="mr">लॉकर सुविधेची वैशिष्ट्ये:</span>
+              <span data-lang="en">Features of locker facility</span>
+            </h3>
+            <ul class="savings-checklist-ul">
+              <li>
+                <span data-lang="mr">अत्याधुनिक कुलूप आणि स्ट्राँगरूम लॉकर</span>
+                <span data-lang="en">Fully air-conditioned state-of-the-art lockers</span>
+              </li>
+              <li>
+                <span data-lang="mr">सीसीटीव्ही आणि सुरक्षेचे कडक पहारे</span>
+                <span data-lang="en">Fully equipped with latest burglar alarm systems</span>
+              </li>
+              <li>
+                <span data-lang="mr">विविध आकारांचे लॉकर पर्याय</span>
+                <span data-lang="en">Available in different sizes as per your requirement</span>
+              </li>
+              <li>
+                <span data-lang="mr">नाममात्र वार्षिक भाडे दर</span>
+                <span data-lang="en">For additional safety, the locker holder assigns a passcode</span>
+              </li>
+              <li>
+                <span data-lang="mr">वारसदार नोंदणीची सुलभ सोय</span>
+                <span data-lang="en">The lockers can be nominated to your family or friends</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <img src="assets/images/gold_jewelry.png" alt="Locker Vault" style="width:100%; border-radius:24px; box-shadow: var(--shadow-premium);">
+          </div>
+        </div>
+
+        <h3 class="savings-checklist-title" style="margin-top: 50px;">
+          <span data-lang="mr">लॉकर सुविधा उपलब्ध असलेल्या शाखा:</span>
+          <span data-lang="en">Branches with Locker Facility:</span>
+        </h3>
+        <div class="locker-table-wrap">
+          <table class="locker-table">
+            <thead>
+              <tr>
+                <th data-lang="mr">शाखा</th>
+                <th data-lang="en">Location</th>
+                <th data-lang="mr">पत्ता</th>
+                <th data-lang="en">Address</th>
+                <th data-lang="mr">संपर्क क्रमांक</th>
+                <th data-lang="en">Contact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span data-lang="mr">शिवाजी पेठ (मुख्य शाखा)</span><span data-lang="en">Shivaji Peth (Main)</span></td>
+                <td><span data-lang="mr">शिवाजी पेठ, कोल्हापूर</span><span data-lang="en">Shivaji Peth, Kolhapur</span></td>
+                <td>+91 0231-2654321</td>
+              </tr>
+              <tr>
+                <td><span data-lang="mr">राजारामपुरी शाखा</span><span data-lang="en">Rajarampuri Branch</span></td>
+                <td><span data-lang="mr">राजारामपुरी मुख्य रस्ता, कोल्हापूर</span><span data-lang="en">Rajarampuri Main Rd, Kolhapur</span></td>
+                <td>+91 0231-2654322</td>
+              </tr>
+              <tr>
+                <td><span data-lang="mr">शाहूपुरी शाखा</span><span data-lang="en">Shahupuri Branch</span></td>
+                <td><span data-lang="mr">शाहूपुरी २ री गल्ली, कोल्हापूर</span><span data-lang="en">Shahupuri 2nd Lane, Kolhapur</span></td>
+                <td>+91 0231-2654323</td>
+              </tr>
+              <tr>
+                <td><span data-lang="mr">गांधीनगर शाखा</span><span data-lang="en">Gandhinagar Branch</span></td>
+                <td><span data-lang="mr">गांधीनगर बाजारपेठ, कोल्हापूर</span><span data-lang="en">Gandhinagar Market, Kolhapur</span></td>
+                <td>+91 0231-2654324</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- MICRO ATM SECTION -->
+    <section class="service-block-py">
+      <div class="container reveal">
+        <div class="service-grid-2col">
+          <div class="service-content-col">
+            <h2>
+              <span data-lang="mr">मायक्रो एटीएम (Micro ATM)</span>
+              <span data-lang="en">MICRO ATM</span>
+            </h2>
+            <p>
+              <span data-lang="mr">दुर्गम किंवा ग्रामीण भागातील खातेदारांना तातडीने रोख रक्कम काढण्यासाठी बँक काउंटरवर जाण्याची गरज नाही. आमचे मायक्रो एटीएम बायोमेट्रिक सुरक्षा आणि डेबिट कार्ड आधारित प्रणालीद्वारे त्वरित पैसे काढण्याची सुलभता प्रदान करते.</span>
+              <span data-lang="en">While digital transactions are on the rise, the need for cash is never going to go away. And at that point, having easy access to a cash withdrawal system becomes crucial. To add convenience to the everyday life of people, Samata has introduced Micro ATM facility for the first time. It will allow people to withdraw money from any of its branches using a Debit Card.</span>
+            </p>
+
+            <h3 class="savings-checklist-title">
+              <span data-lang="mr">मायक्रो एटीएम वैशिष्ट्ये:</span>
+              <span data-lang="en">Features of Micro ATM</span>
+            </h3>
+            <ul class="savings-checklist-ul">
+              <li>
+                <span data-lang="mr">डेबिट कार्डद्वारे कुठेही पैसे काढण्याची सोय</span>
+                <span data-lang="en">Makes money withdrawal easier in remote locations</span>
+              </li>
+              <li>
+                <span data-lang="mr">ग्रामीण बँकिंग विस्ताराला डिजिटल चालना</span>
+                <span data-lang="en">Supports digitization of rural banking</span>
+              </li>
+              <li>
+                <span data-lang="mr">बायोमेट्रिक फिंगरप्रिंट सुरक्षितता पर्याय</span>
+                <span data-lang="en">It is biometric enabled for safety and security</span>
+              </li>
+              <li>
+                <span data-lang="mr">सुलभ हाताळणी आणि विविध भाषांचे पर्याय</span>
+                <span data-lang="en">Supports multiple languages for customer's convenience</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <img src="assets/images/term_deposit_returns.png" alt="Micro ATM Terminal" style="width:100%; border-radius:24px; box-shadow: var(--shadow-premium);">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAPERLESS BANKING SECTION -->
+    <section class="service-block-py" style="background:#f8fafc;">
+      <div class="container reveal">
+        <div class="service-grid-2col">
+          <div class="service-content-col">
+            <h2>
+              <span data-lang="mr">कागदविरहित बँकिंग</span>
+              <span data-lang="en">PAPERLESS BANKING</span>
+            </h2>
+            <p>
+              <span data-lang="mr">एक जबाबदार वित्तीय संस्था म्हणून, एन. डी. चौगुले पतसंस्था पर्यावरणाचे रक्षण करण्यासाठी डिजिटल प्रणालीला प्रोत्साहन देते. आमच्या डिजिटल ई-स्टेटमेंट, मोबाईल व्यवहारांमुळे छापील कागदाचा वापर ८०% पर्यंत कमी झाला आहे.</span>
+              <span data-lang="en">As an environmentally responsible organisation, Samata believes in providing sustainable solutions. As a part of this philosophy, we have migrated extensively to paperless banking through multiple steps, across our operations.</span>
+            </p>
+
+            <h3 class="savings-checklist-title">
+              <span data-lang="mr">कागदविरहित बँकिंगची वैशिष्ट्ये:</span>
+              <span data-lang="en">Features of Paperless Banking</span>
+            </h3>
+            <ul class="savings-checklist-ul">
+              <li>
+                <span data-lang="mr">ई-स्टेटमेंट आणि इलेक्ट्रॉनिक निधी हस्तांतरण</span>
+                <span data-lang="en">Electronic transactions (NEFT/RTGS/IMPS)</span>
+              </li>
+              <li>
+                <span data-lang="mr">डिजिटल पद्धतीने डाऊनलोड करण्यायोग्य खात्याचा उतारा</span>
+                <span data-lang="en">Providing digitally downloadable account statements</span>
+              </li>
+              <li>
+                <span data-lang="mr">ऑनलाइन ठेवी आणि डिजिटल पेमेंट सुविधा</span>
+                <span data-lang="en">Online payments and deposits</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <img src="assets/images/savings_grow.png" alt="Paperless Banking Scan QR" style="width:100%; border-radius:24px; box-shadow: var(--shadow-premium);">
           </div>
         </div>
       </div>
     </section>
   </main>
+
+  <!-- JS Detail Box Logic -->
+  <script>
+    function showTransferDetail(method) {
+      const mainTitle = document.getElementById("detail-title-main");
+      const descTitle = document.getElementById("detail-title-desc");
+      const listPoints = document.getElementById("detail-list-points");
+
+      if (method === 'neft') {
+        mainTitle.innerText = "NEFT";
+        descTitle.innerHTML = `
+          <span data-lang="mr">नॅशनल इलेक्ट्रॉनिक फंड ट्रान्सफर (NEFT)</span>
+          <span data-lang="en">National Electronic Fund Transfer (NEFT)</span>
+        `;
+        listPoints.innerHTML = `
+          <li>
+            <span data-lang="mr">निधी हस्तांतरणाची अत्यंत किफायतशेखर पद्धत</span>
+            <span data-lang="en">An economical method of money transfer</span>
+          </li>
+          <li>
+            <span data-lang="mr">अतिशय सुरक्षित आणि खात्रीशीर प्रणाली</span>
+            <span data-lang="en">Built on a secure platform</span>
+          </li>
+          <li>
+            <span data-lang="mr">बँक खात्यामध्ये त्वरित पैसे जमा होतात</span>
+            <span data-lang="en">Money can be sent/received to customer's own account as well</span>
+          </li>
+          <li>
+            <span data-lang="mr">सुविधाजनक आणि जलद व्यवहार वेळ</span>
+            <span data-lang="en">Faster transactions with more convenience</span>
+          </li>
+        `;
+      } else if (method === 'rtgs') {
+        mainTitle.innerText = "RTGS";
+        descTitle.innerHTML = `
+          <span data-lang="mr">रिअल टाईम ग्रॉस सेटलमेंट (RTGS)</span>
+          <span data-lang="en">Real Time Gross Settlement (RTGS)</span>
+        `;
+        listPoints.innerHTML = `
+          <li>
+            <span data-lang="mr">मोठ्या रकमेच्या हस्तांतरणासाठी तात्काळ आणि सुरक्षित सोय</span>
+            <span data-lang="en">Instant transfer for large value transactions</span>
+          </li>
+          <li>
+            <span data-lang="mr">प्रत्येक व्यवहार रिअल-टाईममध्ये सेटल होतो</span>
+            <span data-lang="en">Settlements processed in real-time frame</span>
+          </li>
+          <li>
+            <span data-lang="mr">किमान ₹२ लाख आणि त्यापुढील रकमेसाठी लागू</span>
+            <span data-lang="en">Minimum transaction limit of ₹2 Lakhs and above</span>
+          </li>
+          <li>
+            <span data-lang="mr">आरबीआय (RBI) द्वारे थेट सुरक्षित नियंत्रण</span>
+            <span data-lang="en">Directly governed and secured by RBI policies</span>
+          </li>
+        `;
+      } else if (method === 'imps') {
+        mainTitle.innerText = "IMPS";
+        descTitle.innerHTML = `
+          <span data-lang="mr">इमिजिएट पेमेंट सर्व्हिस (IMPS)</span>
+          <span data-lang="en">Immediate Payment Service (IMPS)</span>
+        `;
+        listPoints.innerHTML = `
+          <li>
+            <span data-lang="mr">२४/७/३६५ झटपट हस्तांतरण सोय (सुट्ट्यांच्या दिवशीही सुरू)</span>
+            <span data-lang="en">24/7/365 instant transfer service including holidays</span>
+          </li>
+          <li>
+            <span data-lang="mr">मोबाईल बँकिंगद्वारे एका सेकंदात पैसे ट्रान्सफर</span>
+            <span data-lang="en">Money transfer via mobile banking in under a second</span>
+          </li>
+          <li>
+            <span data-lang="mr">शून्य प्रतीक्षा कालावधी, तात्काळ जमा संदेश (SMS)</span>
+            <span data-lang="en">Zero wait time, immediate credit confirmation via SMS</span>
+          </li>
+          <li>
+            <span data-lang="mr">कमी मूल्याच्या व्यवहारांसाठी अत्यंत लोकप्रिय</span>
+            <span data-lang="en">Highly popular and economical for retail transactions</span>
+          </li>
+        `;
+      }
+
+      // Re-trigger language toggling for newly updated HTML elements
+      if (window.applyLanguage) {
+        window.applyLanguage(document.documentElement.getAttribute('lang') || 'mr');
+      }
+    }
+  </script>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -976,7 +849,7 @@
             <div class="footer-col-title" data-lang="en">Contact</div>
             <div class="footer-contact-item"><svg class="icon">
                 <use href="#i-branch" />
-              </svg><span data-lang="mr">शिवाजी पेठ, कोल्हापूर — ४१६ ०१२</span><span data-lang="en">Shivaji Peth,
+              </svg><span data-lang="mr">शिवाजी पेठ, कोल्हापूर — ४१क्षा ०१२</span><span data-lang="en">Shivaji Peth,
                 Kolhapur — 416 012</span></div>
             <div class="footer-contact-item"><svg class="icon">
                 <use href="#i-phone" />
@@ -994,32 +867,14 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="footer-bottom">
-        <div>&copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="#">Grievance</a>
-        </div>
+    <div class="footer-bottom-strip">
+      <div class="container">
+        &copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a
+          href="#">Terms &amp; Conditions</a>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING CTAs -->
-  <div class="float-actions">
-    <a href="https://wa.me/919876543210" class="float-btn float-wa" target="_blank" aria-label="WhatsApp"><svg
-        class="icon" style="width:22px;height:22px;stroke:white;fill:none;stroke-width:2">
-        <use href="#i-chat" />
-      </svg></a>
-    <a href="tel:+910231265432" class="float-btn float-call" aria-label="Call"><svg class="icon"
-        style="width:22px;height:22px;stroke:white;fill:none;stroke-width:2">
-        <use href="#i-phone" />
-      </svg></a>
-  </div>
-
-
-  <!-- MOBILE BOTTOM DOCK -->
   <nav class="mobile-dock">
     <a href="index.html" class="dock-item"><svg class="icon">
         <use href="#i-home" />
@@ -1037,15 +892,9 @@
         <use href="#i-chat" />
       </svg><span>WhatsApp</span></a>
   </nav>
-
-  <!-- SEARCH OVERLAY -->
-  <div class="search-overlay">
-    <span class="search-overlay-close">&times;</span>
-    <div class="search-overlay-box">
-      <input type="text" class="search-overlay-input" placeholder="Search… e.g. Gold Loan, FD Rates, Branches">
-    </div>
+  <div class="search-overlay"><span class="search-overlay-close">&times;</span>
+    <div class="search-overlay-box"><input type="text" class="search-overlay-input" placeholder="Search…"></div>
   </div>
-
   <script src="assets/js/main.js"></script>
 </body>
 
