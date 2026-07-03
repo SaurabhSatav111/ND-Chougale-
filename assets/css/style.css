@@ -6639,6 +6639,60 @@ body.dark .faq-accord-header {
   min-height: 80px;
 }
 
+/* Savings Split Grid & Checklist styling for Eligibility box in Loans/Savings pages */
+.savings-split-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+.savings-checklist-col {
+  display: flex;
+  flex-direction: column;
+}
+.savings-checklist-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-top: 30px;
+  margin-bottom: 16px;
+  font-family: var(--font-title);
+  text-transform: capitalize;
+}
+body.dark .savings-checklist-title {
+  color: #ffffff;
+}
+.savings-checklist-title:first-of-type {
+  margin-top: 0;
+}
+.savings-checklist-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.savings-checklist-ul li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-600);
+}
+body.dark .savings-checklist-ul li {
+  color: rgba(255, 255, 255, 0.75);
+}
+.savings-checklist-ul li::before {
+  content: "\2192"; /* Right arrow → */
+  position: absolute;
+  left: 0;
+  top: -1px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 18px;
+}
+
 @media(max-width: 991px) {
   .personal-hero-grid,
   .vehicle-hero-grid,
@@ -6647,7 +6701,8 @@ body.dark .faq-accord-header {
   .property-hero-grid,
   .fd-hero-grid,
   .calc-grid,
-  .loan-highlight-grid {
+  .loan-highlight-grid,
+  .savings-split-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
