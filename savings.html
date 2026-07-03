@@ -4,21 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>डाऊनलोड | Downloads Center — N.D. Chougale Nagari Path Sanstha</title>
+  <title>ठेव योजना | Deposits — N.D. Chougale Nagari Path Sanstha</title>
   <meta name="description"
-    content="Download cooperative bank forms and audit reports - Account opening forms, loan application forms, locker agreements, KYC updates and annual financial statements.">
+    content="High-interest deposit schemes — Savings, Fixed Deposit, Recurring Deposit. Senior citizen benefits. Open your account today.">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     .page-hero {
-      background: linear-gradient(180deg, #F4F6FB 0%, #EBEDF7 100%);
+      background: var(--bg);
       padding: 60px 0 80px;
       margin-top: var(--header-total-h);
       border-bottom: 1px solid var(--text-200);
-    }
-
-    body.dark .page-hero {
-      background: linear-gradient(180deg, #1A0F00 0%, #261600 100%);
-      border-bottom-color: var(--text-200);
     }
 
     .page-hero-title {
@@ -51,160 +46,67 @@
       color: var(--primary);
     }
 
-    .search-filter-section {
-      margin-bottom: 48px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .dl-search-box {
-      width: 100%;
-      max-width: 500px;
-      position: relative;
-    }
-
-    .dl-search-input {
-      width: 100%;
-      padding: 16px 24px;
-      padding-left: 52px;
-      border: 1px solid var(--text-200);
-      background: var(--surface);
-      border-radius: var(--r-pill);
-      color: var(--text-900);
-      font-size: 15px;
-      box-shadow: var(--shadow-sm);
-      outline: none;
-      transition: border-color var(--ease-smooth);
-    }
-
-    .dl-search-input:focus {
-      border-color: var(--primary);
-    }
-
-    body.dark .dl-search-input:focus {
-      border-color: var(--secondary);
-    }
-
-    .dl-search-icon {
-      position: absolute;
-      left: 20px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
-      color: var(--text-400);
-      pointer-events: none;
-    }
-
-    .docs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      margin-bottom: 80px;
-    }
-
-    .doc-card {
-      background: var(--surface);
-      border-radius: var(--r-card);
-      padding: 28px;
-      box-shadow: var(--shadow-card);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-top: 4px solid var(--primary);
-      transition: all var(--ease-smooth);
-    }
-
-    .doc-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-premium);
-      border-top-color: var(--secondary);
-    }
-
-    .doc-meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .doc-icon-wrap {
-      width: 44px;
-      height: 44px;
-      border-radius: 8px;
-      background: rgba(255, 125, 0, 0.06);
-      color: var(--primary);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    body.dark .doc-icon-wrap {
-      background: rgba(255, 255, 255, 0.05);
-      color: white;
-    }
-
-    .doc-type {
-      font-size: 11px;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--text-400);
-      letter-spacing: 0.5px;
-    }
-
-    .doc-name {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 8px;
-      line-height: 1.4;
-    }
-
-    .doc-desc {
-      font-size: 13.5px;
-      color: var(--text-600);
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .doc-size {
-      font-size: 12px;
-      color: var(--text-400);
-    }
-
-    .doc-dl-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 10px 20px;
-      border-radius: var(--r-sm);
+    .deposit-highlight {
       background: var(--primary);
       color: white;
+      border-radius: var(--r-card);
+      padding: 36px;
+      margin-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 28px;
+    }
+
+    .dh-stat {
+      text-align: center;
+    }
+
+    .dh-val {
+      font-family: var(--font-head);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--secondary);
+    }
+
+    .dh-lbl {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.65);
+      margin-top: 4px;
+    }
+
+    .features-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .features-table th {
+      background: var(--primary);
+      color: white;
+      padding: 13px 18px;
+      text-align: left;
       font-size: 13px;
       font-weight: 600;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background var(--ease-smooth);
     }
 
-    .doc-dl-btn:hover {
-      background: var(--secondary);
+    .features-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--text-200);
+      font-size: 14px;
+      color: var(--text-700);
     }
 
-    body.dark .doc-dl-btn:hover {
-      background: var(--secondary-dark);
+    .features-table tr:nth-child(even) td {
+      background: var(--bg);
     }
 
-    @media(max-width:991px) {
-      .docs-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .check-cell {
+      color: var(--secondary);
+      font-weight: 700;
     }
 
     @media(max-width:767px) {
-      .docs-grid {
-        grid-template-columns: 1fr;
+      .deposit-highlight {
+        grid-template-columns: 1fr 1fr;
       }
     }
   </style>
@@ -419,7 +321,7 @@
             </div>
           </li>
           <li>
-            <a href="deposits.html" class="nav-link"><span data-lang="mr">ठेव योजना</span><span
+            <a href="deposits.html" class="nav-link active"><span data-lang="mr">ठेव योजना</span><span
                 data-lang="en">Deposits</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
               </svg></a>
@@ -458,7 +360,7 @@
           <li><a href="sip.html" class="nav-link"><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale
                 SIP</span></a></li>
           <li>
-            <a href="gallery.html" class="nav-link active"><span data-lang="mr">दालन</span><span
+            <a href="gallery.html" class="nav-link"><span data-lang="mr">दालन</span><span
                 data-lang="en">Gallery</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
               </svg></a>
@@ -517,236 +419,326 @@
     <a href="sip.html" class="mobile-drawer-link"><svg class="icon">
         <use href="#i-growth" />
       </svg><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></a>
-    <a href="gallery.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-award" />
-      </svg><span data-lang="mr">दालन</span><span data-lang="en">Gallery</span></a>
-    <a href="contact.html" class="mobile-drawer-link"><svg class="icon">
-        <use href="#i-phone" />
-      </svg><span data-lang="mr">संपर्क</span><span data-lang="en">Contact</span></a>
-    <a href="loans.html" class="mobile-drawer-link drawer-cta"><span data-lang="mr">कर्ज अर्ज करा</span><span
-        data-lang="en">Apply for Loan</span></a>
-  </div>
-  <div class="drawer-overlay" id="drawer-overlay"></div>
-
-  <!-- PAGE HERO -->
-  <div class="page-hero">
+    <a href="gallery.html" class="m  <!-- PAGE HERO -->
+  <div class="savings-hero">
     <div class="container">
       <div class="breadcrumb">
         <a href="index.html" data-lang="mr">मुख्यपृष्ठ</a>
         <a href="index.html" data-lang="en">Home</a> ›
-        <span data-lang="mr">डाऊनलोड</span>
-        <span data-lang="en">Downloads</span>
+        <span data-lang="mr">बचत ठेव</span>
+        <span data-lang="en">Savings</span>
       </div>
-      <span class="section-tag" data-lang="mr">फॉर्म्स आणि फाईल्स</span>
-      <span class="section-tag" data-lang="en">DOCUMENTS CENTER</span>
-      <h1 class="page-hero-title">
-        <span data-lang="mr">डाऊनलोड केंद्र</span>
-        <span data-lang="en">Downloads Center</span>
-      </h1>
-      <p class="page-hero-desc">
-        <span data-lang="mr">विविध खाती उघडण्याचे अर्ज, कर्ज मागणी फॉर्म, केवायसी दस्तऐवज आणि पतसंस्थेचे वार्षिक अहवाल
-          सहज डाऊनलोड करा.</span>
-        <span data-lang="en">Download account opening forms, loan application sheets, KYC update forms and annual
-          financial audit booklets easily here.</span>
-      </p>
+      <div class="savings-hero-grid reveal">
+        <div>
+          <h1 class="term-hero-title">
+            <span data-lang="mr">बचत: उज्ज्वल भविष्याकडे एक मोठे पाऊल</span>
+            <span data-lang="en">SAVINGS: A BIG STEP TOWARDS A BRIGHT FUTURE</span>
+          </h1>
+          <p class="term-hero-desc">
+            <span data-lang="mr">अशी गुंतवणूक जी तुमच्या स्वप्नांना आणि आव्हानांना साथ देते</span>
+            <span data-lang="en">An investment that supports you in your dreams and challenges</span>
+          </p>
+          <p class="term-hero-bullets">
+            <span data-lang="mr">एका महिन्यात अनेक ठेवींची परवानगी | दरमहा चक्रवाढ व्याज लाभ</span>
+            <span data-lang="en">Multiple deposits allowed in a month | Compounded monthly interest</span>
+          </p>
+          <a href="#features" class="term-hero-btn-white">
+            <span data-lang="mr">आजच बचत करा</span>
+            <span data-lang="en">Invest now</span> &rarr;
+          </a>
+        </div>
+        <div class="savings-hero-img-wrap">
+          <img src="assets/images/savings_hero.png" alt="Savings Account Banner">
+        </div>
+      </div>
     </div>
   </div>
 
   <main>
-    <section class="section-py" style="background:var(--bg)">
-      <div class="container">
-
-        <!-- Search Box -->
-        <div class="search-filter-section reveal">
-          <div class="dl-search-box">
-            <svg class="dl-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <use href="#i-search" />
-            </svg>
-            <input type="text" class="dl-search-input" placeholder="Search forms, reports, leaflets…">
+    <!-- HIGHLIGHT & COLUMNS -->
+    <section class="highlight-columns-section" id="features">
+      <div class="container reveal">
+        <div class="highlight-columns-grid">
+          <div class="highlight-blue-card">
+            <h3 data-lang="mr">तुमच्या बचतीला वाढण्याची संधी द्या!</h3>
+            <h3 data-lang="en">Give your savings the chance to grow!</h3>
+            <div class="highlight-blue-card-img">
+              <img src="assets/images/savings_grow.png" alt="Give your savings the chance to grow">
+            </div>
+            <p data-lang="mr">आजच सुरक्षित गुंतवणूक करा!</p>
+            <p data-lang="en">Make an investment today!</p>
           </div>
-        </div>
-
-        <!-- Docs Grid -->
-        <div class="docs-grid reveal">
-
-          <!-- Doc 1: Account opening -->
-          <div class="doc-card">
-            <div>
-              <div class="doc-meta">
-                <div class="doc-icon-wrap">
-                  <svg class="icon" style="width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2">
-                    <use href="#i-download" />
-                  </svg>
-                </div>
-                <div class="doc-type">PDF Form</div>
+          
+          <div class="highlight-text-column">
+            <h2 class="highlight-text-title" data-lang="mr">बचत ठेव योजना</h2>
+            <h2 class="highlight-text-title" data-lang="en">SAVINGS DEPOSITS</h2>
+            <p class="highlight-text-desc" data-lang="mr">
+              एक रुपया वाचवला म्हणजे एक रुपया कमावला. हीच आहे बचतीची ताकद. ती केवळ कठीण काळातच तुमची मदत करत नाही, तर तुमच्या स्वप्नांना पंखही देते. चौगुले पतसंस्थेची ही बचत ठेव पगारदार आणि सामान्य वर्गाला नियमित बचतीची सवय लावण्यासाठी आणि उज्ज्वल भविष्यासाठी अत्यंत उपयुक्त आहे.
+            </p>
+            <p class="highlight-text-desc" data-lang="en">
+              A rupee saved is a rupee earned. That's the power of savings. They not only help you in your difficult times, but also give wings to your dreams. And this Savings Deposit by Chougale, allows the salaried class to make savings a regular habit today for a bright, prosperous future.
+            </p>
+            
+            <div class="highlight-blocks-grid-2x2">
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">Up to 8%</span>
+                <span class="highlight-block-lbl" data-lang="mr">व्याज दर</span>
+                <span class="highlight-block-lbl" data-lang="en">interest rate</span>
               </div>
-              <div class="doc-name">
-                <span data-lang="mr">बचत खाते उघडण्याचा अर्ज</span>
-                <span data-lang="en">Savings Account Opening Form</span>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">Min. Rs. 100</span>
+                <span class="highlight-block-lbl" data-lang="mr">किमान ठेव रक्कम</span>
+                <span class="highlight-block-lbl" data-lang="en">deposit</span>
               </div>
-              <p class="doc-desc" data-lang="mr">नवीन बचत आणि चालू खाते उघडण्यासाठी लागणारा मुख्य फॉर्म.</p>
-              <p class="doc-desc" data-lang="en">Main form required to open a new savings or current bank account.</p>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
-              <span class="doc-size">1.4 MB</span>
-              <a href="#" class="doc-dl-btn"
-                onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
-                <span data-lang="mr">डाऊनलोड</span>
-                <span data-lang="en">Download</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Doc 2: Loan Application -->
-          <div class="doc-card">
-            <div>
-              <div class="doc-meta">
-                <div class="doc-icon-wrap">
-                  <svg class="icon" style="width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2">
-                    <use href="#i-download" />
-                  </svg>
-                </div>
-                <div class="doc-type">PDF Form</div>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">₹144 Cr.</span>
+                <span class="highlight-block-lbl" data-lang="mr">एकूण बचत ठेव</span>
+                <span class="highlight-block-lbl" data-lang="en">worth deposits</span>
               </div>
-              <div class="doc-name">
-                <span data-lang="mr">कर्ज मागणी अर्ज</span>
-                <span data-lang="en">Loan Application Form</span>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">40 Years'</span>
+                <span class="highlight-block-lbl" data-lang="mr">सहकार वारसा</span>
+                <span class="highlight-block-lbl" data-lang="en">legacy</span>
               </div>
-              <p class="doc-desc" data-lang="mr">सुवर्ण कर्ज, वैयक्तिक आणि इतर कर्जासाठी लागणारा अधिकृत मागणी अर्ज.</p>
-              <p class="doc-desc" data-lang="en">Official application form required for gold, personal, and mortgage
-                loans.</p>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
-              <span class="doc-size">2.1 MB</span>
-              <a href="#" class="doc-dl-btn"
-                onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
-                <span data-lang="mr">डाऊनलोड</span>
-                <span data-lang="en">Download</span>
-              </a>
             </div>
           </div>
-
-          <!-- Doc 3: Locker Rental Agreement -->
-          <div class="doc-card">
-            <div>
-              <div class="doc-meta">
-                <div class="doc-icon-wrap">
-                  <svg class="icon" style="width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2">
-                    <use href="#i-download" />
-                  </svg>
-                </div>
-                <div class="doc-type">PDF Form</div>
-              </div>
-              <div class="doc-name">
-                <span data-lang="mr">लॉकर भाडे करार अर्ज</span>
-                <span data-lang="en">Locker Rental Agreement Form</span>
-              </div>
-              <p class="doc-desc" data-lang="mr">लॉकर भाड्याने घेण्यासाठी लागणारा नियम व अटींसह करार फॉर्म.</p>
-              <p class="doc-desc" data-lang="en">Locker rental request form with full rules, regulations and terms.</p>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
-              <span class="doc-size">1.1 MB</span>
-              <a href="#" class="doc-dl-btn"
-                onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
-                <span data-lang="mr">डाऊनलोड</span>
-                <span data-lang="en">Download</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Doc 4: KYC Update Form -->
-          <div class="doc-card">
-            <div>
-              <div class="doc-meta">
-                <div class="doc-icon-wrap">
-                  <svg class="icon" style="width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2">
-                    <use href="#i-download" />
-                  </svg>
-                </div>
-                <div class="doc-type">PDF Form</div>
-              </div>
-              <div class="doc-name">
-                <span data-lang="mr">केवायसी (KYC) अपडेट फॉर्म</span>
-                <span data-lang="en">KYC Update Form</span>
-              </div>
-              <p class="doc-desc" data-lang="mr">खातेदारांचे पत्ते, फोटो आणि मोबाईल क्रमांक अपडेट करण्याचा अधिकृत फॉर्म.
-              </p>
-              <p class="doc-desc" data-lang="en">Official form to update addresses, photos, signatures, and mobile
-                numbers.</p>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
-              <span class="doc-size">850 KB</span>
-              <a href="#" class="doc-dl-btn"
-                onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
-                <span data-lang="mr">डाऊनलोड</span>
-                <span data-lang="en">Download</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Doc 5: Share Application Form -->
-          <div class="doc-card">
-            <div>
-              <div class="doc-meta">
-                <div class="doc-icon-wrap">
-                  <svg class="icon" style="width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2">
-                    <use href="#i-download" />
-                  </svg>
-                </div>
-                <div class="doc-type">PDF Form</div>
-              </div>
-              <div class="doc-name">
-                <span data-lang="mr">सभासदत्व / भागभांडवल अर्ज</span>
-                <span data-lang="en">Membership Share Application Form</span>
-              </div>
-              <p class="doc-desc" data-lang="mr">पतसंस्थेचे सभासद होऊन भागभांडवल खरेदी करण्यासाठी अर्ज.</p>
-              <p class="doc-desc" data-lang="en">Form to apply for official membership and purchase shares of the
-                society.</p>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
-              <span class="doc-size">1.8 MB</span>
-              <a href="#" class="doc-dl-btn"
-                onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
-                <span data-lang="mr">डाऊनलोड</span>
-                <span data-lang="en">Download</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Doc 6: Annual Audit Report -->
-          <div class="doc-card">
-            <div>
-              <div class="doc-meta">
-                <div class="doc-icon-wrap">
-                  <svg class="icon" style="width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2">
-                    <use href="#i-download" />
-                  </svg>
-                </div>
-                <div class="doc-type">PDF Report</div>
-              </div>
-              <div class="doc-name">
-                <span data-lang="mr">वार्षिक अहवाल २०२४-२५</span>
-                <span data-lang="en">Annual Audit Report 2024-25</span>
-              </div>
-              <p class="doc-desc" data-lang="mr">गेल्या आर्थिक वर्षाचे आर्थिक ताळेबंद आणि लेखापरीक्षण अहवाल पुस्तिका.
-              </p>
-              <p class="doc-desc" data-lang="en">Audit financial statements and progress booklet for the last financial
-                year.</p>
-            </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
-              <span class="doc-size">4.2 MB</span>
-              <a href="#" class="doc-dl-btn"
-                onclick="alert('अहवाल डाऊनलोड सुरू झाला! / Report download started!'); return false;">
-                <span data-lang="mr">डाऊनलोड</span>
-                <span data-lang="en">Download</span>
-              </a>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
+
+    <!-- INTEREST RATES SECTION -->
+    <section class="rates-dark-section">
+      <div class="container reveal">
+        <div class="rates-dark-grid">
+          <div class="rates-table-side">
+            <h2 data-lang="mr">बचत खात्यावरील व्याजदर</h2>
+            <h2 data-lang="en">INTEREST RATE ON SAVINGS ACCOUNT</h2>
+            <table class="rates-dark-table">
+              <thead>
+                <tr>
+                  <th style="width: 70px;">No.</th>
+                  <th data-lang="mr">रक्कम मर्यादा</th>
+                  <th data-lang="en">the amount</th>
+                  <th data-lang="mr">व्याज दर</th>
+                  <th data-lang="en">Interest rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td data-lang="mr">रु. १ ते रु. २५,०००</td>
+                  <td data-lang="en">Rs . 1 to Rs . 25,000</td>
+                  <td style="font-weight:700; color:var(--primary);">4.00 %</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td data-lang="mr">रु. २५,००० ते रु. ४९,९९९</td>
+                  <td data-lang="en">Rs . 25,000 to Rs . 49,999</td>
+                  <td style="font-weight:700; color:var(--primary);">5.00 %</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td data-lang="mr">रु. ५०,००० ते रु. ९९,९९९</td>
+                  <td data-lang="en">Rs . 50,000 to Rs . 99,999</td>
+                  <td style="font-weight:700; color:var(--primary);">6.00 %</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td data-lang="mr">रु. १,००,००० ते रु. २,९९,९९९</td>
+                  <td data-lang="en">Rs . 1,00,000 to Rs . 2,99,999</td>
+                  <td style="font-weight:700; color:var(--primary);">7.00 %</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td data-lang="mr">रु. ३,००,००० च्या पुढे</td>
+                  <td data-lang="en">Rs . 3,00,000 /- onwards</td>
+                  <td style="font-weight:700; color:var(--primary);">8.00 %</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top: 20px; font-size: 13px; opacity: 0.8; font-style: italic;">
+              <span data-lang="mr">* बचत खात्यावरील व्याज - मासिक सरासरी शिलकीनुसार दिले जाते (अटी आणि शर्ती लागू)</span>
+              <span data-lang="en">* Interest On Saving - According to Monthly Average Balance (Terms & Conditions Apply)</span>
+            </p>
+          </div>
+          <div class="rates-img-side">
+            <img src="assets/images/term_deposit_rates.png" alt="Savings Growth Investment">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES & FAQs -->
+    <section class="eligibility-faq-section">
+      <div class="container reveal">
+        <div class="eligibility-faq-grid">
+          <div class="eligibility-list-col">
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">वैशिष्ट्ये (Features)</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Features</h3>
+              <ul style="display:flex; flex-direction:column; gap:10px; padding-left:0; list-style:none;">
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">ठेवींच्या संख्येवर (जमा आणि काढणे) आणि रकमेवर कोणतेही बंधन नाही</span>
+                    <span data-lang="en">No restriction on number of transactions (deposits & withdrawals) and amount of deposits</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">पैसे काढणे रोखीने किंवा इलेक्ट्रॉनिक ट्रान्सफरद्वारे केले जाऊ शकते</span>
+                    <span data-lang="en">Withdrawals can be in cash or through electronic transfer</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">प्रत्येक व्यवहारासाठी ग्राहकाला एक मोफत SMS पाठवला जातो</span>
+                    <span data-lang="en">An SMS is sent to the customer for every transaction</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">व्याज हे मासिक आधारावर खात्यात जमा केले जाते</span>
+                    <span data-lang="en">Interest is credited on monthly compounded interest</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">आवश्यक कागदपत्रे</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Minimum documentation needed</h3>
+              <p class="eligibility-block-text" data-lang="mr">१. छायाचित्र (Photograph)<br>२. पॅन कार्ड (PAN Card)<br>३. आधार कार्ड (Aadhar Card)</p>
+              <p class="eligibility-block-text" data-lang="en">Photograph | PAN Card | Aadhar Card</p>
+            </div>
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">महत्वाच्या गोष्टी</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Things to know</h3>
+              <ul style="display:flex; flex-direction:column; gap:10px; padding-left:0; list-style:none;">
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">बचत ठेव पगारदार लोकांना नियमित बचतीसाठी प्रोत्साहित करते</span>
+                    <span data-lang="en">Savings deposit encourages salaried people to save regularly</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">व्याजाच्या माध्यमातून ग्राहकांना अतिरिक्त उत्पन्न मिळते</span>
+                    <span data-lang="en">Gives them additional income by the way of interest</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">चौगुले मोबाईल बँकिंग ॲपद्वारे थेट खात्यात रक्कम जमा करता येते</span>
+                    <span data-lang="en">Deposits can be made through Chougale Mobile Banking App</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-accordion-col">
+            <h3 class="faq-accordion-title" data-lang="mr">बचत खाते - वारंवार विचारले जाणारे प्रश्न</h3>
+            <h3 class="faq-accordion-title" data-lang="en">Savings Account - FAQs</h3>
+            
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">१. चौगुले पतसंस्थेचे बचत खाते (Savings Account) काय आहे?</div>
+              <div class="faq-accord-header" data-lang="en">What is a Chougale Savings Account?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">बचत खाते हे एक सामान्य बँक खाते आहे जिथे ग्राहक त्यांचे पैसे सुरक्षित ठेवून त्यावर नियमित व्याज मिळवू शकतात.</span>
+                <span data-lang="en">A savings account is a basic financial account that allows you to deposit money safely, earn interest, and withdraw it whenever you need.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">२. सध्याचे बचत खात्यावरील व्याजदर काय आहेत?</div>
+              <div class="faq-accord-header" data-lang="en">What are the current Chougale Savings Account interest rates?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">आम्ही बचत खात्यावर रक्कमेनुसार ४.००% ते ८.००% प्रतिवर्ष व्याजदर प्रदान करतो.</span>
+                <span data-lang="en">We offer competitive interest rates ranging from 4.00% up to 8.00% depending on the balance bracket kept in the account.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">३. व्याज कधी आणि कसे मोजले जाते?</div>
+              <div class="faq-accord-header" data-lang="en">How and when is interest calculated and credited?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">व्याज हे तुमच्या खात्यातील दैनंदिन शिलकीवर मोजले जाते आणि दरमहा खात्यात जमा केले जाते.</span>
+                <span data-lang="en">Interest is calculated on the daily balance maintained in your account and is credited directly to your account at the end of each month.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">४. बचत खाते उघडण्यासाठी कोणती कागदपत्रे लागतात?</div>
+              <div class="faq-accord-header" data-lang="en">What documents are required to open a Chougale Savings Account?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">खाते उघडण्यासाठी तुम्हाला आधार कार्ड, पॅन कार्ड आणि पासपोर्ट आकाराचे फोटो आवश्यक आहेत.</span>
+                <span data-lang="en">You will need standard KYC documents: an Aadhaar Card, PAN Card, and passport-sized photographs.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">५. पतसंस्था मोबाईल बँकिंग आणि डिजिटल ट्रान्सफर सेवा देते का?</div>
+              <div class="faq-accord-header" data-lang="en">Does Chougale offer mobile banking and digital transfers (NEFT/RTGS/IMPS)?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">होय! चौगुले मोबाईल बँकिंग ॲपद्वारे तुम्ही सहजपणे NEFT, RTGS आणि IMPS द्वारे व्यवहार करू शकता.</span>
+                <span data-lang="en">Yes! We provide complete digital transaction features including NEFT, RTGS, and IMPS through our secure Chougale Mobile Banking App.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INQUIRY FORM -->
+    <section class="inquiry-footer-section">
+      <div class="container reveal">
+        <h2 class="inquiry-footer-title">
+          <span data-lang="mr">काही प्रश्न आहेत? आम्हाला मोकळेपणाने विचारा!</span>
+          <span data-lang="en">ANY QUESTIONS? FEEL FREE TO ASK US!</span>
+        </h2>
+        <form class="inquiry-form-horizontal" onsubmit="alert('तुमची चौकशी यशस्वीरीत्या नोंदवली गेली आहे! / Your inquiry has been sent!'); return false;">
+          <div class="inquiry-form-row-4">
+            <input type="text" class="inquiry-input-field" placeholder="Name*" required>
+            <input type="email" class="inquiry-input-field" placeholder="Email*" required>
+            <input type="tel" class="inquiry-input-field" placeholder="Contact No.*" required>
+            <input type="text" class="inquiry-input-field" placeholder="City*" required>
+          </div>
+          <div style="display:flex; gap:16px; margin-top:10px;">
+            <textarea class="inquiry-input-field" placeholder="Message" style="flex:1; height:60px; resize:none;"></textarea>
+            <button type="submit" class="inquiry-submit-btn-green">
+              <span data-lang="mr">पाठवा</span>
+              <span data-lang="en">SUBMIT</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // FAQ accordion toggle logic
+      const faqHeaders = document.querySelectorAll(".faq-accord-header");
+      faqHeaders.forEach(hdr => {
+        hdr.addEventListener("click", () => {
+          const item = hdr.parentElement;
+          const isActive = item.classList.contains("active");
+          
+          document.querySelectorAll(".faq-accord-item").forEach(itm => itm.classList.remove("active"));
+          
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -835,32 +827,15 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="footer-bottom">
-        <div>&copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="#">Grievance</a>
-        </div>
+    <div class="footer-bottom-strip">
+      <div class="container">
+        &copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a
+          href="#">Terms &amp; Conditions</a>
       </div>
     </div>
   </footer>
 
-  <!-- FLOATING CTAs -->
-  <div class="float-actions">
-    <a href="https://wa.me/919876543210" class="float-btn float-wa" target="_blank" aria-label="WhatsApp"><svg
-        class="icon" style="width:22px;height:22px;stroke:white;fill:none;stroke-width:2">
-        <use href="#i-chat" />
-      </svg></a>
-    <a href="tel:+910231265432" class="float-btn float-call" aria-label="Call"><svg class="icon"
-        style="width:22px;height:22px;stroke:white;fill:none;stroke-width:2">
-        <use href="#i-phone" />
-      </svg></a>
-  </div>
 
-
-  <!-- MOBILE BOTTOM DOCK -->
   <nav class="mobile-dock">
     <a href="index.html" class="dock-item"><svg class="icon">
         <use href="#i-home" />
@@ -878,15 +853,9 @@
         <use href="#i-chat" />
       </svg><span>WhatsApp</span></a>
   </nav>
-
-  <!-- SEARCH OVERLAY -->
-  <div class="search-overlay">
-    <span class="search-overlay-close">&times;</span>
-    <div class="search-overlay-box">
-      <input type="text" class="search-overlay-input" placeholder="Search… e.g. Gold Loan, FD Rates, Branches">
-    </div>
+  <div class="search-overlay"><span class="search-overlay-close">&times;</span>
+    <div class="search-overlay-box"><input type="text" class="search-overlay-input" placeholder="Search…"></div>
   </div>
-
   <script src="assets/js/main.js"></script>
 </body>
 

@@ -6300,3 +6300,49 @@ body.dark .faq-accord-header {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   SAVINGS PAGE REDESIGN
+   ============================================================ */
+.savings-hero {
+  position: relative;
+  padding: 120px 0 80px;
+  background: var(--secondary);
+  color: #ffffff;
+  overflow: hidden;
+  margin-top: var(--header-total-h);
+}
+.savings-hero::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(11, 26, 48, 0.95) 100%);
+  z-index: 1;
+}
+.savings-hero .container {
+  position: relative;
+  z-index: 2;
+}
+.savings-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+.savings-hero-img-wrap {
+  display: flex;
+  justify-content: center;
+}
+.savings-hero-img-wrap img {
+  max-height: 380px;
+  border-radius: 24px;
+  width: auto;
+  display: block;
+}
+
+@media(max-width: 991px) {
+  .savings-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
