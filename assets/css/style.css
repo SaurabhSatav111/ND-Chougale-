@@ -4381,8 +4381,17 @@ body.dark .branch-info-name {
   }
   
   .top-bar-item {
+    display: inline-flex !important;
+    align-items: center !important;
     font-size: 11px !important;
-    gap: 4px !important;
+    gap: 6px !important;
+  }
+  
+  .top-bar-item .icon {
+    width: 14px !important;
+    height: 14px !important;
+    stroke-width: 2.2 !important;
+    flex-shrink: 0 !important;
   }
   
   .navbar {
