@@ -4,21 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>चौगुले SIP | Chougale SIP — N.D. Chougale Nagari Path Sanstha</title>
+  <title>ठेव योजना | Deposits — N.D. Chougale Nagari Path Sanstha</title>
   <meta name="description"
-    content="N.D. Chougale Patsanstha SIP - Grow your wealth systematically. Calculate returns using our interactive SIP calculator.">
+    content="High-interest deposit schemes — Savings, Fixed Deposit, Recurring Deposit. Senior citizen benefits. Open your account today.">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
     .page-hero {
-      background: linear-gradient(180deg, #F4F6FB 0%, #EBEDF7 100%);
+      background: var(--bg);
       padding: 60px 0 80px;
       margin-top: var(--header-total-h);
       border-bottom: 1px solid var(--text-200);
-    }
-
-    body.dark .page-hero {
-      background: linear-gradient(180deg, #030A14 0%, #071424 100%);
-      border-bottom-color: var(--text-200);
     }
 
     .page-hero-title {
@@ -51,147 +46,67 @@
       color: var(--primary);
     }
 
-    .sip-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 48px;
-      margin-bottom: 80px;
-      align-items: start;
-    }
-
-    .sip-info h3 {
-      font-size: 24px;
-      color: var(--primary);
-      margin-bottom: 16px;
-      font-weight: 800;
-    }
-
-    .sip-info p {
-      color: var(--text-600);
-      margin-bottom: 20px;
-      font-size: 16px;
-      line-height: 1.8;
-    }
-
-    .sip-features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      margin-top: 32px;
-    }
-
-    .sip-feat-card {
-      background: var(--surface);
-      padding: 24px;
-      border-radius: var(--r-card);
-      box-shadow: var(--shadow-card);
-      border-top: 4px solid var(--secondary);
-    }
-
-    .sip-feat-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 8px;
-    }
-
-    .sip-feat-desc {
-      font-size: 13px;
-      color: var(--text-600);
-    }
-
-    /* Calculator */
-    .sip-calc-card {
-      background: var(--surface);
+    .deposit-highlight {
+      background: var(--primary);
+      color: white;
       border-radius: var(--r-card);
       padding: 36px;
-      box-shadow: var(--shadow-premium);
-      border: 1px solid var(--text-200);
+      margin-bottom: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 28px;
     }
 
-    .sip-calc-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 24px;
+    .dh-stat {
       text-align: center;
     }
 
-    .calc-group {
-      margin-bottom: 20px;
+    .dh-val {
+      font-family: var(--font-head);
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--secondary);
     }
 
-    .calc-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--text-700);
-      margin-bottom: 8px;
-    }
-
-    .calc-range {
-      width: 100%;
-      height: 6px;
-      background: var(--text-200);
-      border-radius: 3px;
-      outline: none;
-      -webkit-appearance: none;
-    }
-
-    .calc-range::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      background: var(--secondary);
-      cursor: pointer;
-      transition: transform 0.1s;
-    }
-
-    .calc-range::-webkit-slider-thumb:hover {
-      transform: scale(1.2);
-    }
-
-    .calc-results {
-      background: var(--bg);
-      border-radius: var(--r-sm);
-      padding: 20px;
-      margin-top: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .calc-res-row {
-      display: flex;
-      justify-content: space-between;
-      font-size: 14px;
-      color: var(--text-600);
-    }
-
-    .calc-res-row.highlight {
-      font-size: 18px;
-      font-weight: 800;
-      color: var(--primary);
-      border-top: 1px solid var(--text-200);
-      padding-top: 12px;
+    .dh-lbl {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.65);
       margin-top: 4px;
     }
 
-    .calc-res-val {
+    .features-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .features-table th {
+      background: var(--primary);
+      color: white;
+      padding: 13px 18px;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .features-table td {
+      padding: 12px 18px;
+      border-bottom: 1px solid var(--text-200);
+      font-size: 14px;
+      color: var(--text-700);
+    }
+
+    .features-table tr:nth-child(even) td {
+      background: var(--bg);
+    }
+
+    .check-cell {
+      color: var(--secondary);
       font-weight: 700;
-      color: var(--text-900);
     }
 
-    .calc-res-row.highlight .calc-res-val {
-      color: var(--secondary-dark);
-    }
-
-    @media(max-width:991px) {
-      .sip-grid {
-        grid-template-columns: 1fr;
-        gap: 36px;
+    @media(max-width:767px) {
+      .deposit-highlight {
+        grid-template-columns: 1fr 1fr;
       }
     }
   </style>
@@ -406,7 +321,7 @@
             </div>
           </li>
           <li>
-            <a href="deposits.html" class="nav-link"><span data-lang="mr">ठेव योजना</span><span
+            <a href="deposits.html" class="nav-link active"><span data-lang="mr">ठेव योजना</span><span
                 data-lang="en">Deposits</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
                 <path d="M6 9l6 6 6-6" />
               </svg></a>
@@ -442,8 +357,8 @@
           </li>
           <li><a href="services.html" class="nav-link"><span data-lang="mr">डिजिटल सेवा</span><span
                 data-lang="en">Services</span></a></li>
-          <li><a href="sip.html" class="nav-link active"><span data-lang="mr">चौगुले SIP</span><span
-                data-lang="en">Chougale SIP</span></a></li>
+          <li><a href="sip.html" class="nav-link"><span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale
+                SIP</span></a></li>
           <li>
             <a href="gallery.html" class="nav-link"><span data-lang="mr">दालन</span><span
                 data-lang="en">Gallery</span><svg class="nav-link-chevron" viewBox="0 0 24 24">
@@ -516,131 +431,310 @@
   <div class="drawer-overlay" id="drawer-overlay"></div>
 
   <!-- PAGE HERO -->
-  <div class="page-hero">
+  <div class="current-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html" data-lang="mr">मुख्यपृष्ठ</a><a href="index.html"
-          data-lang="en">Home</a> › <span data-lang="mr">चौगुले SIP</span><span data-lang="en">Chougale SIP</span></div>
-      <span class="section-tag" data-lang="mr">गुंतवणूक योजना</span>
-      <span class="section-tag" data-lang="en">INVESTMENT SCHEME</span>
-      <h1 class="page-hero-title"><span data-lang="mr">चौगुले SIP योजना</span><span data-lang="en">Chougale SIP
-          Scheme</span></h1>
-      <p class="page-hero-desc">
-        <span data-lang="mr">दरमहा लहान नियमित गुंतवणुकीतून मोठे ध्येय साध्य करा. चक्रवाढ व्याजाच्या सामर्थ्याने warme
-          तुमचे भविष्य सुरक्षित करा.</span>
-        <span data-lang="en">Achieve big financial milestones with small, disciplined monthly contributions. Secure your
-          future with the power of compounding.</span>
-      </p>
+      <div class="breadcrumb">
+        <a href="index.html" data-lang="mr">मुख्यपृष्ठ</a>
+        <a href="index.html" data-lang="en">Home</a> ›
+        <span data-lang="mr">चालू खाते</span>
+        <span data-lang="en">Current Account</span>
+      </div>
+      <div class="current-hero-grid reveal">
+        <div>
+          <h1 class="term-hero-title">
+            <span data-lang="mr">चालू खाते: सुरक्षित आणि मजबूत व्यावसायिक बँकिंग</span>
+            <span data-lang="en">CURRENT ACCOUNT: SECURE & STABLE BUSINESS BANKING</span>
+          </h1>
+          <p class="term-hero-desc">
+            <span data-lang="mr">अमर्यादित व्यवहार आणि सुलभ तरलता व्यवस्थापनासह व्यवसाय क्षमता वाढवा</span>
+            <span data-lang="en">Maximize business potential with zero limit withdrawals and daily liquidity management</span>
+          </p>
+          <p class="term-hero-bullets">
+            <span data-lang="mr">अमर्याद ठेवी आणि विना-मर्यादा व्यवहार | दैनिक रोकड तरलता व्यवस्थापन सुविधा</span>
+            <span data-lang="en">Unlimited transactions and deposits | Daily cash flow liquidity management</span>
+          </p>
+          <a href="#features" class="term-hero-btn-white">
+            <span data-lang="mr">आजच खाते उघडा</span>
+            <span data-lang="en">Invest now</span> &rarr;
+          </a>
+        </div>
+        <div class="current-hero-img-wrap">
+          <img src="assets/images/current_hero.png" alt="Current Account Banner">
+        </div>
+      </div>
     </div>
   </div>
 
   <main>
-    <section class="section-py" style="background:var(--bg)">
-      <div class="container">
-        <div class="sip-grid">
-
-          <!-- Info Content -->
-          <div class="sip-info reveal">
-            <h3>
-              <span data-lang="mr">सिस्टमॅटिक इन्व्हेस्टमेंट प्लॅन (SIP) म्हणजे काय?</span>
-              <span data-lang="en">What is a Systematic Investment Plan (SIP)?</span>
-            </h3>
-            <p>
-              <span data-lang="mr">चौगुले SIP ही अशी योजना आहे जिथे आपण प्रत्येक महिन्याला एक निश्चित रक्कम नियमितपणे
-                गुंतवू शकता. ही योजना नियमित बचतीची शिस्त लावते आणि दीर्घकाळात चक्रवाढ व्याजाचा फायदा मिळवून
-                देते.</span>
-              <span data-lang="en">Chougale SIP is a structured program that allows you to invest fixed amounts
-                regularly at monthly intervals. It builds disciplined saving habits and leverages compounding to grow
-                your wealth steadily.</span>
+    <!-- HIGHLIGHT & COLUMNS -->
+    <section class="highlight-columns-section" id="features">
+      <div class="container reveal">
+        <div class="highlight-columns-grid">
+          <div class="highlight-blue-card">
+            <h3 data-lang="mr">तुमच्या व्यवसायाला वाढण्याची संधी द्या!</h3>
+            <h3 data-lang="en">Give your business the chance to grow!</h3>
+            <div class="highlight-blue-card-img">
+              <img src="assets/images/savings_grow.png" alt="Give your business the chance to grow">
+            </div>
+            <p data-lang="mr">आजच व्यावसायिक प्रगतीची सुरुवात करा!</p>
+            <p data-lang="en">Make an investment today!</p>
+          </div>
+          
+          <div class="highlight-text-column">
+            <h2 class="highlight-text-title" data-lang="mr">चालू खाते योजना</h2>
+            <h2 class="highlight-text-title" data-lang="en">CURRENT DEPOSITS</h2>
+            <p class="highlight-text-desc" data-lang="mr">
+              व्यवसायामध्ये वेगाला आणि तरलतेला सर्वाधिक महत्त्व असते. चौगुले पतसंस्थेचे चालू खाते व्यापारी, उद्योजक आणि संस्थांसाठी अनुकूल बनवले आहे. अमर्यादित व्यवहार आणि सुलभ बँकिंग सेवांच्या साहाय्याने तुम्ही तुमच्या दैनंदिन व्यावसायिक व्यवहारांना अधिक सोपे आणि जलद बनवू शकता.
             </p>
-            <p>
-              <span data-lang="mr">लहान व्यवसाय मालक, नोकरदार व्यक्ती आणि शेतकरी यांच्यासाठी ही एक सुवर्णसंधी आहे. दरमहा
-                किमान ₹५०० पासून आपण आपल्या मुलांचे शिक्षण, लग्न किंवा सेवानिवृत्तीच्या नियोजनासाठी सुरुवात करू
-                शकता.</span>
-              <span data-lang="en">This is an ideal solution for small business owners, salaried professionals, and
-                farmers. Starting with as little as ₹500 per month, you can accumulate a substantial fund for education,
-                marriage, or retirement goals.</span>
+            <p class="highlight-text-desc" data-lang="en">
+              Speed and liquidity are what drive a business forward. Chougale's Business Current Account is tailored to suit the requirements of traders, firms, corporates, and institutions. Make daily transactions seamless and capture every market opportunity with ease.
             </p>
-
-            <div class="sip-features">
-              <div class="sip-feat-card">
-                <div class="sip-feat-title" data-lang="mr">शिस्तबद्ध बचत</div>
-                <div class="sip-feat-title" data-lang="en">Disciplined Saving</div>
-                <div class="sip-feat-desc" data-lang="mr">दरमहा स्वयंचलित किंवा थेट ठेव सुविधेने नियमित गुंतवणूक.</div>
-                <div class="sip-feat-desc" data-lang="en">Auto-debit options make monthly investing completely
-                  hassle-free.</div>
+            
+            <div class="highlight-blocks-grid-2x2">
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">Up to 5%</span>
+                <span class="highlight-block-lbl" data-lang="mr">व्याज दर</span>
+                <span class="highlight-block-lbl" data-lang="en">interest rate</span>
               </div>
-              <div class="sip-feat-card">
-                <div class="sip-feat-title" data-lang="mr">चक्रवाढ परतावा</div>
-                <div class="sip-feat-title" data-lang="en">Compounded Growth</div>
-                <div class="sip-feat-desc" data-lang="mr">तुमच्या पैशावर सतत व्याज मिळवून जलद वृद्धी.</div>
-                <div class="sip-feat-desc" data-lang="en">Reinvested interest accelerates wealth creation through
-                  compounding.</div>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">Zero Limit</span>
+                <span class="highlight-block-lbl" data-lang="mr">व्यवहार मर्यादा</span>
+                <span class="highlight-block-lbl" data-lang="en">transactions</span>
+              </div>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">₹280 Cr.</span>
+                <span class="highlight-block-lbl" data-lang="mr">एकूण व्यावसायिक ठेव</span>
+                <span class="highlight-block-lbl" data-lang="en">worth deposits</span>
+              </div>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">40 Years'</span>
+                <span class="highlight-block-lbl" data-lang="mr">सहकार वारसा</span>
+                <span class="highlight-block-lbl" data-lang="en">legacy</span>
               </div>
             </div>
           </div>
-
-          <!-- Live Calculator -->
-          <div class="sip-calc-card reveal">
-            <div class="sip-calc-title">
-              <span data-lang="mr">SIP परतावा कॅल्क्युलेटर</span>
-              <span data-lang="en">SIP Growth Calculator</span>
-            </div>
-
-            <div class="calc-group">
-              <div class="calc-label">
-                <span data-lang="mr">दरमहा गुंतवणूक (₹)</span>
-                <span data-lang="en">Monthly Investment (₹)</span>
-                <span id="sip-amount-txt">₹2,000</span>
-              </div>
-              <input type="range" class="calc-range" id="sip-amount" min="500" max="50000" step="500" value="2000">
-            </div>
-
-            <div class="calc-group">
-              <div class="calc-label">
-                <span data-lang="mr">अपेक्षित व्याजदर (% प्रतिवर्ष)</span>
-                <span data-lang="en">Expected Rate (% p.a.)</span>
-                <span id="sip-rate-txt">9.0%</span>
-              </div>
-              <input type="range" class="calc-range" id="sip-rate" min="5" max="15" step="0.5" value="9">
-            </div>
-
-            <div class="calc-group">
-              <div class="calc-label">
-                <span data-lang="mr">कालावधी (वर्षे)</span>
-                <span data-lang="en">Tenure (Years)</span>
-                <span id="sip-tenure-txt">5 Yr</span>
-              </div>
-              <input type="range" class="calc-range" id="sip-tenure" min="1" max="25" step="1" value="5">
-            </div>
-
-            <div class="calc-results">
-              <div class="calc-res-row">
-                <span data-lang="mr">एकूण गुंतवलेली रक्कम</span>
-                <span data-lang="en">Total Invested Amount</span>
-                <span class="calc-res-val" id="sip-total-invested">₹1,20,000</span>
-              </div>
-              <div class="calc-res-row">
-                <span data-lang="mr">मिळालेले एकूण व्याज</span>
-                <span data-lang="en">Estimated Returns (Interest)</span>
-                <span class="calc-res-val" id="sip-total-interest">₹32,323</span>
-              </div>
-              <div class="calc-res-row highlight">
-                <span data-lang="mr">परिपक्वता मूल्य</span>
-                <span data-lang="en">Maturity Value</span>
-                <span class="calc-res-val" id="sip-maturity-val">₹1,52,323</span>
-              </div>
-            </div>
-
-            <a href="contact.html" class="btn btn-secondary btn-full btn-lg" style="margin-top:24px;">
-              <span data-lang="mr">SIP सुरु करा</span>
-              <span data-lang="en">Start Your SIP</span>
-            </a>
-          </div>
-
         </div>
       </div>
     </section>
+
+    <!-- INTEREST RATES SECTION -->
+    <section class="rates-dark-section">
+      <div class="container reveal">
+        <div class="rates-dark-grid">
+          <div class="rates-table-side">
+            <h2 data-lang="mr">चालू खात्यावरील व्याजदर</h2>
+            <h2 data-lang="en">INTEREST RATE ON CURRENT ACCOUNT</h2>
+            <table class="rates-dark-table">
+              <thead>
+                <tr>
+                  <th style="width: 70px;">No.</th>
+                  <th data-lang="mr">रक्कम मर्यादा</th>
+                  <th data-lang="en">the amount</th>
+                  <th data-lang="mr">व्याज दर</th>
+                  <th data-lang="en">Interest rate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td data-lang="mr">रु. १ ते रु. १,००,०००</td>
+                  <td data-lang="en">Rs . 1 to Rs . 1,00,000</td>
+                  <td style="font-weight:700; color:var(--primary);">3.50 %</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td data-lang="mr">रु. १,००,००० ते रु. ४,९९,९९९</td>
+                  <td data-lang="en">Rs . 1,00,000 to Rs . 4,99,999</td>
+                  <td style="font-weight:700; color:var(--primary);">4.00 %</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td data-lang="mr">रु. ५,००,००० ते रु. ९,९९,९९९</td>
+                  <td data-lang="en">Rs . 5,00,000 to Rs . 9,99,999</td>
+                  <td style="font-weight:700; color:var(--primary);">4.50 %</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td data-lang="mr">रु. १०,००,००० च्या पुढे</td>
+                  <td data-lang="en">Rs . 10,00,000 /- onwards</td>
+                  <td style="font-weight:700; color:var(--primary);">5.00 %</td>
+                </tr>
+              </tbody>
+            </table>
+            <p style="margin-top: 20px; font-size: 13px; opacity: 0.8; font-style: italic;">
+              <span data-lang="mr">* चालू खात्यावरील व्याज - सरासरी शिलकीनुसार मोजले जाते (अटी आणि शर्ती लागू)</span>
+              <span data-lang="en">* Interest On Current Account - According to balance maintained (Terms & Conditions Apply)</span>
+            </p>
+          </div>
+          <div class="rates-img-side">
+            <img src="assets/images/term_deposit_rates.png" alt="Current Account Growth">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES & FAQs -->
+    <section class="eligibility-faq-section">
+      <div class="container reveal">
+        <div class="eligibility-faq-grid">
+          <div class="eligibility-list-col">
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">वैशिष्ट्ये (Features)</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Features</h3>
+              <ul style="display:flex; flex-direction:column; gap:10px; padding-left:0; list-style:none;">
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">ठेवी आणि पैसे काढण्याच्या व्यवहारांवर कोणतीही मर्यादा नाही</span>
+                    <span data-lang="en">No restriction on withdrawals and deposits frequency or amount</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">ऑनलाइन व्यवहार आणि जलद पेमेंट हस्तांतरण सुविधा (NEFT/RTGS/IMPS)</span>
+                    <span data-lang="en">Online transfers support for easy business transactions (NEFT/RTGS/IMPS)</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">व्यावसायिक खात्यांसाठी स्वतंत्र हेल्पडेस्क सुविधा</span>
+                    <span data-lang="en">Dedicated business support desk for commercial needs</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">मोफत ई-स्टेटमेंट आणि तत्काळ खाते खातेनिहाय तपशील</span>
+                    <span data-lang="en">Instant account statement facility and free e-statements</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">आवश्यक कागदपत्रे</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Minimum documentation needed</h3>
+              <p class="eligibility-block-text" data-lang="mr">१. भागीदार/संचालकांचे फोटो (Photograph)<br>२. व्यवसाय पॅन कार्ड (Business PAN Card)<br>३. गुमास्ता परवाना / जीएसटी प्रमाणपत्र (Shop Act / GST Certificate)</p>
+              <p class="eligibility-block-text" data-lang="en">Photographs | Business PAN Card | Shop Act License / GST Certificate</p>
+            </div>
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">महत्वाच्या गोष्टी</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Things to know</h3>
+              <ul style="display:flex; flex-direction:column; gap:10px; padding-left:0; list-style:none;">
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">चालू खाते हे प्रामुख्याने व्यापारी, व्यावसायिक आणि कंपन्यांसाठी असते</span>
+                    <span data-lang="en">Current account is designed for traders, firms, and companies</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">दैनंदिन व्यावसायिक खेळत्या भांडवलाचे सुरळीत व्यवस्थापन करते</span>
+                    <span data-lang="en">Facilitates smooth daily business working capital and cash flow management</span>
+                  </span>
+                </li>
+                <li style="display:flex; align-items:flex-start; gap:10px; font-size:14px; color:var(--text-600);">
+                  <span style="color:var(--primary); font-weight:bold;">&rarr;</span>
+                  <span>
+                    <span data-lang="mr">मोबाईल आणि इंटरनेट बँकिंगद्वारे सर्व व्यवहार २४/७ सहज व्यवस्थापित करा</span>
+                    <span data-lang="en">Accessible via Chougale Mobile Banking app for 24/7 ease</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-accordion-col">
+            <h3 class="faq-accordion-title" data-lang="mr">चालू खाते - वारंवार विचारले जाणारे प्रश्न</h3>
+            <h3 class="faq-accordion-title" data-lang="en">Current Account - FAQs</h3>
+            
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">१. चालू खाते (Current Account) म्हणजे काय?</div>
+              <div class="faq-accord-header" data-lang="en">What is a Chougale Current Account?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">चालू खाते हे व्यावसायिक व्यवहारांसाठी डिझाइन केलेले खाते आहे जे व्यवहारांच्या वारंवारतेवर आणि रकमेवर मर्यादा आणत नाही.</span>
+                <span data-lang="en">A current account is a commercial bank account designed for business owners, traders, and corporates that supports high frequency deposits and withdrawals.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">२. व्यावसायिक चालू खाते उघडण्याचे काय फायदे आहेत?</div>
+              <div class="faq-accord-header" data-lang="en">What are the benefits of opening a Current Account?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">यामध्ये अमर्याद व्यवहार मर्यादा, NEFT/RTGS सुविधा, जलद रोख हस्तांतरण आणि व्यवसायासाठी सुलभ ओव्हरड्राफ्ट पात्रता मिळते.</span>
+                <span data-lang="en">It provides unlimited transaction bandwidth, NEFT/RTGS/IMPS, swift deposits/withdrawals, and easy business overdraft eligibility.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">३. चालू ठेवीवर किती व्याजदर मिळतो?</div>
+              <div class="faq-accord-header" data-lang="en">What interest rate is offered on Business Current Accounts?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">आम्ही खात्यातील रकमेच्या स्तरानुसार ३.५०% ते ५.००% प्रतिवर्ष व्याजदर प्रदान करतो.</span>
+                <span data-lang="en">We offer competitive interest rates ranging from 3.50% to 5.00% p.a. depending on the average balance bracket in the account.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">४. चालू खाते उघडण्यासाठी कोणती व्यावसायिक कागदपत्रे लागतात?</div>
+              <div class="faq-accord-header" data-lang="en">What documents are needed for business KYC?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">फर्म/कंपनीचे पॅन कार्ड, जीएसटी नोंदणी प्रमाणपत्र किंवा शॉप ॲक्ट लायसन्स, आणि मालकांचे ओळख पुरावे लागतात.</span>
+                <span data-lang="en">You will need the Business PAN card, Shop Act License, GST Certificate, partnership deed (if applicable), and KYC of the business owners.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INQUIRY FORM -->
+    <section class="inquiry-footer-section">
+      <div class="container reveal">
+        <h2 class="inquiry-footer-title">
+          <span data-lang="mr">काही प्रश्न आहेत? आम्हाला मोकळेपणाने विचारा!</span>
+          <span data-lang="en">ANY QUESTIONS? FEEL FREE TO ASK US!</span>
+        </h2>
+        <form class="inquiry-form-horizontal" onsubmit="alert('तुमची चौकशी यशस्वीरीत्या नोंदवली गेली आहे! / Your inquiry has been sent!'); return false;">
+          <div class="inquiry-form-row-4">
+            <input type="text" class="inquiry-input-field" placeholder="Name*" required>
+            <input type="email" class="inquiry-input-field" placeholder="Email*" required>
+            <input type="tel" class="inquiry-input-field" placeholder="Contact No.*" required>
+            <input type="text" class="inquiry-input-field" placeholder="City*" required>
+          </div>
+          <div style="display:flex; gap:16px; margin-top:10px;">
+            <textarea class="inquiry-input-field" placeholder="Message" style="flex:1; height:60px; resize:none;"></textarea>
+            <button type="submit" class="inquiry-submit-btn-green">
+              <span data-lang="mr">पाठवा</span>
+              <span data-lang="en">SUBMIT</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // FAQ accordion toggle logic
+      const faqHeaders = document.querySelectorAll(".faq-accord-header");
+      faqHeaders.forEach(hdr => {
+        hdr.addEventListener("click", () => {
+          const item = hdr.parentElement;
+          const isActive = item.classList.contains("active");
+          
+          document.querySelectorAll(".faq-accord-item").forEach(itm => itm.classList.remove("active"));
+          
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -742,10 +836,10 @@
     <a href="index.html" class="dock-item"><svg class="icon">
         <use href="#i-home" />
       </svg><span data-lang="mr">मुख्य</span><span data-lang="en">Home</span></a>
-    <a href="loans.html" class="dock-item dock-cta"><svg class="icon" style="width:20px;height:20px">
-        <use href="#i-rates" />
+    <a href="loans.html" class="dock-item dock-cta"><svg class="icon">
+        <use href="#i-loan" />
       </svg><span data-lang="mr">कर्ज</span><span data-lang="en">Loans</span></a>
-    <a href="sip.html" class="dock-item active"><svg class="icon">
+    <a href="sip.html" class="dock-item"><svg class="icon">
         <use href="#i-growth" />
       </svg><span data-lang="mr">SIP</span><span data-lang="en">SIP</span></a>
     <a href="tel:+910231265432" class="dock-item"><svg class="icon">
@@ -758,52 +852,7 @@
   <div class="search-overlay"><span class="search-overlay-close">&times;</span>
     <div class="search-overlay-box"><input type="text" class="search-overlay-input" placeholder="Search…"></div>
   </div>
-
   <script src="assets/js/main.js"></script>
-  <script>
-    // Dedicated script for SIP calculator page
-    document.addEventListener('DOMContentLoaded', () => {
-      const amountSlider = document.getElementById('sip-amount');
-      const rateSlider = document.getElementById('sip-rate');
-      const tenureSlider = document.getElementById('sip-tenure');
-
-      const amountTxt = document.getElementById('sip-amount-txt');
-      const rateTxt = document.getElementById('sip-rate-txt');
-      const tenureTxt = document.getElementById('sip-tenure-txt');
-
-      const investedTxt = document.getElementById('sip-total-invested');
-      const interestTxt = document.getElementById('sip-total-interest');
-      const maturityTxt = document.getElementById('sip-maturity-val');
-
-      function calculateSIP() {
-        const P = parseFloat(amountSlider.value);
-        const annualRate = parseFloat(rateSlider.value);
-        const years = parseFloat(tenureSlider.value);
-
-        const months = years * 12;
-        const i = (annualRate / 12) / 100;
-
-        // SIP Formula: M = P * [ ( (1 + i)^n - 1 ) / i ] * (1 + i)
-        const maturityValue = P * ((Math.pow(1 + i, months) - 1) / i) * (1 + i);
-        const totalInvested = P * months;
-        const totalInterest = Math.max(0, maturityValue - totalInvested);
-
-        amountTxt.textContent = '₹' + P.toLocaleString('en-IN');
-        rateTxt.textContent = annualRate.toFixed(1) + '%';
-        tenureTxt.textContent = years + ' Yr';
-
-        investedTxt.textContent = '₹' + Math.round(totalInvested).toLocaleString('en-IN');
-        interestTxt.textContent = '₹' + Math.round(totalInterest).toLocaleString('en-IN');
-        maturityTxt.textContent = '₹' + Math.round(maturityValue).toLocaleString('en-IN');
-      }
-
-      [amountSlider, rateSlider, tenureSlider].forEach(slider => {
-        slider.addEventListener('input', calculateSIP);
-      });
-
-      calculateSIP();
-    });
-  </script>
 </body>
 
 </html>

@@ -6304,7 +6304,10 @@ body.dark .faq-accord-header {
 /* ============================================================
    SAVINGS PAGE REDESIGN
    ============================================================ */
-.savings-hero {
+.savings-hero,
+.current-hero,
+.daily-hero,
+.recurring-hero {
   position: relative;
   padding: 120px 0 80px;
   background: var(--secondary);
@@ -6312,28 +6315,43 @@ body.dark .faq-accord-header {
   overflow: hidden;
   margin-top: var(--header-total-h);
 }
-.savings-hero::before {
+.savings-hero::before,
+.current-hero::before,
+.daily-hero::before,
+.recurring-hero::before {
   content: "";
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
   background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(11, 26, 48, 0.95) 100%);
   z-index: 1;
 }
-.savings-hero .container {
+.savings-hero .container,
+.current-hero .container,
+.daily-hero .container,
+.recurring-hero .container {
   position: relative;
   z-index: 2;
 }
-.savings-hero-grid {
+.savings-hero-grid,
+.current-hero-grid,
+.daily-hero-grid,
+.recurring-hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 40px;
   align-items: center;
 }
-.savings-hero-img-wrap {
+.savings-hero-img-wrap,
+.current-hero-img-wrap,
+.daily-hero-img-wrap,
+.recurring-hero-img-wrap {
   display: flex;
   justify-content: center;
 }
-.savings-hero-img-wrap img {
+.savings-hero-img-wrap img,
+.current-hero-img-wrap img,
+.daily-hero-img-wrap img,
+.recurring-hero-img-wrap img {
   max-height: 380px;
   border-radius: 24px;
   width: auto;
@@ -6341,7 +6359,10 @@ body.dark .faq-accord-header {
 }
 
 @media(max-width: 991px) {
-  .savings-hero-grid {
+  .savings-hero-grid,
+  .current-hero-grid,
+  .daily-hero-grid,
+  .recurring-hero-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
