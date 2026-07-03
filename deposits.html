@@ -431,225 +431,351 @@
   <div class="drawer-overlay" id="drawer-overlay"></div>
 
   <!-- PAGE HERO -->
-  <div class="page-hero">
+  <!-- PAGE HERO -->
+  <div class="term-deposit-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html" data-lang="mr">मुख्यपृष्ठ</a><a href="index.html"
-          data-lang="en">Home</a> › <span data-lang="mr">ठेव योजना</span><span data-lang="en">Deposits</span></div>
-      <span class="section-tag" data-lang="mr">ठेव योजना</span>
-      <span class="section-tag" data-lang="en">DEPOSIT SCHEMES</span>
-      <h1 class="page-hero-title"><span data-lang="mr">सुरक्षित गुंतवणूक, उत्तम परतावा</span><span data-lang="en">Secure
-          Investment, Maximum Returns</span></h1>
-      <p class="page-hero-desc"><span data-lang="mr">बचत खाते ते मुदत ठेव — सर्व योजनांवर सर्वाधिक व्याजदर आणि पूर्ण
-          सुरक्षितता.</span><span data-lang="en">From savings to fixed deposits — highest interest rates on all schemes
-          with complete security.</span></p>
+      <div class="breadcrumb">
+        <a href="index.html" data-lang="mr">मुख्यपृष्ठ</a>
+        <a href="index.html" data-lang="en">Home</a> ›
+        <span data-lang="mr">ठेव योजना</span>
+        <span data-lang="en">Deposits</span>
+      </div>
+      <div class="term-deposit-grid reveal">
+        <div>
+          <h1 class="term-hero-title">
+            <span data-lang="mr">विश्वसनीय गुंतवणूक, सुरक्षित परतावा</span>
+            <span data-lang="en">TRUSTED INVESTMENT, SECURED RETURNS</span>
+          </h1>
+          <p class="term-hero-desc">
+            <span data-lang="mr">कमी-जोखीम आणि हमीभावाच्या आश्वासनासह आपले भविष्य सुरक्षित करा</span>
+            <span data-lang="en">Secure your future with the promise of low-risk and assured returns</span>
+          </p>
+          <p class="term-hero-bullets">
+            <span data-lang="mr">निश्चित कालावधीसाठी एकरकमी ठेव | कालावधी: १ ते ३६ महिने | परिपक्वतेवर व्याजासह परतफेड</span>
+            <span data-lang="en">One-time deposit for fixed period | Term duration: 1 to 36 months | Repayment with interest on maturity</span>
+          </p>
+          <a href="#calculator" class="term-hero-btn-white">
+            <span data-lang="mr">आत्ताच गुंतवा</span>
+            <span data-lang="en">Invest now</span> &rarr;
+          </a>
+        </div>
+        <div class="term-hero-img-wrap">
+          <img src="assets/images/term_deposit_hero.png" alt="Term Deposit Investment">
+        </div>
+      </div>
     </div>
   </div>
 
   <main>
-    <section class="section-py" style="background:var(--bg)">
-      <div class="container">
-        <!-- Stats -->
-        <div class="deposit-highlight reveal">
-          <div class="dh-stat">
-            <div class="dh-val">8.5%</div>
-            <div class="dh-lbl" data-lang="mr">सर्वाधिक FD व्याजदर</div>
-            <div class="dh-lbl" data-lang="en">Highest FD Rate</div>
-          </div>
-          <div class="dh-stat">
-            <div class="dh-val">+0.5%</div>
-            <div class="dh-lbl" data-lang="mr">ज्येष्ठ नागरिक लाभ</div>
-            <div class="dh-lbl" data-lang="en">Senior Citizen Bonus</div>
-          </div>
-          <div class="dh-stat">
-            <div class="dh-val">90%</div>
-            <div class="dh-lbl" data-lang="mr">FD वर कर्ज मर्यादा</div>
-            <div class="dh-lbl" data-lang="en">Loan Against FD</div>
-          </div>
-          <div class="dh-stat">
-            <div class="dh-val">₹500</div>
-            <div class="dh-lbl" data-lang="mr">किमान ठेव रक्कम</div>
-            <div class="dh-lbl" data-lang="en">Minimum Deposit</div>
-          </div>
-        </div>
-
-        <!-- Deposit Cards -->
-        <div class="deposit-full-grid">
-          <!-- Savings -->
-          <div class="deposit-card dc-sav reveal reveal-d1">
-            <div>
-              <div class="deposit-card-header">
-                <div class="deposit-icon-wrap"><svg class="icon">
-                    <use href="#i-account" />
-                  </svg></div>
-                <span class="rate-badge">4.00% p.a.</span>
+    <!-- CALCULATOR -->
+    <section class="calc-redesign-section" id="calculator">
+      <div class="container reveal">
+        <div class="calc-redesign-grid">
+          <div class="calc-inputs-side">
+            <h2 class="calc-inputs-title">
+              <span data-lang="mr">मुदत ठेव कॅल्क्युलेटर</span>
+              <span data-lang="en">TERM DEPOSIT CALCULATOR</span>
+            </h2>
+            
+            <div class="calc-slider-item">
+              <div class="calc-slider-header">
+                <span class="calc-slider-lbl" data-lang="mr">रक्कम (Amount)</span>
+                <span class="calc-slider-lbl" data-lang="en">Amount</span>
+                <span class="calc-slider-bubble" id="amount-val-display">₹7,50,000</span>
               </div>
-              <div class="deposit-title" data-lang="mr">बचत खाते</div>
-              <div class="deposit-title" data-lang="en">Savings Account</div>
-              <p class="deposit-desc" data-lang="mr">दैनंदिन व्यवहारासाठी आदर्श. RuPay ATM कार्ड, चेकबुक आणि मोबाईल
-                बँकिंग सुविधासह.</p>
-              <p class="deposit-desc" data-lang="en">Ideal for daily transactions. Includes RuPay ATM card, chequebook,
-                and mobile banking.</p>
-              <ul style="margin:16px 0;display:flex;flex-direction:column;gap:8px">
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">किमान शिल्लक ₹५०० मात्र</span><span
-                    data-lang="en">Minimum balance ₹500 only</span>
-                </li>
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">विनामूल्य SMS अलर्ट</span><span
-                    data-lang="en">Free SMS alerts</span>
-                </li>
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">मोबाईल बँकिंग उपलब्ध</span><span
-                    data-lang="en">Mobile banking available</span>
-                </li>
-              </ul>
+              <input type="range" class="emi-range" id="calc-amount" min="10000" max="5000000" step="10000" value="750000">
             </div>
-            <div class="deposit-footer"><a href="contact.html" class="btn btn-primary btn-full"><span
-                  data-lang="mr">खाते उघडा</span><span data-lang="en">Open Account</span></a></div>
-          </div>
 
-          <!-- Fixed Deposit -->
-          <div class="deposit-card dc-fd reveal reveal-d2">
-            <div>
-              <div class="deposit-card-header">
-                <div class="deposit-icon-wrap"><svg class="icon">
-                    <use href="#i-deposit" />
-                  </svg></div>
-                <span class="rate-badge">8.50% p.a.</span>
+            <div class="calc-slider-item">
+              <div class="calc-slider-header">
+                <span class="calc-slider-lbl" data-lang="mr">कालावधी (Duration)</span>
+                <span class="calc-slider-lbl" data-lang="en">Duration</span>
+                <span class="calc-slider-bubble" id="duration-val-display">12 Months</span>
               </div>
-              <div class="deposit-title" data-lang="mr">मुदत ठेव (FD)</div>
-              <div class="deposit-title" data-lang="en">Fixed Deposit (FD)</div>
-              <p class="deposit-desc" data-lang="mr">एकरकमी गुंतवणुकीवर सर्वाधिक परतावा. ७ दिवस ते ५ वर्षांपर्यंत लवचिक
-                मुदत.</p>
-              <p class="deposit-desc" data-lang="en">Maximum returns on lump sum investment. Flexible tenure from 7 days
-                to 5 years.</p>
-              <ul style="margin:16px 0;display:flex;flex-direction:column;gap:8px">
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">९०% पर्यंत कर्ज सुविधा</span><span
-                    data-lang="en">Loan up to 90%</span>
-                </li>
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">स्वयंचलित नूतनीकरण</span><span
-                    data-lang="en">Auto-renewal option</span>
-                </li>
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">मासिक/त्रैमासिक व्याज</span><span
-                    data-lang="en">Monthly/quarterly interest</span>
-                </li>
-              </ul>
+              <input type="range" class="emi-range" id="calc-duration" min="1" max="36" step="1" value="12">
             </div>
-            <div class="deposit-footer"><a href="contact.html" class="btn btn-secondary btn-full"><span
-                  data-lang="mr">FD उघडा</span><span data-lang="en">Open FD</span></a></div>
-          </div>
 
-          <!-- Recurring Deposit -->
-          <div class="deposit-card dc-rd reveal reveal-d3">
-            <div>
-              <div class="deposit-card-header">
-                <div class="deposit-icon-wrap"><svg class="icon">
-                    <use href="#i-calc" />
-                  </svg></div>
-                <span class="rate-badge">8.00% p.a.</span>
+            <div class="calc-slider-item">
+              <div class="calc-slider-header">
+                <span class="calc-slider-lbl" data-lang="mr">व्याज दर (Interest Rate)</span>
+                <span class="calc-slider-lbl" data-lang="en">Interest Rate</span>
+                <span class="calc-slider-bubble" id="rate-val-display">9.00%</span>
               </div>
-              <div class="deposit-title" data-lang="mr">आवर्ती ठेव (RD)</div>
-              <div class="deposit-title" data-lang="en">Recurring Deposit</div>
-              <p class="deposit-desc" data-lang="mr">दरमहा छोटी रक्कम जमा करून मोठा निधी तयार करा. नियमित बचतीसाठी उत्तम
-                योजना.</p>
-              <p class="deposit-desc" data-lang="en">Build a large corpus by depositing small monthly amounts. Best
-                scheme for regular saving.</p>
-              <ul style="margin:16px 0;display:flex;flex-direction:column;gap:8px">
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">किमान ₹१०० दरमहा</span><span
-                    data-lang="en">Minimum ₹100/month</span>
-                </li>
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">१ ते ५ वर्षे मुदत</span><span data-lang="en">1
-                    to 5 year tenure</span>
-                </li>
-                <li class="loan-check"
-                  style="display:flex;align-items:center;gap:8px;font-size:14px;color:var(--text-600)">
-                  <div class="loan-check-dot"></div><span data-lang="mr">परिपक्वतेवर एकरकमी परतावा</span><span
-                    data-lang="en">Lump sum on maturity</span>
-                </li>
-              </ul>
+              <input type="range" class="emi-range" id="calc-rate" min="4" max="15" step="0.25" value="9.00">
             </div>
-            <div class="deposit-footer"><a href="contact.html" class="btn btn-outline btn-full"><span data-lang="mr">RD
-                  उघडा</span><span data-lang="en">Open RD</span></a></div>
           </div>
-        </div>
 
-        <!-- Interest rates table -->
-        <div class="section-header reveal" style="text-align:left;max-width:none;margin-bottom:28px;">
-          <span class="section-tag" data-lang="mr">व्याजदर तक्ता</span>
-          <span class="section-tag" data-lang="en">CURRENT RATES</span>
-          <h2 class="section-title"><span data-lang="mr">ठेव व्याजदर</span><span data-lang="en">Deposit Interest
-              Rates</span></h2>
-        </div>
-        <div class="reveal" style="overflow-x:auto;">
-          <table class="features-table" style="font-size:14px;">
-            <thead>
-              <tr>
-                <th><span data-lang="mr">ठेव प्रकार</span><span data-lang="en">Deposit Type</span></th>
-                <th><span data-lang="mr">मुदत</span><span data-lang="en">Tenure</span></th>
-                <th><span data-lang="mr">सामान्य दर</span><span data-lang="en">General Rate</span></th>
-                <th><span data-lang="mr">ज्येष्ठ नागरिक</span><span data-lang="en">Sr. Citizen</span></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span data-lang="mr">बचत खाते</span><span data-lang="en">Savings A/C</span></td>
-                <td>—</td>
-                <td class="rate-highlight">4.00%</td>
-                <td class="rate-highlight">4.50%</td>
-              </tr>
-              <tr>
-                <td><span data-lang="mr">मुदत ठेव</span><span data-lang="en">FD</span></td>
-                <td><span data-lang="mr">७–९० दिवस</span><span data-lang="en">7–90 Days</span></td>
-                <td class="rate-highlight">5.50%</td>
-                <td class="rate-highlight">6.00%</td>
-              </tr>
-              <tr>
-                <td><span data-lang="mr">मुदत ठेव</span><span data-lang="en">FD</span></td>
-                <td><span data-lang="mr">९१–१८० दिवस</span><span data-lang="en">91–180 Days</span></td>
-                <td class="rate-highlight">6.50%</td>
-                <td class="rate-highlight">7.00%</td>
-              </tr>
-              <tr>
-                <td><span data-lang="mr">मुदत ठेव</span><span data-lang="en">FD</span></td>
-                <td><span data-lang="mr">१–२ वर्षे</span><span data-lang="en">1–2 Years</span></td>
-                <td class="rate-highlight">8.00%</td>
-                <td class="rate-highlight">8.50%</td>
-              </tr>
-              <tr>
-                <td><span data-lang="mr">मुदत ठेव</span><span data-lang="en">FD</span></td>
-                <td><span data-lang="mr">२–५ वर्षे</span><span data-lang="en">2–5 Years</span></td>
-                <td class="rate-highlight">8.50%</td>
-                <td class="rate-highlight">9.00%</td>
-              </tr>
-              <tr>
-                <td><span data-lang="mr">आवर्ती ठेव</span><span data-lang="en">RD</span></td>
-                <td><span data-lang="mr">१–५ वर्षे</span><span data-lang="en">1–5 Years</span></td>
-                <td class="rate-highlight">8.00%</td>
-                <td class="rate-highlight">8.50%</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div style="text-align:center;margin-top:48px;" class="reveal">
-          <a href="contact.html" class="btn btn-primary btn-lg"><span data-lang="mr">आज खाते उघडा</span><span
-              data-lang="en">Open Account Today</span></a>
+          <div class="calc-green-output-card">
+            <div class="calc-output-row">
+              <span class="calc-output-lbl" data-lang="mr">परिपक्वता रक्कम:</span>
+              <span class="calc-output-lbl" data-lang="en">Maturity amount:</span>
+              <div class="calc-output-val" id="maturity-val-display">₹8,17,500</div>
+            </div>
+            <div class="calc-output-row">
+              <span class="calc-output-lbl" data-lang="mr">एकूण व्याज:</span>
+              <span class="calc-output-lbl" data-lang="en">Total interest:</span>
+              <div class="calc-output-val" id="interest-val-display">₹67,500</div>
+            </div>
+            <button class="calc-open-btn-navy" onclick="location.href='contact.html'">
+              <span data-lang="mr">मुदत ठेव खाते उघडा</span>
+              <span data-lang="en">OPEN FIXED DEPOSIT</span> &rarr;
+            </button>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- INTEREST RATES SECTION -->
+    <section class="rates-dark-section">
+      <div class="container reveal">
+        <div class="rates-dark-grid">
+          <div class="rates-table-side">
+            <h2 data-lang="mr">मुदत ठेव व्याजदर</h2>
+            <h2 data-lang="en">INTEREST RATE ON TERM DEPOSIT</h2>
+            <table class="rates-dark-table">
+              <thead>
+                <tr>
+                  <th data-lang="mr">दिवस/महिने</th>
+                  <th data-lang="en">Days/month</th>
+                  <th data-lang="mr">व्याज दर (%)</th>
+                  <th data-lang="en">Interest Rate (%)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-lang="mr">४६ दिवस ते ९० दिवस</td>
+                  <td data-lang="en">46 days to 90 days</td>
+                  <td style="font-weight:700; color:var(--primary);">5.00%</td>
+                </tr>
+                <tr>
+                  <td data-lang="mr">९१ दिवस ते १८० दिवस</td>
+                  <td data-lang="en">91 days to 180 days</td>
+                  <td style="font-weight:700; color:var(--primary);">6.00%</td>
+                </tr>
+                <tr>
+                  <td data-lang="mr">१८१ दिवस ते २त्त्० दिवस</td>
+                  <td data-lang="en">181 days to 270 days</td>
+                  <td style="font-weight:700; color:var(--primary);">7.00%</td>
+                </tr>
+                <tr>
+                  <td data-lang="mr">२७१ दिवस ते ३६४ दिवस</td>
+                  <td data-lang="en">271 days to 364 days</td>
+                  <td style="font-weight:700; color:var(--primary);">8.00%</td>
+                </tr>
+                <tr>
+                  <td data-lang="mr">१२ महिने पूर्ण</td>
+                  <td data-lang="en">12 months complete</td>
+                  <td style="font-weight:700; color:var(--primary);">10.00%</td>
+                </tr>
+                <tr>
+                  <td data-lang="mr">१२ महिने पूर्ण (ज्येष्ठ नागरिक / अपंग / विधवा / माजी सैनिक)</td>
+                  <td data-lang="en">12 months complete for senior citizen / handicapped / widow /ex- army person</td>
+                  <td style="font-weight:700; color:var(--primary);">10.00%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="rates-img-side">
+            <img src="assets/images/term_deposit_rates.png" alt="Gold Coins Accumulation">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HIGHLIGHT COLUMNS -->
+    <section class="highlight-columns-section">
+      <div class="container reveal">
+        <div class="highlight-columns-grid">
+          <div class="highlight-blue-card">
+            <h3 data-lang="mr">निश्चित गुंतवणूक. हमी परतावा.</h3>
+            <h3 data-lang="en">Fixed investment. Assured returns.</h3>
+            <div class="highlight-blue-card-img">
+              <img src="assets/images/term_deposit_returns.png" alt="Assured returns bag">
+            </div>
+            <p data-lang="mr">आजच आपली मुदत निवडा!</p>
+            <p data-lang="en">Choose your tenure today!</p>
+          </div>
+          
+          <div class="highlight-text-column">
+            <h2 class="highlight-text-title" data-lang="mr">मुदत / मध्यवर्ती ठेव योजना</h2>
+            <h2 class="highlight-text-title" data-lang="en">TERM / MID-TERM DEPOSITS</h2>
+            <p class="highlight-text-desc" data-lang="mr">
+              मुदत ठेव हा अत्यंत सुरक्षित आणि कमी जोखीम असलेला गुंतवणुकीचा पर्याय आहे, जो आपल्या गुंतवणुकीवर निश्चित परतावा आणि सुरक्षिततेची हमी देतो. नियमित उत्पन्नाचा स्त्रोत निर्माण करू इच्छिणाऱ्या गुंतवणूकदारांसाठी हा सर्वोत्तम पर्याय आहे.
+            </p>
+            <p class="highlight-text-desc" data-lang="en">
+              An extremely safe and low-risk investment, the term deposit is extremely popular among investors who like the security and assurance of consistent returns. Investors try and build a monthly source of income by appropriately investing in this type of deposit.
+            </p>
+            
+            <div class="highlight-blocks-grid-2x2">
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">Up to 10%</span>
+                <span class="highlight-block-lbl" data-lang="mr">व्याज दर</span>
+                <span class="highlight-block-lbl" data-lang="en">interest rate</span>
+              </div>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">Liquidity Base</span>
+                <span class="highlight-block-lbl" data-lang="mr">संरक्षण निधी योजना</span>
+                <span class="highlight-block-lbl" data-lang="en">Protection Fund</span>
+              </div>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">₹1128 Cr.</span>
+                <span class="highlight-block-lbl" data-lang="mr">एकूण ठेव विश्वास</span>
+                <span class="highlight-block-lbl" data-lang="en">worth deposits</span>
+              </div>
+              <div class="highlight-block-navy">
+                <span class="highlight-block-num">40 Years'</span>
+                <span class="highlight-block-lbl" data-lang="mr">सहकार वारसा</span>
+                <span class="highlight-block-lbl" data-lang="en">legacy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ELIGIBILITY & FAQs -->
+    <section class="eligibility-faq-section">
+      <div class="container reveal">
+        <div class="eligibility-faq-grid">
+          <div class="eligibility-list-col">
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">पात्रता (Eligibility)</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Eligibility</h3>
+              <p class="eligibility-block-text" data-lang="mr">सर्व भारतीय नागरिक, व्यावसायिक संस्था आणि सहकारी संस्था मुदत ठेव योजना सुरू करण्यास पात्र आहेत.</p>
+              <p class="eligibility-block-text" data-lang="en">All individual residents, business entities, and registered cooperative societies are eligible to open a term deposit.</p>
+            </div>
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">आवश्यक कागदपत्रे</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Minimum documentation needed</h3>
+              <p class="eligibility-block-text" data-lang="mr">१. छायाचित्र (Photograph)<br>२. पॅन कार्ड (PAN Card)<br>३. आधार कार्ड (Aadhar Card)</p>
+              <p class="eligibility-block-text" data-lang="en">Photograph | PAN Card | Aadhar Card</p>
+            </div>
+            <div class="eligibility-block-item">
+              <h3 class="eligibility-block-title" data-lang="mr">कालावधी (Duration)</h3>
+              <h3 class="eligibility-block-title" data-lang="en">Duration</h3>
+              <p class="eligibility-block-text" data-lang="mr">१ महिना ते ३६ महिने (01 to 36 months)</p>
+              <p class="eligibility-block-text" data-lang="en">01 to 36 months</p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-col">
+            <h3 class="faq-accordion-title" data-lang="mr">मुदत ठेव - वारंवार विचारले जाणारे प्रश्न</h3>
+            <h3 class="faq-accordion-title" data-lang="en">Term Deposit - FAQs</h3>
+            
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">१. चौगुले पतसंस्थेची मुदत ठेव (Fixed Deposit) काय आहे?</div>
+              <div class="faq-accord-header" data-lang="en">What is a Chougale Term Deposit (Fixed Deposit)?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">मुदत ठेव (FD) हा एक असा गुंतवणुकीचा पर्याय आहे जिथे तुम्ही निश्चित कालावधीसाठी एकरकमी रक्कम जमा करता आणि त्यावर आकर्षक व्याज मिळवता.</span>
+                <span data-lang="en">A fixed deposit is a secure financial investment where you deposit a lump sum amount for a fixed period at a higher rate of interest than savings accounts.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">२. चौगुले पतसंस्था मुदत ठेवीवर किती व्याजदर देते?</div>
+              <div class="faq-accord-header" data-lang="en">What interest rates does Chougale offer on Term Deposits?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">आम्ही मुदत ठेवींवर मुदतीनुसार ५.००% ते १०.००% प्रतिवर्ष व्याजदर प्रदान करतो. ज्येष्ठ नागरिकांना विशेष लाभ मिळतो.</span>
+                <span data-lang="en">We offer highly competitive interest rates ranging from 5.00% to 10.00% depending on your chosen tenure. Special bonus rates apply for senior citizens.</span>
+              </div>
+            </div>
+
+            <div class="faq-accord-item">
+              <div class="faq-accord-header" data-lang="mr">३. मुदत ठेवीच्या रकमेवर कर्ज सुविधा उपलब्ध आहे का?</div>
+              <div class="faq-accord-header" data-lang="en">Is there a loan facility available against Fixed Deposits?</div>
+              <div class="faq-accord-body">
+                <span data-lang="mr">होय, तुम्ही तुमच्या मुदत ठेव पावतीच्या ९०% रकमेपर्यंत कर्ज किंवा ओव्हरड्राफ्ट सुविधा मिळवू शकता.</span>
+                <span data-lang="en">Yes, you can easily avail loans or overdraft facilities up to 90% of your fixed deposit receipt value.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INQUIRY FORM -->
+    <section class="inquiry-footer-section">
+      <div class="container reveal">
+        <h2 class="inquiry-footer-title">
+          <span data-lang="mr">काही प्रश्न आहेत? आम्हाला मोकळेपणाने विचारा!</span>
+          <span data-lang="en">ANY QUESTIONS? FEEL FREE TO ASK US!</span>
+        </h2>
+        <form class="inquiry-form-horizontal" onsubmit="alert('तुमची चौकशी यशस्वीरीत्या नोंदवली गेली आहे! / Your inquiry has been sent!'); return false;">
+          <div class="inquiry-form-row-4">
+            <input type="text" class="inquiry-input-field" placeholder="Name*" required>
+            <input type="email" class="inquiry-input-field" placeholder="Email*" required>
+            <input type="tel" class="inquiry-input-field" placeholder="Contact No.*" required>
+            <input type="text" class="inquiry-input-field" placeholder="City*" required>
+          </div>
+          <div style="display:flex; gap:16px; margin-top:10px;">
+            <textarea class="inquiry-input-field" placeholder="Message" style="flex:1; height:60px; resize:none;"></textarea>
+            <button type="submit" class="inquiry-submit-btn-green">
+              <span data-lang="mr">पाठवा</span>
+              <span data-lang="en">SUBMIT</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
   </main>
+
+  <script>
+    // Self-contained Term Deposit Calculator logic
+    document.addEventListener("DOMContentLoaded", () => {
+      const amountSlider = document.getElementById("calc-amount");
+      const durationSlider = document.getElementById("calc-duration");
+      const rateSlider = document.getElementById("calc-rate");
+
+      const amountDisplay = document.getElementById("amount-val-display");
+      const durationDisplay = document.getElementById("duration-val-display");
+      const rateDisplay = document.getElementById("rate-val-display");
+
+      const maturityVal = document.getElementById("maturity-val-display");
+      const interestVal = document.getElementById("interest-val-display");
+
+      function updateCalculator() {
+        const principal = parseFloat(amountSlider.value);
+        const durationMonths = parseInt(durationSlider.value);
+        const ratePercent = parseFloat(rateSlider.value);
+
+        // Update displays
+        amountDisplay.textContent = "₹" + principal.toLocaleString("en-IN");
+        durationDisplay.textContent = durationMonths + " Months";
+        rateDisplay.textContent = ratePercent.toFixed(2) + "%";
+
+        // Calculate Simple Interest
+        const interest = principal * (ratePercent / 100) * (durationMonths / 12);
+        const maturity = principal + interest;
+
+        // Display results
+        maturityVal.textContent = "₹" + Math.round(maturity).toLocaleString("en-IN");
+        interestVal.textContent = "₹" + Math.round(interest).toLocaleString("en-IN");
+      }
+
+      // Sliders event listeners
+      if (amountSlider) amountSlider.addEventListener("input", updateCalculator);
+      if (durationSlider) durationSlider.addEventListener("input", updateCalculator);
+      if (rateSlider) rateSlider.addEventListener("input", updateCalculator);
+
+      // FAQ accordion toggle logic
+      const faqHeaders = document.querySelectorAll(".faq-accord-header");
+      faqHeaders.forEach(hdr => {
+        hdr.addEventListener("click", () => {
+          const item = hdr.parentElement;
+          const isActive = item.classList.contains("active");
+          
+          document.querySelectorAll(".faq-accord-item").forEach(itm => itm.classList.remove("active"));
+          
+          if (!isActive) {
+            item.classList.add("active");
+          }
+        });
+      });
+
+      // Initial run
+      updateCalculator();
+    });
+  </script>
 
   <!-- FOOTER -->
   <footer class="footer">
