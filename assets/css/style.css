@@ -4359,7 +4359,30 @@ body.dark .branch-info-name {
 @media(max-width:767px) {
   :root {
     --header-nav-h: 74px !important;
-    --header-total-h: 74px !important;
+    --header-total-h: 102px !important;
+  }
+  
+  .top-bar {
+    display: block !important;
+    font-size: 11px !important;
+    padding: 6px 0 !important;
+  }
+  
+  .top-bar-inner {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+  }
+  
+  .top-bar-item:nth-child(1),
+  .top-bar-ifsc {
+    display: none !important;
+  }
+  
+  .top-bar-item {
+    font-size: 11px !important;
+    gap: 4px !important;
   }
   
   .navbar {
@@ -4397,27 +4420,11 @@ body.dark .branch-info-name {
   }
   
   .nav-lang-top {
-    grid-column: 1 !important;
-    grid-row: 2 !important;
-    position: static !important;
-    transform: none !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    font-size: 11px !important;
-    background: none !important;
-    padding: 0 0 8px 16px !important;
-    box-shadow: none !important;
-    z-index: 999;
-  }
-  
-  body.dark .nav-lang-top {
-    background: none !important;
-    box-shadow: none !important;
+    display: none !important;
   }
   
   .nav-actions {
-    grid-column: 2 !important;
+    grid-column: 1 / span 2 !important;
     grid-row: 2 !important;
     display: flex !important;
     align-items: center !important;
