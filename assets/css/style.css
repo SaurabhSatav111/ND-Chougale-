@@ -7396,7 +7396,7 @@ body.dark .sip-cta-banner {
   align-items: center;
   gap: 10px;
   background: #ffffff !important;
-  color: var(--primary) !important;
+  color: var(--secondary) !important;
   padding: 12px 28px !important;
   border-radius: 50px !important;
   font-weight: 700 !important;
@@ -7407,7 +7407,7 @@ body.dark .sip-cta-banner {
 }
 .savings-hero-btn:hover {
   transform: translateY(-2px) !important;
-  background: var(--primary) !important;
+  background: var(--secondary) !important;
   color: #ffffff !important;
 }
 
