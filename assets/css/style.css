@@ -7353,6 +7353,12 @@ body.dark .sip-cta-banner {
 .page-hero .section-tag {
   color: #ffffff !important;
 }
+.savings-hero-title {
+  color: #ffffff !important;
+}
+.savings-hero-tagline {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
 
 /* ============================================================
    INQUIRY FORM PLACEHOLDER OVERRIDES
