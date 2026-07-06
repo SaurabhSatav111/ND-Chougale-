@@ -7349,6 +7349,9 @@ body.dark .sip-cta-banner {
 .section-tag {
   color: var(--primary) !important;
 }
+.page-hero .section-tag {
+  color: #ffffff !important;
+}
 
 /* ============================================================
    INQUIRY FORM PLACEHOLDER OVERRIDES
