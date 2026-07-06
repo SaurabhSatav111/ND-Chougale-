@@ -7345,4 +7345,33 @@ body.dark .sip-cta-banner {
 }
 .section-tag {
   color: var(--primary) !important;
-}
+}
+
+/* ============================================================
+   INQUIRY FORM PLACEHOLDER OVERRIDES
+   ============================================================ */
+.inquiry-input-field {
+  color: #000000 !important;
+  background-color: #ffffff !important;
+}
+.inquiry-input-field::placeholder {
+  color: #000000 !important;
+  opacity: 0.65 !important;
+}
+.inquiry-input-field::-webkit-input-placeholder {
+  color: #000000 !important;
+  opacity: 0.65 !important;
+}
+.inquiry-input-field::-moz-placeholder {
+  color: #000000 !important;
+  opacity: 0.65 !important;
+}
+.inquiry-input-field:-ms-input-placeholder {
+  color: #000000 !important;
+  opacity: 0.65 !important;
+}
+.inquiry-input-field::-ms-input-placeholder {
+  color: #000000 !important;
+  opacity: 0.65 !important;
+}
+
