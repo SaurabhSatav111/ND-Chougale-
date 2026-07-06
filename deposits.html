@@ -696,7 +696,7 @@
           <div class="inquiry-form-row-4">
             <input type="text" class="inquiry-input-field" placeholder="Name*" required>
             <input type="email" class="inquiry-input-field" placeholder="Email*" required>
-            <input type="tel" class="inquiry-input-field" placeholder="Contact No.*" required>
+            <input type="tel" class="inquiry-input-field" placeholder="10-Digit Mobile No.*" pattern="[0-9]{10}" maxlength="10" required title="Please enter a 10-digit mobile number" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
             <input type="text" class="inquiry-input-field" placeholder="City*" required>
           </div>
           <div style="display:flex; gap:16px; margin-top:10px;">
