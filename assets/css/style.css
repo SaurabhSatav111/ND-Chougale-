@@ -3632,7 +3632,7 @@ body.dark .branch-info-name {
 .float-actions {
   position: fixed;
   right: 20px;
-  bottom: 90px;
+  bottom: 30px;
   display: flex;
   flex-direction: column;
   gap: 9px;
