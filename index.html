@@ -1234,7 +1234,7 @@
                   <div class="form-group">
                     <label class="form-label" data-lang="mr">मोबाईल नंबर</label>
                     <label class="form-label" data-lang="en">Mobile Number</label>
-                    <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" required>
+                    <input type="tel" class="form-input" placeholder="10-Digit Mobile No." pattern="[0-9]{10}" maxlength="10" required title="Please enter a 10-digit mobile number" oninput="this.value = this.value.replace(/[^0-9]/g, '');">
                   </div>
                 </div>
                 <div class="form-group">
