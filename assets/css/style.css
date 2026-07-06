@@ -5858,6 +5858,7 @@ body.dark .dropdown-menu-loans .dropdown-item {
   line-height: 1.2;
   margin-bottom: 20px;
   text-transform: uppercase;
+  color: #ffffff !important;
 }
 .term-hero-desc {
   font-size: 18px;
