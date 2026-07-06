@@ -7134,12 +7134,11 @@ body.dark .locker-table tr:hover td {
   display: block;
 }
 
-/* Why choose SIP card left side */
 .sip-why-card {
   background: linear-gradient(135deg, #101c36 0%, #1c315e 100%);
   border-radius: 24px;
   padding: 40px;
-  color: #ffffff;
+  color: #ffffff !important;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -7153,6 +7152,10 @@ body.dark .locker-table tr:hover td {
   font-size: 54px;
   font-weight: 900;
   line-height: 1.1;
+  color: #ffffff !important;
+}
+.sip-why-card h3 span {
+  color: var(--primary) !important;
 }
 .sip-why-card .sip-sub-label {
   font-size: 16px;
