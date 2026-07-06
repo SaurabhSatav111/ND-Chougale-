@@ -7322,3 +7322,27 @@ body.dark .sip-cta-banner {
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================================
+   GLOBAL PAGE HERO READABILITY OVERRIDES
+   ============================================================ */
+.page-hero {
+  background: linear-gradient(135deg, #0b1a30 0%, #152c4e 100%) !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.page-hero-title {
+  color: #ffffff !important;
+}
+.page-hero-desc {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.breadcrumb, .breadcrumb a {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+.breadcrumb a:hover {
+  color: var(--primary) !important;
+}
+.section-tag {
+  color: var(--primary) !important;
+}
