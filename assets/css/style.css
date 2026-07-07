@@ -7410,4 +7410,37 @@ body.dark .sip-cta-banner {
   background: var(--secondary) !important;
   color: #ffffff !important;
 }
+
+/* ============================================================
+   FULL-WIDTH HEADER BANNER AND LOGO FIXES
+   ============================================================ */
+.header-banner-wrap {
+  width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  background: #ffffff;
+  display: block;
+}
+.header-banner-img {
+  width: 100%;
+  height: 90px;
+  object-fit: fill;
+  display: block;
+}
+@media (max-width: 767px) {
+  .header-banner-img {
+    height: 50px;
+  }
+}
+.nav-logo {
+  display: none !important;
+}
+.nav-inner {
+  justify-content: center !important; /* Centers the navigation links since logo is removed */
+}
+@media (max-width: 991px) {
+  .nav-inner {
+    justify-content: space-between !important; /* Keeps hamburger on right, lang on left etc. */
+  }
+}
 

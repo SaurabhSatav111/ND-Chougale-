@@ -98,6 +98,14 @@ function initNavbar() {
   const header = document.querySelector('.site-header');
   if (!header) return;
 
+  // Dynamically inject full width header logo banner at the top of site-header
+  if (!header.querySelector('.header-banner-wrap')) {
+    const banner = document.createElement('div');
+    banner.className = 'header-banner-wrap';
+    banner.innerHTML = '<img src="assets/images/headerlogo.jpeg" alt="N.D. Chougale Header Logo" class="header-banner-img">';
+    header.insertBefore(banner, header.firstChild);
+  }
+
   const onScroll = () => {
     header.classList.toggle('scrolled', window.scrollY > 60);
   };
