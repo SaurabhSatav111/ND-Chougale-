@@ -342,39 +342,38 @@
   <main>
     <section class="home-hero" id="hero">
       <div class="container">
-        <div class="hero-split-grid reveal">
-          <div class="hero-text-side">
-            <span class="hero-main-badge" data-lang="mr">चौगुले पतसंस्थेचे ८.५% मुदत परतावा</span>
-            <span class="hero-main-badge" data-lang="en">Chougale Patsanstha's 8.5% Fixed Returns</span>
-            <h1 class="hero-heading">
-              <span data-lang="mr">योग्य का निवडायचे? <span>चौगुले SIP</span> सह सर्वोत्तम निवडा</span>
-              <span data-lang="en">Why settle for right? Choose the best with <span>Chougale SIP</span></span>
-            </h1>
-            <ul class="hero-feature-list">
-              <li class="hero-feature-item">
-                <span data-lang="mr">दरमहिन्याला निश्चित परताव्याची हमी</span>
-                <span data-lang="en">Assurance of fixed returns every month</span>
-              </li>
-              <li class="hero-feature-item">
-                <span data-lang="mr">चक्रवाढ व्याजासह फायदेशीर गुंतवणूक</span>
-                <span data-lang="en">Profitable investment with compound interest</span>
-              </li>
-              <li class="hero-feature-item">
-                <span data-lang="mr">१२ महिन्यांपेक्षा जास्त कालावधी</span>
-                <span data-lang="en">Minimum tenure of more than 12 months</span>
-              </li>
-            </ul>
-            <div style="margin-top: 10px;">
-              <a href="sip.html" class="btn btn-primary btn-lg">
-                <span data-lang="mr">आत्ताच सुरू करा</span>
-                <span data-lang="en">Start Systematic Investment</span>
-              </a>
-            </div>
+        <div class="hero-slider reveal">
+          <div class="hero-slide active">
+            <img src="assets/images/bank_hero_banner.png" alt="N.D. Chougale Nagari Path Sanstha Banner">
           </div>
-          <div class="hero-image-side">
-            <div class="hero-main-img-wrap">
-              <img src="assets/images/hero_family.png" alt="Chougale SIP Family Growth">
-            </div>
+          <div class="hero-slide">
+            <img src="assets/images/bank_hero_landscape.png" alt="Professional Cooperative Banking Services">
+          </div>
+          <div class="hero-slide">
+            <img src="assets/images/savings_hero.png" alt="Grow your savings with higher returns">
+          </div>
+          <div class="hero-slide">
+            <img src="assets/images/recurring_hero.png" alt="Recurring Deposits and Safe Investments">
+          </div>
+          
+          <!-- Slider Controls -->
+          <button class="hero-slider-prev" aria-label="Previous Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+          <button class="hero-slider-next" aria-label="Next Slide">
+            <svg viewBox="0 0 24 24" width="24" height="24">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+          
+          <!-- Indicators -->
+          <div class="hero-slider-dots">
+            <span class="hero-slider-dot active"></span>
+            <span class="hero-slider-dot"></span>
+            <span class="hero-slider-dot"></span>
+            <span class="hero-slider-dot"></span>
           </div>
         </div>
       </div>
@@ -384,41 +383,41 @@
     <section class="quick-nav-tabs-section">
       <div class="container">
         <div class="quick-nav-grid reveal">
-          <a href="deposits.html" class="quick-nav-item">
+          <button class="quick-nav-item quick-tab-btn active" data-tab-target="tab-deposits" type="button">
             <div class="quick-nav-icon-wrap">
               <svg class="icon"><use href="#i-deposit" /></svg>
             </div>
             <span class="quick-nav-title" data-lang="mr">ठेव योजना</span>
             <span class="quick-nav-title" data-lang="en">Deposits</span>
-          </a>
-          <a href="loans.html" class="quick-nav-item">
+          </button>
+          <button class="quick-nav-item quick-tab-btn" data-tab-target="tab-loans" type="button">
             <div class="quick-nav-icon-wrap">
               <svg class="icon"><use href="#i-loan" /></svg>
             </div>
             <span class="quick-nav-title" data-lang="mr">कर्ज सेवा</span>
             <span class="quick-nav-title" data-lang="en">Loan</span>
-          </a>
-          <a href="deposits.html" class="quick-nav-item">
+          </button>
+          <button class="quick-nav-item quick-tab-btn" data-tab-target="tab-savings" type="button">
             <div class="quick-nav-icon-wrap">
               <svg class="icon"><use href="#i-account" /></svg>
             </div>
             <span class="quick-nav-title" data-lang="mr">बचत योजना</span>
             <span class="quick-nav-title" data-lang="en">Savings</span>
-          </a>
-          <a href="deposits.html" class="quick-nav-item">
+          </button>
+          <button class="quick-nav-item quick-tab-btn" data-tab-target="tab-current" type="button">
             <div class="quick-nav-icon-wrap">
               <svg class="icon"><use href="#i-calc" /></svg>
             </div>
             <span class="quick-nav-title" data-lang="mr">चालू खाते</span>
             <span class="quick-nav-title" data-lang="en">Current</span>
-          </a>
-          <a href="sip.html" class="quick-nav-item">
+          </button>
+          <button class="quick-nav-item quick-tab-btn" data-tab-target="tab-sip" type="button">
             <div class="quick-nav-icon-wrap">
               <svg class="icon"><use href="#i-growth" /></svg>
             </div>
             <span class="quick-nav-title" data-lang="mr">चौगुले SIP</span>
             <span class="quick-nav-title" data-lang="en">Chougale SIP</span>
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -427,55 +426,113 @@
     <section class="liquidity-section">
       <div class="container">
         <div class="liquidity-grid reveal">
-          <div class="liquidity-left-card">
-            <div class="liquidity-badge" data-lang="mr">तरलता संरक्षण योजना</div>
-            <div class="liquidity-badge" data-lang="en">Liquidity Protection Scheme</div>
-            <h3 class="liquidity-heading">
-              <span data-lang="mr">या योजनेअंतर्गत, <span>₹ ७० लाख</span> पर्यंतच्या ठेवी आणि <span>९९.९४% ठेवीदार</span> पूर्णपणे सुरक्षित आहेत.</span>
-              <span data-lang="en">Under this scheme, deposits up to <span>₹ 70 Lakhs</span> of <span>99.94% depositors</span> are completely safe.</span>
-            </h3>
-            <div class="liquidity-body">
-              <div class="liquidity-image">
-                <img src="assets/images/bank_ambassador_transparent.png" alt="Ambassador Image">
-              </div>
-              <div class="liquidity-rate-circle">
-                <span class="liquidity-circle-lbl" data-lang="mr">व्याज दर</span>
-                <span class="liquidity-circle-lbl" data-lang="en">Interest</span>
-                <span class="liquidity-circle-num">10%</span>
-                <span class="liquidity-circle-lbl" data-lang="mr">पर्यंत</span>
-                <span class="liquidity-circle-lbl" data-lang="en">Up To</span>
-              </div>
-            </div>
+          <div class="liquidity-left-card" style="padding:0 !important; overflow:hidden; display:block !important;">
+            <img src="assets/images/liquidity_banner.png" alt="Chougale Liquidity Protection Scheme" style="width:100%; height:100%; object-fit:cover; display:block;">
           </div>
           <div class="what-do-you-want-card">
             <h3 class="what-heading">
               <span data-lang="mr">तुम्हाला काय हवे आहे?</span>
               <span data-lang="en">What do you want?</span>
             </h3>
-            <div class="what-links-list">
+            
+            <!-- PANEL 1: DEPOSITS -->
+            <div class="what-links-list tab-panel active" id="tab-deposits">
               <a href="deposits.html" class="what-link-item">
                 <span data-lang="mr">मुदत ठेव (Term Deposit)</span>
                 <span data-lang="en">Term Deposit</span>
                 <span class="what-link-arrow">&rarr;</span>
               </a>
-              <a href="deposits.html" class="what-link-item">
-                <span data-lang="mr">बचत खाते</span>
+              <a href="savings.html" class="what-link-item">
+                <span data-lang="mr">बचत खाते (Savings Account)</span>
                 <span data-lang="en">Savings Account</span>
                 <span class="what-link-arrow">&rarr;</span>
               </a>
-              <a href="deposits.html" class="what-link-item">
-                <span data-lang="mr">चालू खाते</span>
+              <a href="current.html" class="what-link-item">
+                <span data-lang="mr">चालू खाते (Current Deposit)</span>
                 <span data-lang="en">Current Deposit</span>
                 <span class="what-link-arrow">&rarr;</span>
               </a>
-              <a href="deposits.html" class="what-link-item">
-                <span data-lang="mr">दैनिक ठेव</span>
+              <a href="daily.html" class="what-link-item">
+                <span data-lang="mr">दैनिक ठेव (Daily Deposit)</span>
                 <span data-lang="en">Daily Deposit</span>
                 <span class="what-link-arrow">&rarr;</span>
               </a>
-              <a href="deposits.html" class="what-link-item">
-                <span data-lang="mr">आवर्ती ठेव (RD)</span>
+              <a href="recurring.html" class="what-link-item">
+                <span data-lang="mr">आवर्ती ठेव (Recurring Deposit)</span>
                 <span data-lang="en">Recurring Deposit</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+            </div>
+
+            <!-- PANEL 2: LOANS -->
+            <div class="what-links-list tab-panel" id="tab-loans">
+              <a href="personal-loan.html" class="what-link-item">
+                <span data-lang="mr">वैयक्तिक कर्ज (Personal Loan)</span>
+                <span data-lang="en">Personal Loan</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+              <a href="vehicle-loan.html" class="what-link-item">
+                <span data-lang="mr">वाहन कर्ज (Vehicle Loan)</span>
+                <span data-lang="en">Vehicle Loan</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+              <a href="gold-loan.html" class="what-link-item">
+                <span data-lang="mr">सुवर्ण कर्ज (Gold Loan)</span>
+                <span data-lang="en">Gold Loan</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+              <a href="business-loan.html" class="what-link-item">
+                <span data-lang="mr">व्यावसायिक कर्ज (Business Loan)</span>
+                <span data-lang="en">Business Loan</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+              <a href="property-loan.html" class="what-link-item">
+                <span data-lang="mr">मालमत्ता तारण कर्ज (Property Loan)</span>
+                <span data-lang="en">Property Loan</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+              <a href="fd-loan.html" class="what-link-item">
+                <span data-lang="mr">मुदत ठेव तारण कर्ज (Fixed Deposit Loan)</span>
+                <span data-lang="en">Fixed Deposit Loan</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+            </div>
+
+            <!-- PANEL 3: SAVINGS -->
+            <div class="what-links-list tab-panel" id="tab-savings">
+              <p class="tab-desc">
+                <span data-lang="mr">चौगुले पतसंस्थेमध्ये, बचत करणे म्हणजे केवळ पैसे जमा करणे नाही—तर ते तुमच्या भविष्यासाठी सुरक्षितता निर्माण करणे आहे. आमचे बचत खाते तुम्हाला अमर्याद व्यवहार, सोयीस्कर मोबाईल बँकिंग आणि पूर्ण नियंत्रणासाठी त्वरित एसएमएस अलर्ट प्रदान करते. दरमहा थेट जमा होणाऱ्या व्याजासह, तुमचे पैसे सुरक्षितपणे वाढत राहतील. आजच सुरुवात करा आणि अशा बँकिंगचा अनुभव घ्या जे तुमच्या प्रगतीला महत्त्व देते.</span>
+                <span data-lang="en">At Chougale, saving is more than just depositing money—it’s about building security for your future. Our Savings Account offers unlimited transactions, mobile banking convenience, and instant SMS alerts for complete control. With monthly interest credited directly, your money grows steadily while staying accessible. Start today and experience banking that values both freedom and growth.</span>
+              </p>
+              <a href="savings.html" class="what-link-item">
+                <span data-lang="mr">बचत खाते</span>
+                <span data-lang="en">Savings</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+            </div>
+
+            <!-- PANEL 4: CURRENT -->
+            <div class="what-links-list tab-panel" id="tab-current">
+              <p class="tab-desc">
+                <span data-lang="mr">तुमच्या व्यवसायाला तुमच्यासारखाच गतिमान बँकिंग भागीदार मिळायला हवा. आमचे चालू खाते भागीदारी संस्था, ट्रस्ट आणि सोसायट्यांसाठी डिझाइन केलेले आहे—ज्यामुळे तुमचे आर्थिक व्यवहार सुलभ आणि सुसंगत राहतात. सोपे दस्तऐवजीकरण आणि लवचिक व्यवहार हाताळणीसह, प्रत्येक तपशील तुमच्या दैनंदिन गरजांना मदत करतो. तुम्ही व्यवसायावर लक्ष केंद्रित करा, तर आम्ही त्याचे सुरळीत व्यवस्थापन करू.</span>
+                <span data-lang="en">Your business deserves a banking partner as dynamic as you are. Chougale's Current Account is designed for firms, partnerships, trusts, and societies—making operations smooth and compliant. From easy documentation to flexible transaction handling, every detail supports your day-to-day needs. With us, you focus on business, while we ensure seamless financial management.</span>
+              </p>
+              <a href="current.html" class="what-link-item">
+                <span data-lang="mr">चालू खाते</span>
+                <span data-lang="en">Current</span>
+                <span class="what-link-arrow">&rarr;</span>
+              </a>
+            </div>
+
+            <!-- PANEL 5: SIP -->
+            <div class="what-links-list tab-panel" id="tab-sip">
+              <p class="tab-desc">
+                <span data-lang="mr">आजची छोटी आणि शिस्तबद्ध पावले उद्याचे मोठे आर्थिक टप्पे गाठू शकतात. चौगुले SIP तुम्हाला दरमहा परवडणाऱ्या रकमेसह पद्धतशीरपणे गुंतवणूक करू देते, ज्याद्वारे तुमची बचत दीर्घकालीन संपत्तीत रूपांतरित होते. ही योजना चक्रवाढ व्याज आणि सातत्यपूर्ण वाढीसाठी उपयुक्त आहे. कौटुंबिक ध्येय असो किंवा भविष्यातील स्वप्ने—तुमचा प्रवास येथून सुरू होतो.</span>
+                <span data-lang="en">Small, disciplined steps today can create big financial milestones tomorrow. Chougale SIP lets you invest systematically with affordable monthly amounts, turning savings into long-term wealth. The plan harnesses the power of compounding and rupee-cost averaging for consistent growth. Whether for family goals, retirement, or future dreams—your journey begins here.</span>
+              </p>
+              <a href="sip.html" class="what-link-item">
+                <span data-lang="mr">चौगुले SIP</span>
+                <span data-lang="en">Chougale SIP</span>
                 <span class="what-link-arrow">&rarr;</span>
               </a>
             </div>
@@ -489,46 +546,48 @@
       <div class="container">
         <div class="about-grid-new reveal">
           <div class="about-content">
-            <span class="section-tag" data-lang="mr">आमच्याबद्दल</span>
-            <span class="section-tag" data-lang="en">ABOUT US</span>
-            <h2 class="section-title">
+            <h2 class="about-title" style="font-size: 40px; font-weight: 800; color: var(--primary); margin-bottom: 12px; text-transform: uppercase;">
+              <span data-lang="mr">आमच्याबद्दल</span>
+              <span data-lang="en">About Us</span>
+            </h2>
+            <h3 class="about-subtitle" style="font-size: 20px; font-weight: 600; color: var(--text-800); margin-bottom: 20px;">
               <span data-lang="mr">चौगुले पतसंस्था - एक सहकार यशोगाथा</span>
               <span data-lang="en">Chougale Credit Society - A co-operative success story</span>
-            </h2>
+            </h3>
             <p class="section-desc" style="margin-bottom:24px;">
-              <span data-lang="mr">महाराष्ट्र हा सहकार चळवळीचा केंद्रबिंदू असून गेल्या ४० वर्षांहून अधिक काळ चौगुले पतसंस्था या चळवळीचे नेतृत्व करत आहे. कोल्हापूर आणि आसपासच्या परिसरात २० हून अधिक शाखांच्या माध्यमातून आम्ही सभासदांना सर्वोत्तम वित्तीय सेवा पुरवत आहोत.</span>
-              <span data-lang="en">Maharashtra is the epicentre of co-operative movement and for more than 40 years, Chougale Patsanstha has been the torchbearer of this movement. With presence in 20+ areas, Chougale continues to nurture people's trust.</span>
+              <span data-lang="mr">महाराष्ट्र हा सहकार चळवळीचा केंद्रबिंदू असून गेल्या ४० वर्षांहून अधिक काळ चौगुले नागरी सहकारी पतसंस्था या चळवळीचे नेतृत्व करत आहे. कोल्हापूर येथे मुख्य कार्यालय आणि २० हून अधिक शाखांच्या माध्यमातून, चौगुले पतसंस्था आपल्या सभासदांना त्यांच्या कष्टाच्या पैशावर चांगला आणि सातत्यपूर्ण परतावा देऊन लोकांचा विश्वास वृद्धिंगत करत आहे. या प्रवासात, आम्ही लोकांना सुज्ञ वित्तीय सल्ला आणि सेवा देण्यासोबतच, बदलत्या बँकिंग क्षेत्राला अनुरूप अशा आधुनिक सेवा देखील प्रदान केल्या आहेत. चौगुले पतसंस्थेमध्ये, आम्ही लोकांचा आमच्यावरील विश्वास दररोज आणि सदैव दृढ करण्यासाठी कटिबद्ध आहोत.</span>
+              <span data-lang="en">Maharashtra is the epicentre of co-operative movement and for more than 40 years, Chougale Credit Co-operative Society has been the torchbearer of this movement. Headquartered in Kolhapur and with presence in 20+ areas, Chougale continues to nurture people's trust by giving them big and consistent returns on their hard-earned money. Along the way, we have also built a reputation of giving people wise financial advice and services, while also providing them modern services in line with the evolving banking sector. At Chougale, we are committed to strengthening people's trust in us, every day, forever.</span>
             </p>
             <div class="about-stats-grid-3x2">
-              <div class="about-stat-card-new" style="background:var(--secondary); color:#fff; border:none;">
-                <div class="about-stat-number" style="color:var(--primary);">40</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="mr">वर्षे वारसा</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="en">Years' Legacy</div>
+              <div class="about-stat-card-new">
+                <div class="about-stat-number">40</div>
+                <div class="about-stat-label" data-lang="mr">वर्षे वारसा</div>
+                <div class="about-stat-label" data-lang="en">Years' Legacy</div>
               </div>
-              <div class="about-stat-card-new" style="background:var(--secondary); color:#fff; border:none;">
-                <div class="about-stat-number" style="color:var(--primary);">20+</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="mr">शाखा</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="en">Branches</div>
+              <div class="about-stat-card-new">
+                <div class="about-stat-number">20+</div>
+                <div class="about-stat-label" data-lang="mr">शाखा</div>
+                <div class="about-stat-label" data-lang="en">Branches</div>
               </div>
-              <div class="about-stat-card-new" style="background:var(--secondary); color:#fff; border:none;">
-                <div class="about-stat-number" style="color:var(--primary);">₹316Cr.</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="mr">गुंतवणूक</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="en">Investments</div>
+              <div class="about-stat-card-new">
+                <div class="about-stat-number">₹316Cr.</div>
+                <div class="about-stat-label" data-lang="mr">गुंतवणूक</div>
+                <div class="about-stat-label" data-lang="en">Investments</div>
               </div>
-              <div class="about-stat-card-new" style="background:var(--secondary); color:#fff; border:none;">
-                <div class="about-stat-number" style="color:var(--primary);">₹585Cr.</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="mr">सुवर्ण कर्ज</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="en">Gold Loans</div>
+              <div class="about-stat-card-new">
+                <div class="about-stat-number">₹585Cr.</div>
+                <div class="about-stat-label" data-lang="mr">सुवर्ण कर्ज</div>
+                <div class="about-stat-label" data-lang="en">Gold Loans</div>
               </div>
-              <div class="about-stat-card-new" style="background:var(--secondary); color:#fff; border:none;">
-                <div class="about-stat-number" style="color:var(--primary);">₹1128Cr.</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="mr">ठेवी</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="en">Deposits</div>
+              <div class="about-stat-card-new">
+                <div class="about-stat-number">₹1128Cr.</div>
+                <div class="about-stat-label" data-lang="mr">ठेवी</div>
+                <div class="about-stat-label" data-lang="en">Deposits</div>
               </div>
-              <div class="about-stat-card-new" style="background:var(--secondary); color:#fff; border:none;">
-                <div class="about-stat-number" style="color:var(--primary);">₹824Cr.</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="mr">कर्ज वाटप</div>
-                <div class="about-stat-label" style="color:#fff;" data-lang="en">Loan Disbursed</div>
+              <div class="about-stat-card-new">
+                <div class="about-stat-number">₹824Cr.</div>
+                <div class="about-stat-label" data-lang="mr">कर्ज वाटप</div>
+                <div class="about-stat-label" data-lang="en">Loan Disbursed</div>
               </div>
             </div>
           </div>
@@ -541,7 +600,154 @@
       </div>
     </section>
 
+    <!-- OUR SERVICES SECTION -->
+    <section class="services-dark-section">
+      <div class="container">
+        <div class="services-dark-card-wrap">
+          <div class="services-dark-header reveal">
+            <h2 style="font-size: 40px; font-weight: 800; text-transform: uppercase; margin-bottom: 16px;">
+              <span data-lang="mr">आमच्या सेवा</span>
+              <span data-lang="en">Our Services</span>
+            </h2>
+            <p style="font-size: 15px; opacity: 0.85; line-height: 1.6; max-width: 700px; margin: 0 auto;">
+              <span data-lang="mr">चौगुले नागरी सहकारी पतसंस्था नेहमीच ग्राहकांच्या प्रगतीसाठी आणि सुविधेसाठी कटिबद्ध आहे. त्यामुळे आमचे ग्राहक अत्यंत सुलभ आणि जलद व्यवहारांचा अनुभव घेतात.</span>
+              <span data-lang="en">Chougale Credit Co-operative Society always focuses on the growth and convenience of the investors. And so, investors experience transactions that are executed with ease and simplicity.</span>
+            </p>
+          </div>
+          <div class="services-dark-grid reveal">
+            <!-- Card 1: Mobile Banking -->
+            <div class="service-dark-card">
+              <div class="service-dark-icon">
+                <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-mobile" /></svg>
+              </div>
+              <h3 class="service-dark-title">
+                <span data-lang="mr">मोबाईल बँकिंग</span>
+                <span data-lang="en">Mobile Banking</span>
+              </h3>
+              <p class="service-dark-desc">
+                <span data-lang="mr">चौगुले ॲपवर एका क्लिकवर सर्व बँकिंग सेवा उपलब्ध</span>
+                <span data-lang="en">Banking services available on Chougale App on one click</span>
+              </p>
+              <a href="services.html" class="service-dark-btn">
+                <span data-lang="mr">अधिक माहिती</span>
+                <span data-lang="en">Know More</span> &rarr;
+              </a>
+            </div>
+            <!-- Card 2: Money Transfer -->
+            <div class="service-dark-card">
+              <div class="service-dark-icon">
+                <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-neft" /></svg>
+              </div>
+              <h3 class="service-dark-title">
+                <span data-lang="mr">पैसे वर्ग करणे</span>
+                <span data-lang="en">Money Transfer</span>
+              </h3>
+              <p class="service-dark-desc">
+                <span data-lang="mr">RTGS, NEFT आणि IMPS द्वारे जलद पैसे ट्रान्सफरचा आनंद घ्या</span>
+                <span data-lang="en">Enjoy fastest money transfer through RTGS, NEFT & IMPS</span>
+              </p>
+              <a href="services.html" class="service-dark-btn">
+                <span data-lang="mr">अधिक माहिती</span>
+                <span data-lang="en">Know More</span> &rarr;
+              </a>
+            </div>
+            <!-- Card 3: Locker Facility -->
+            <div class="service-dark-card">
+              <div class="service-dark-icon">
+                <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-locker" /></svg>
+              </div>
+              <h3 class="service-dark-title">
+                <span data-lang="mr">लॉकर सुविधा</span>
+                <span data-lang="en">Locker Facility</span>
+              </h3>
+              <p class="service-dark-desc">
+                <span data-lang="mr">तुमच्या मौल्यवान वस्तूंसाठी अत्याधुनिक सुरक्षा लॉकर</span>
+                <span data-lang="en">State-of-the-art safety vaults for your valuables</span>
+              </p>
+              <a href="services.html" class="service-dark-btn">
+                <span data-lang="mr">अधिक माहिती</span>
+                <span data-lang="en">Know More</span> &rarr;
+              </a>
+            </div>
+            <!-- Card 4: Micro ATM -->
+            <div class="service-dark-card">
+              <div class="service-dark-icon">
+                <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-atm" /></svg>
+              </div>
+              <h3 class="service-dark-title">
+                <span data-lang="mr">मायक्रो एटीएम</span>
+                <span data-lang="en">Micro ATM</span>
+              </h3>
+              <p class="service-dark-desc">
+                <span data-lang="mr">डेबिट कार्डद्वारे पैसे काढण्यासाठी पतसंस्थेतील पहिलीच सुविधा</span>
+                <span data-lang="en">First-ever in Credit Society to withdraw money with debit card</span>
+              </p>
+              <a href="services.html" class="service-dark-btn">
+                <span data-lang="mr">अधिक माहिती</span>
+                <span data-lang="en">Know More</span> &rarr;
+              </a>
+            </div>
+            <!-- Card 5: Paperless Banking -->
+            <div class="service-dark-card">
+              <div class="service-dark-icon">
+                <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-passbook" /></svg>
+              </div>
+              <h3 class="service-dark-title">
+                <span data-lang="mr">कागदविरहित बँकिंग</span>
+                <span data-lang="en">Paperless Banking</span>
+              </h3>
+              <p class="service-dark-desc">
+                <span data-lang="mr">सुरक्षा वाढवण्यासोबतच लोकांच्या सोयीसाठी तंत्रज्ञानाचा वापर</span>
+                <span data-lang="en">Using technology for people's convenience, while adding security</span>
+              </p>
+              <a href="services.html" class="service-dark-btn">
+                <span data-lang="mr">अधिक माहिती</span>
+                <span data-lang="en">Know More</span> &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- GOLD LOAN PROMO CARD -->
+    <section class="gold-promo-section">
+      <div class="container">
+        <div class="gold-promo-card reveal">
+          <div class="gold-promo-left">
+            <h2 data-lang="mr">तुमच्या सोन्याला योग्य मूल्य देतो</h2>
+            <h2 data-lang="en">Giving Your Gold the Value it Deserves</h2>
+            <p data-lang="mr">अडचणीच्या वेळी किंवा स्वप्न पूर्ण करण्यासाठी, सुवर्ण कर्ज तात्काळ पैसे मिळवण्यास उपयुक्त ठरते. चौगुले पतसंस्थेसोबत, सोन्याच्या मूल्यावर ९०% पर्यंत कर्ज मिळवा.</p>
+            <p data-lang="en">From emergencies to dreams, a gold loan comes in handy to give you money in urgent scenarios. With Chougale, you get up to 90% loan against the value of gold.</p>
+            
+            <div class="gold-promo-metrics">
+              <div class="gold-metric-card large">
+                <span data-lang="mr">१० ग्रॅम सोन्यावर</span>
+                <span data-lang="en">On 10-gram gold</span>
+                <div class="gold-val">₹ 87,000/-</div>
+                <span data-lang="mr">पर्यंत सुवर्ण कर्ज</span>
+                <span data-lang="en">worth gold loan</span>
+              </div>
+              <div class="gold-metric-subgrid">
+                <div class="gold-metric-card small">
+                  <div class="gold-val">14</div>
+                  <span data-lang="mr">मिनिटांत कर्ज मंजुरी</span>
+                  <span data-lang="en">Minute loan approval</span>
+                </div>
+                <div class="gold-metric-card small">
+                  <div class="gold-val">06%</div>
+                  <span data-lang="mr">किमान व्याज दर</span>
+                  <span data-lang="en">Min. interest rate</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gold-promo-right">
+            <img src="assets/images/gold_loan_collage.png" alt="Gold Loan Customer Collage">
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ══════════════════════════════════════════════
      11. EMI CALCULATOR
@@ -1108,8 +1314,9 @@
           </div>
           <div>
             <div class="branch-panel active" id="branch-main">
-              <div class="branch-map"><span data-lang="mr">नकाशा लोड होत आहे...</span><span data-lang="en">Map
-                  loading...</span></div>
+              <div class="branch-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.5796245942!2d74.2215!3d16.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1000000000000%3A0x0!2sShivaji%20Peth%2C%20Kolhapur!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
               <div class="branch-info-panel">
                 <div class="branch-info-name" data-lang="mr">मुख्य शाखा — कोल्हापूर</div>
                 <div class="branch-info-name" data-lang="en">Head Branch — Kolhapur</div>
@@ -1129,8 +1336,9 @@
               </div>
             </div>
             <div class="branch-panel" id="branch-ichal">
-              <div class="branch-map"><span data-lang="mr">इचलकरंजी नकाशा</span><span data-lang="en">Ichalkaranji
-                  Map</span></div>
+              <div class="branch-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.8485292850937!2d74.45398227591605!3d16.697525384074213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0e2d3126f59b3%3A0x9bbdcdbfe0e5d038!2sIchalkaranji%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000001!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
               <div class="branch-info-panel">
                 <div class="branch-info-name" data-lang="mr">इचलकरंजी शाखा</div>
                 <div class="branch-info-name" data-lang="en">Ichalkaranji Branch</div>
@@ -1149,7 +1357,9 @@
               </div>
             </div>
             <div class="branch-panel" id="branch-sangli">
-              <div class="branch-map"><span>Sangli Map</span></div>
+              <div class="branch-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3819.3496924843916!2d74.59961637591873!3d16.85854838393522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1230623a07293%3A0x5a18a994ef93845b!2sVishrambag%2C%20Sangli%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000002!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
               <div class="branch-info-panel">
                 <div class="branch-info-name">Sangli Branch</div>
                 <div class="branch-info-items">
@@ -1166,7 +1376,9 @@
               </div>
             </div>
             <div class="branch-panel" id="branch-kagal">
-              <div class="branch-map"><span>Kagal Map</span></div>
+              <div class="branch-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3823.7745268480927!2d74.31682337591393!3d16.57502758417937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc0ffb30bc076b3%3A0xb69dbd6e67b2d56a!2sKagal%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000003!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
               <div class="branch-info-panel">
                 <div class="branch-info-name">Kagal Branch</div>
                 <div class="branch-info-items">
@@ -1269,9 +1481,17 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-brand-logo">
-              <img src="assets/images/logo1.jpeg" alt="Logo" class="footer-logo-img"
-                style="height: 50px; width: auto; object-fit: contain; margin-right: 12px;">
+                        <div class="footer-brand-logo">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--secondary); margin-right: 4px; flex-shrink: 0; margin-top: 2px;">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              <div class="footer-brand-text">
+                <div class="footer-brand-name" data-lang="mr">??. ??. ?????? ????????</div>
+                <div class="footer-brand-name" data-lang="en">N.D. Chougale Path Sanstha</div>
+                <div class="footer-brand-sub" data-lang="mr">????? ?????? ???????? ????????, ?????????</div>
+                <div class="footer-brand-sub" data-lang="en">Nagari Sahakari Path Sanstha Ltd.</div>
+              </div>
             </div>
             <p class="footer-desc" data-lang="mr">१९९६ पासून कोल्हापूर जिल्ह्यातील सर्वात विश्वसनीय सहकारी पतसंस्था. ३०+
               वर्षांचा अखंड सेवेचा वारसा.</p>
@@ -1350,10 +1570,16 @@
         </div>
       </div>
     </div>
-    <div class="footer-bottom-strip">
+        <div class="footer-bottom-strip">
       <div class="container">
-        &copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a
-          href="#">Terms &amp; Conditions</a>
+        <div class="footer-bottom-flex">
+          <div class="footer-copyright">&copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved.</div>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Grievance</a>
+          </div>
+        </div>
       </div>
     </div>
   </footer>

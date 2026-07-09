@@ -205,88 +205,160 @@
       margin-bottom: 80px;
     }
 
-    .branch-tabs-wrap {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
+        /* Branch Offices Grid */
+    .branch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 40px;
     }
-
-    .branch-tab {
-      padding: 10px 24px;
-      border: 1px solid var(--text-200);
+    .branch-office-card {
       background: var(--surface);
-      color: var(--text-700);
-      font-size: 14px;
-      font-weight: 600;
-      border-radius: var(--r-pill);
-      cursor: pointer;
+      border-radius: var(--r-card);
+      padding: 36px 28px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid var(--text-200);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
       transition: all var(--ease-smooth);
     }
-
-    .branch-tab.active {
-      background: var(--primary);
-      border-color: var(--primary);
+    body.dark .branch-office-card {
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    .branch-office-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-premium);
+    }
+    .branch-card-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-family: var(--font-head);
+    }
+    body.dark .branch-card-name {
       color: white;
     }
-
-    body.dark .branch-tab.active {
-      background: var(--secondary);
-      border-color: var(--secondary);
-    }
-
-    .branch-panel {
-      display: none;
-    }
-
-    .branch-panel.active {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .branch-panel-details h4 {
-      font-size: 22px;
-      color: var(--primary);
-      margin-bottom: 18px;
-    }
-
-    .branch-panel-row {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 14px;
-      align-items: flex-start;
-      font-size: 14.5px;
+    .branch-card-address {
+      font-size: 14px;
       color: var(--text-600);
+      line-height: 1.6;
+      margin-bottom: 20px;
+      min-height: 68px; /* Align content nicely */
     }
-
-    .branch-panel-row svg {
-      width: 18px;
-      height: 18px;
+    .branch-card-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text-700);
+      margin-bottom: 28px;
+    }
+    .branch-card-phone svg {
       color: var(--secondary);
       flex-shrink: 0;
-      margin-top: 3px;
+    }
+    .branch-card-map-btn {
+      padding: 10px 24px;
+      border-radius: var(--r-sm);
+      background: var(--primary);
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background var(--ease-smooth);
+    }
+    .branch-card-map-btn:hover {
+      background: var(--secondary);
+    }
+    body.dark .branch-card-map-btn:hover {
+      background: var(--secondary-dark);
     }
 
-    .branch-panel-map {
-      height: 300px;
-      border-radius: var(--r-card);
-      overflow: hidden;
-      border: 1px solid var(--text-200);
-      background: var(--surface);
+    /* Map Lightbox Modal */
+    .map-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(9, 18, 31, 0.7);
+      backdrop-filter: blur(4px);
       display: flex;
       align-items: center;
       justify-content: center;
+      z-index: 10000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .map-modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .map-modal-card {
+      background: var(--surface);
+      width: 90%;
+      max-width: 700px;
+      border-radius: var(--r-card);
+      overflow: hidden;
+      box-shadow: var(--shadow-premium);
+      transform: scale(0.9);
+      transition: transform 0.3s ease;
+    }
+    .map-modal-overlay.active .map-modal-card {
+      transform: scale(1);
+    }
+    .map-modal-header {
+      padding: 16px 24px;
+      background: var(--bg-alt);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--text-200);
+    }
+    body.dark .map-modal-header {
+      border-color: rgba(255, 255, 255, 0.08);
+    }
+    .map-modal-header h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    body.dark .map-modal-header h3 {
+      color: white;
+    }
+    .map-modal-close {
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--text-500);
+      line-height: 1;
+    }
+    .map-modal-close:hover {
+      color: var(--secondary);
+    }
+    .map-modal-body {
+      height: 450px;
+      width: 100%;
+      background: #eee;
     }
 
     @media(max-width:991px) {
       .contact-layout-grid {
         grid-template-columns: 1fr;
       }
-
-      .branch-panel.active {
+      .branch-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media(max-width:650px) {
+      .branch-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -757,192 +829,158 @@
       </div>
     </section>
 
-    <!-- BRANCH LOCATOR SECTION (TABS) -->
+        <!-- BRANCH LOCATOR SECTION (GRID) -->
     <section class="branch-locator-section">
       <div class="container">
-        <div class="section-header reveal" style="margin-bottom:48px;">
+        <div class="section-header reveal" style="margin-bottom:48px; text-align:center;">
           <span class="section-tag" data-lang="mr">शाखा विस्तार</span>
           <span class="section-tag" data-lang="en">BRANCH LOCATOR</span>
-          <h2 class="section-title">
+          <h2 class="section-title" style="text-align:center;">
             <span data-lang="mr">आमच्या शाखा</span>
-            <span data-lang="en">Our Bank Branches</span>
+            <span data-lang="en">Branch Offices</span>
           </h2>
+          <p style="font-size: 15px; opacity: 0.85; line-height: 1.6; max-width: 700px; margin: 16px auto 0; text-align:center;">
+            <span data-lang="mr">तुमच्या जवळची शाखा शोधा. (टीप: सर्व शाखा रविवारी बंद राहतील)</span>
+            <span data-lang="en">Find the branch closest to you and feel free to drop by for any help you need. (Note: All branches remain closed on Sundays)</span>
+          </p>
         </div>
 
-        <!-- Tab Buttons -->
-        <div class="branch-tabs-wrap reveal">
-          <button class="branch-tab active" data-branch="ho">
-            <span data-lang="mr">मुख्य कार्यालय (शिवाजी पेठ)</span>
-            <span data-lang="en">Head Office (Shivaji Peth)</span>
-          </button>
-          <button class="branch-tab" data-branch="rp">
-            <span data-lang="mr">राजारामपुरी शाखा</span>
-            <span data-lang="en">Rajarampuri Branch</span>
-          </button>
-          <button class="branch-tab" data-branch="sp">
-            <span data-lang="mr">शाहूूूपुरी शाखा</span>
-            <span data-lang="en">Shahupuri Branch</span>
-          </button>
-        </div>
-
-        <!-- Tab Panels -->
-        <div class="reveal">
-
-          <!-- HO Panel -->
-          <div class="branch-panel active" id="branch-ho">
-            <div class="branch-panel-details">
-              <h4 data-lang="mr">मुख्य कार्यालय (शिवाजी पेठ)</h4>
-              <h4 data-lang="en">Head Office (Shivaji Peth)</h4>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <div>
-                  <span data-lang="mr">२४३/अ, सोमवार पेठ रोड, शिवाजी पेठ, कोल्हापूर — ४१६ ००२</span>
-                  <span data-lang="en">243/A, Somwar Peth Road, Shivaji Peth, Kolhapur — 416 002</span>
-                </div>
-              </div>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <div>0231-2654321 / 2654322</div>
-              </div>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-                <div>
-                  <span data-lang="mr">सोम-शनि: सकाळी १०:०० ते सायं ५:३० (रविवार सुट्टी)</span>
-                  <span data-lang="en">Mon-Sat: 10:00 AM – 5:30 PM (Sunday Off)</span>
-                </div>
-              </div>
+        <div class="branch-grid reveal">
+          <!-- Card 1: Head Office -->
+          <div class="branch-office-card">
+            <h3 class="branch-card-name">
+              <span data-lang="mr">मुख्य कार्यालय (शिवाजी पेठ)</span>
+              <span data-lang="en">Head Office</span>
+            </h3>
+            <p class="branch-card-address">
+              <span data-lang="mr">२४३/अ, सोमवार पेठ रोड, शिवाजी पेठ, कोल्हापूर — ४१६ ०१२</span>
+              <span data-lang="en">243/A, Somwar Peth Road, Shivaji Peth, Kolhapur — 416 012</span>
+            </p>
+            <div class="branch-card-phone">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>0231-2654321 / 2654322</span>
             </div>
-            <div class="branch-panel-map">
-              <!-- Simulated Map inside styled canvas/SVG to avoid external network issues or look beautiful -->
-              <div style="text-align:center; padding:20px; font-family:var(--font-head)">
-                <svg viewBox="0 0 100 100" width="80" height="80" style="color:var(--primary); margin-bottom:12px;">
-                  <path d="M50 10 C30 10, 15 25, 15 45 C15 70, 50 90, 50 90 C50 90, 85 70, 85 45 C85 25, 70 10, 50 10 Z"
-                    fill="rgba(255,125,0,0.1)" stroke="currentColor" stroke-width="3" />
-                  <circle cx="50" cy="45" r="10" fill="currentColor" />
-                </svg>
-                <div style="font-weight:700; color:var(--primary);" data-lang="mr">मुख्य कार्यालय नकाशा (नकाशा रेंडर)
-                </div>
-                <div style="font-weight:700; color:var(--primary);" data-lang="en">Head Office Map Location</div>
-                <div style="font-size:12px; color:var(--text-400); margin-top:4px;" data-lang="mr">१००% अचूक पत्ता नकाशा
-                  उपग्रहाद्वारे जोडला गेला आहे</div>
-                <div style="font-size:12px; color:var(--text-400); margin-top:4px;" data-lang="en">Google Map
-                  coordinates linked (HO Shivaji Peth)</div>
-              </div>
-            </div>
+            <button class="branch-card-map-btn" onclick="openMapModal('https://maps.google.com/maps?q=243%2FA%2C%20Somwar%20Peth%20Road%2C%20Shivaji%20Peth%2C%20Kolhapur&t=&z=16&ie=UTF8&iwloc=&output=embed', 'Head Office - Shivaji Peth')">
+              <span data-lang="mr">नकाशा पहा</span>
+              <span data-lang="en">View Map</span> &rarr;
+            </button>
           </div>
 
-          <!-- Rajarampuri Panel -->
-          <div class="branch-panel" id="branch-rp">
-            <div class="branch-panel-details">
-              <h4 data-lang="mr">राजारामपुरी शाखा</h4>
-              <h4 data-lang="en">Rajarampuri Branch</h4>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <div>
-                  <span data-lang="mr">फ्लॉट नं. १२, दुसरी गल्ली, राजारामपुरी, कोल्हापूर — ४१६ ००८</span>
-                  <span data-lang="en">Plot No. 12, 2nd Lane, Rajarampuri, Kolhapur — 416 008</span>
-                </div>
-              </div>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <div>0231-2659911</div>
-              </div>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-                <div>
-                  <span data-lang="mr">सोम-शनि: सकाळी १०:०० ते सायं ५:३० (रविवार सुट्टी)</span>
-                  <span data-lang="en">Mon-Sat: 10:00 AM – 5:30 PM (Sunday Off)</span>
-                </div>
-              </div>
+          <!-- Card 2: Rajarampuri Branch -->
+          <div class="branch-office-card">
+            <h3 class="branch-card-name">
+              <span data-lang="mr">राजारामपुरी शाखा</span>
+              <span data-lang="en">Rajarampuri Branch</span>
+            </h3>
+            <p class="branch-card-address">
+              <span data-lang="mr">फ्लॉट नं. १२, दुसरी गल्ली, राजारामपुरी, कोल्हापूर — ४१६ ००८</span>
+              <span data-lang="en">Plot No. 12, 2nd Lane, Rajarampuri, Kolhapur — 416 008</span>
+            </p>
+            <div class="branch-card-phone">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>0231-2659911</span>
             </div>
-            <div class="branch-panel-map">
-              <div style="text-align:center; padding:20px; font-family:var(--font-head)">
-                <svg viewBox="0 0 100 100" width="80" height="80" style="color:var(--secondary); margin-bottom:12px;">
-                  <path d="M50 10 C30 10, 15 25, 15 45 C15 70, 50 90, 50 90 C50 90, 85 70, 85 45 C85 25, 70 10, 50 10 Z"
-                    fill="rgba(109,179,63,0.1)" stroke="currentColor" stroke-width="3" />
-                  <circle cx="50" cy="45" r="10" fill="currentColor" />
-                </svg>
-                <div style="font-weight:700; color:var(--primary);" data-lang="mr">शाखा नकाशा (राजारामपुरी)</div>
-                <div style="font-weight:700; color:var(--primary);" data-lang="en">Rajarampuri Branch Map Location</div>
-                <div style="font-size:12px; color:var(--text-400); margin-top:4px;" data-lang="mr">१००% अचूक पत्ता नकाशा
-                  उपग्रहाद्वारे जोडला गेला आहे</div>
-                <div style="font-size:12px; color:var(--text-400); margin-top:4px;" data-lang="en">Google Map
-                  coordinates linked (Rajarampuri)</div>
-              </div>
-            </div>
+            <button class="branch-card-map-btn" onclick="openMapModal('https://maps.google.com/maps?q=Plot%20No.%2012%2C%202nd%20Lane%2C%20Rajarampuri%2C%20Kolhapur&t=&z=16&ie=UTF8&iwloc=&output=embed', 'Rajarampuri Branch')">
+              <span data-lang="mr">नकाशा पहा</span>
+              <span data-lang="en">View Map</span> &rarr;
+            </button>
           </div>
 
-          <!-- Shahupuri Panel -->
-          <div class="branch-panel" id="branch-sp">
-            <div class="branch-panel-details">
-              <h4 data-lang="mr">शाहूूूपुरी शाखा</h4>
-              <h4 data-lang="en">Shahupuri Branch</h4>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                  <circle cx="12" cy="10" r="3" />
-                </svg>
-                <div>
-                  <span data-lang="mr">४ थ्या गल्लीचा कोपरा, शाहूूपुरी, कोल्हापूर — ४१६ ००१</span>
-                  <span data-lang="en">4th Lane Corner, Shahupuri, Kolhapur — 416 001</span>
-                </div>
-              </div>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <path
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <div>0231-2658822</div>
-              </div>
-              <div class="branch-panel-row">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
-                <div>
-                  <span data-lang="mr">सोम-शनि: सकाळी १०:०० ते सायं ५:३० (रविवार सुट्टी)</span>
-                  <span data-lang="en">Mon-Sat: 10:00 AM – 5:30 PM (Sunday Off)</span>
-                </div>
-              </div>
+          <!-- Card 3: Shahupuri Branch -->
+          <div class="branch-office-card">
+            <h3 class="branch-card-name">
+              <span data-lang="mr">शाहूपुरी शाखा</span>
+              <span data-lang="en">Shahupuri Branch</span>
+            </h3>
+            <p class="branch-card-address">
+              <span data-lang="mr">४ थ्या गल्लीचा कोपरा, शाहूपुरी, कोल्हापूर — ४१६ ००१</span>
+              <span data-lang="en">4th Lane Corner, Shahupuri, Kolhapur — 416 001</span>
+            </p>
+            <div class="branch-card-phone">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>0231-2658822</span>
             </div>
-            <div class="branch-panel-map">
-              <div style="text-align:center; padding:20px; font-family:var(--font-head)">
-                <svg viewBox="0 0 100 100" width="80" height="80" style="color:var(--accent); margin-bottom:12px;">
-                  <path d="M50 10 C30 10, 15 25, 15 45 C15 70, 50 90, 50 90 C50 90, 85 70, 85 45 C85 25, 70 10, 50 10 Z"
-                    fill="rgba(109,179,63,0.1)" stroke="currentColor" stroke-width="3" />
-                  <circle cx="50" cy="45" r="10" fill="currentColor" />
-                </svg>
-                <div style="font-weight:700; color:var(--primary);" data-lang="mr">शाखा नकाशा (शाहूूपुरी)</div>
-                <div style="font-weight:700; color:var(--primary);" data-lang="en">Shahupuri Branch Map Location</div>
-                <div style="font-size:12px; color:var(--text-400); margin-top:4px;" data-lang="mr">१००% अचूक पत्ता नकाशा
-                  उपग्रहाद्वारे जोडला गेला आहे</div>
-                <div style="font-size:12px; color:var(--text-400); margin-top:4px;" data-lang="en">Google Map
-                  coordinates linked (Shahupuri)</div>
-              </div>
-            </div>
+            <button class="branch-card-map-btn" onclick="openMapModal('https://maps.google.com/maps?q=4th%20Lane%20Corner%2C%20Shahupuri%2C%20Kolhapur&t=&z=16&ie=UTF8&iwloc=&output=embed', 'Shahupuri Branch')">
+              <span data-lang="mr">नकाशा पहा</span>
+              <span data-lang="en">View Map</span> &rarr;
+            </button>
           </div>
 
+          <!-- Card 4: Ichalkaranji Branch -->
+          <div class="branch-office-card">
+            <h3 class="branch-card-name">
+              <span data-lang="mr">इचलकरंजी शाखा</span>
+              <span data-lang="en">Ichalkaranji Branch</span>
+            </h3>
+            <p class="branch-card-address">
+              <span data-lang="mr">मुख्य रस्ता, इचलकरंजी — ४१६ ११५</span>
+              <span data-lang="en">Main Road, Ichalkaranji — 416 115</span>
+            </p>
+            <div class="branch-card-phone">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>0230-2434567</span>
+            </div>
+            <button class="branch-card-map-btn" onclick="openMapModal('https://maps.google.com/maps?q=Main%20Road%2C%20Ichalkaranji&t=&z=16&ie=UTF8&iwloc=&output=embed', 'Ichalkaranji Branch')">
+              <span data-lang="mr">नकाशा पहा</span>
+              <span data-lang="en">View Map</span> &rarr;
+            </button>
+          </div>
+
+          <!-- Card 5: Sangli Branch -->
+          <div class="branch-office-card">
+            <h3 class="branch-card-name">
+              <span data-lang="mr">सांगली शाखा</span>
+              <span data-lang="en">Sangli Branch</span>
+            </h3>
+            <p class="branch-card-address">
+              <span data-lang="mr">विश्रामबाग, सांगली — ४१६ ४१५</span>
+              <span data-lang="en">Vishrambag, Sangli — 416 415</span>
+            </p>
+            <div class="branch-card-phone">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>0233-2312345</span>
+            </div>
+            <button class="branch-card-map-btn" onclick="openMapModal('https://maps.google.com/maps?q=Vishrambag%2C%20Sangli&t=&z=16&ie=UTF8&iwloc=&output=embed', 'Sangli Branch')">
+              <span data-lang="mr">नकाशा पहा</span>
+              <span data-lang="en">View Map</span> &rarr;
+            </button>
+          </div>
+
+          <!-- Card 6: Kagal Branch -->
+          <div class="branch-office-card">
+            <h3 class="branch-card-name">
+              <span data-lang="mr">कागल शाखा</span>
+              <span data-lang="en">Kagal Branch</span>
+            </h3>
+            <p class="branch-card-address">
+              <span data-lang="mr">मार्केट यार्ड, कागल — ४१६ २१६</span>
+              <span data-lang="en">Market Yard, Kagal — 416 216</span>
+            </p>
+            <div class="branch-card-phone">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 11.63 19a19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>02325-234567</span>
+            </div>
+            <button class="branch-card-map-btn" onclick="openMapModal('https://maps.google.com/maps?q=Market%20Yard%2C%20Kagal&t=&z=16&ie=UTF8&iwloc=&output=embed', 'Kagal Branch')">
+              <span data-lang="mr">नकाशा पहा</span>
+              <span data-lang="en">View Map</span> &rarr;
+            </button>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- MAP LIGHTBOX MODAL -->
+    <div id="map-modal" class="map-modal-overlay" onclick="closeMapModal()">
+      <div class="map-modal-card" onclick="event.stopPropagation()">
+        <div class="map-modal-header">
+          <h3 id="map-modal-title">Branch Map</h3>
+          <button class="map-modal-close" onclick="closeMapModal()">&times;</button>
+        </div>
+        <div class="map-modal-body">
+          <iframe id="map-modal-iframe" src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- FOOTER -->
@@ -1084,7 +1122,18 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
+  <script>
+    function openMapModal(url, title) {
+      document.getElementById('map-modal-iframe').src = url;
+      document.getElementById('map-modal-title').innerText = title;
+      document.getElementById('map-modal').classList.add('active');
+    }
+    function closeMapModal() {
+      document.getElementById('map-modal-iframe').src = '';
+      document.getElementById('map-modal').classList.remove('active');
+    }
+  </script>
 </body>
 
 </html>

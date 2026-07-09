@@ -113,6 +113,8 @@
       justify-content: space-between;
       border-top: 4px solid var(--primary);
       transition: all var(--ease-smooth);
+      align-items: stretch !important;
+      min-height: 280px;
     }
 
     .doc-card:hover {
@@ -579,7 +581,7 @@
               <p class="doc-desc" data-lang="mr">नवीन बचत आणि चालू खाते उघडण्यासाठी लागणारा मुख्य फॉर्म.</p>
               <p class="doc-desc" data-lang="en">Main form required to open a new savings or current bank account.</p>
             </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto; width:100%; padding-top:20px;">
               <span class="doc-size">1.4 MB</span>
               <a href="#" class="doc-dl-btn"
                 onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
@@ -608,7 +610,7 @@
               <p class="doc-desc" data-lang="en">Official application form required for gold, personal, and mortgage
                 loans.</p>
             </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto; width:100%; padding-top:20px;">
               <span class="doc-size">2.1 MB</span>
               <a href="#" class="doc-dl-btn"
                 onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
@@ -636,7 +638,7 @@
               <p class="doc-desc" data-lang="mr">लॉकर भाड्याने घेण्यासाठी लागणारा नियम व अटींसह करार फॉर्म.</p>
               <p class="doc-desc" data-lang="en">Locker rental request form with full rules, regulations and terms.</p>
             </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto; width:100%; padding-top:20px;">
               <span class="doc-size">1.1 MB</span>
               <a href="#" class="doc-dl-btn"
                 onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
@@ -666,7 +668,7 @@
               <p class="doc-desc" data-lang="en">Official form to update addresses, photos, signatures, and mobile
                 numbers.</p>
             </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto; width:100%; padding-top:20px;">
               <span class="doc-size">850 KB</span>
               <a href="#" class="doc-dl-btn"
                 onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
@@ -695,7 +697,7 @@
               <p class="doc-desc" data-lang="en">Form to apply for official membership and purchase shares of the
                 society.</p>
             </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto; width:100%; padding-top:20px;">
               <span class="doc-size">1.8 MB</span>
               <a href="#" class="doc-dl-btn"
                 onclick="alert('फॉर्म डाऊनलोड सुरू झाला! / Form download started!'); return false;">
@@ -725,7 +727,7 @@
               <p class="doc-desc" data-lang="en">Audit financial statements and progress booklet for the last financial
                 year.</p>
             </div>
-            <div style="display:flex; align-items:center; justify-content:between; margin-top:20px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-top:auto; width:100%; padding-top:20px;">
               <span class="doc-size">4.2 MB</span>
               <a href="#" class="doc-dl-btn"
                 onclick="alert('अहवाल डाऊनलोड सुरू झाला! / Report download started!'); return false;">
@@ -746,9 +748,17 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <div class="footer-brand-logo">
-              <img src="assets/images/logo1.jpeg" alt="Logo" class="footer-logo-img"
-                style="height: 50px; width: auto; object-fit: contain; margin-right: 12px;">
+                        <div class="footer-brand-logo">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2.5" style="color: var(--secondary); margin-right: 4px; flex-shrink: 0; margin-top: 2px;">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+              <div class="footer-brand-text">
+                <div class="footer-brand-name" data-lang="mr">??. ??. ?????? ????????</div>
+                <div class="footer-brand-name" data-lang="en">N.D. Chougale Path Sanstha</div>
+                <div class="footer-brand-sub" data-lang="mr">????? ?????? ???????? ????????, ?????????</div>
+                <div class="footer-brand-sub" data-lang="en">Nagari Sahakari Path Sanstha Ltd.</div>
+              </div>
             </div>
             <p class="footer-desc" data-lang="mr">१९९६ पासून कोल्हापूर जिल्ह्यातील सर्वात विश्वसनीय सहकारी पतसंस्था. ३०+
               वर्षांचा अखंड सेवेचा वारसा.</p>
@@ -827,13 +837,15 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <div class="footer-bottom">
-        <div>&copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="#">Grievance</a>
+        <div class="footer-bottom-strip">
+      <div class="container">
+        <div class="footer-bottom-flex">
+          <div class="footer-copyright">&copy; 2026 N.D. Chougale Nagari Path Sanstha. All Rights Reserved.</div>
+          <div class="footer-bottom-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Grievance</a>
+          </div>
         </div>
       </div>
     </div>
