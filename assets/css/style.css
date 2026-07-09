@@ -3498,15 +3498,22 @@ body.dark .branch-info-name {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr 0.9fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+}
+
+.footer-brand-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .footer-brand-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  margin-bottom: 20px;
   color: white;
 }
 
@@ -3515,20 +3522,18 @@ body.dark .branch-info-name {
 }
 
 .footer-logo-img {
-  height: 50px;
+  height: calc(var(--header-nav-h) - 5px); /* Same size and look as in header */
   width: auto;
   object-fit: contain;
-  border-radius: var(--r-xs);
-  background-color: #ffffff;
-  padding: 6px 12px;
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
   display: inline-block;
-  transition: transform var(--ease-smooth), box-shadow var(--ease-smooth);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform var(--ease-smooth);
 }
 
 .footer-logo-img:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transform: scale(1.03);
 }
 
 .footer-brand-name {
