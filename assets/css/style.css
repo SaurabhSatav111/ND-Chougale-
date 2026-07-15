@@ -8641,3 +8641,622 @@ body.dark .visual-floating-stat .floating-val {
   }
 }
 
+
+/* ============================================================
+   19. PREMIUM FIXED VERTICAL SIDE TABS (Reference image style)
+   ============================================================ */
+
+/*
+  Design: Tall, narrow rectangular tabs flush to the right edge.
+  Text is rotated 90° and always visible — no expand-on-hover.
+  Rounded corners on the LEFT side only (exposed side).
+  Hover: subtle leftward slide + stronger shadow.
+*/
+
+/* Container */
+.side-tabs-container {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 990;
+}
+
+/* Base tab */
+.side-tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 148px;
+  border-radius: 12px 0 0 12px; /* rounded only on the left/exposed side */
+  cursor: pointer;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: -4px 4px 20px rgba(0, 0, 0, 0.18);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.28s ease,
+              filter 0.28s ease;
+}
+
+/* Hover: slide left & deepen shadow */
+.side-tab:hover {
+  transform: translateX(-5px);
+  box-shadow: -8px 8px 32px rgba(0, 0, 0, 0.28);
+  filter: brightness(1.06);
+}
+
+/* Hide the SVG icons — reference image is text-only */
+.side-tab-icon {
+  display: none;
+}
+
+/* Text label — always visible, rotated vertically */
+.side-tab-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Rotate text: reads bottom-to-top, matching reference */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg); /* flip so text reads bottom-up */
+  font-family: var(--font-head);
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Language spans: stack vertically inside the rotated container.
+   The global html[lang] rules hide the inactive language. */
+.side-tab-text [data-lang="mr"],
+.side-tab-text [data-lang="en"] {
+  display: block;
+}
+
+/* Subtle inner highlight at top */
+.side-tab::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.1), transparent);
+  pointer-events: none;
+  border-radius: 12px 0 0 0;
+}
+
+/* ── Internet Banking — brand navy ── */
+.tab-netbanking {
+  background: linear-gradient(180deg, #0F2E5E 0%, #1A3E7A 100%);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Gold left-edge accent stripe */
+.tab-netbanking::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  background: var(--secondary);
+  border-radius: 0 2px 2px 0;
+}
+
+/* ── Open Online Account — brand gold ── */
+.tab-openaccount {
+  background: linear-gradient(180deg, #C8870E 0%, #D49A25 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* White left-edge accent stripe */
+.tab-openaccount::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0 2px 2px 0;
+}
+
+/* ── Dark mode ── */
+body.dark .tab-netbanking {
+  background: linear-gradient(180deg, #1A3E7A 0%, #0F2E5E 100%);
+}
+
+body.dark .tab-openaccount {
+  background: linear-gradient(180deg, #D49216 0%, #C8870E 100%);
+}
+
+/* ── Tablet (≤991px): slightly smaller ── */
+@media (max-width: 991px) {
+  .side-tab {
+    width: 38px;
+    height: 130px;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .side-tab-text {
+    font-size: 12px;
+  
+  .scheme-showcase-block.alternate .scheme-story-text {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+  }
+  
+  .scheme-showcase-block.alternate .scheme-story-visual {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+  }
+  
+  .scheme-visual-container {
+    height: 380px;
+  }
+  
+  .visual-floating-stat {
+    padding: 10px 16px;
+  }
+  
+  .visual-focus-card {
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .scheme-feature-panels {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  
+  .completed-schemes-section {
+    padding: 60px 0;
+  }
+  
+  .visual-floating-stat {
+    display: none; /* Hide floating stats on very small screens */
+  }
+  
+  .visual-focus-card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* ============================================================
+   20. LATEST UPDATES TICKER BAR
+   ============================================================ */
+
+/* Ticker Outer Wrapper (full bleed parent, wraps the container) */
+.ticker-outer-wrap {
+  width: 100%;
+  padding: 16px 0; /* Add generous top/bottom spacing around the ticker bar */
+  background: var(--bg); /* Fits into page flow */
+  position: relative;
+  z-index: 10;
+}
+
+body.dark .ticker-outer-wrap {
+  background: #030A14;
+}
+
+/* Floating Ticker Container */
+.ticker-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 56px; /* around 55px */
+  background: var(--primary-dark);
+  border-radius: 14px; /* Premium rounded corners */
+  box-shadow: var(--shadow-premium);
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark .ticker-container {
+  background: #071424;
+  border-color: rgba(255, 255, 255, 0.03);
+}
+
+/* Ticker Label Button */
+.ticker-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 24px;
+  background: var(--secondary);
+  color: #0A1F40;
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  user-select: none;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0.2, 1);
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.ticker-label:hover {
+  background: var(--secondary-dark);
+  color: #ffffff;
+}
+
+.ticker-label:hover .ticker-icon {
+  stroke: #ffffff;
+  animation: bellRing 0.6s ease;
+}
+
+/* Bell ring animation for extra micro-interaction delight! */
+@keyframes bellRing {
+  0%, 100% { transform: rotate(0); }
+  20%, 60% { transform: rotate(-15deg); }
+  40%, 80% { transform: rotate(15deg); }
+}
+
+.ticker-icon {
+  width: 18px;
+  height: 18px;
+  stroke: #0A1F40;
+  fill: none;
+  flex-shrink: 0;
+  transition: stroke 0.3s ease;
+}
+
+/* Marquee scrolling track */
+.ticker-marquee {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding-left: 10px;
+  /* Fade mask edges */
+  -webkit-mask-image: linear-gradient(to right, transparent 0px, #000 20px, #000 calc(100% - 20px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0px, #000 20px, #000 calc(100% - 20px), transparent 100%);
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: tickerScroll 32s linear infinite;
+  will-change: transform;
+}
+
+.ticker-marquee:hover .ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes tickerScroll {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Clickable item link */
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 24px;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.ticker-item:hover {
+  color: var(--secondary);
+}
+
+.ticker-divider {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 14px;
+  margin: 0 4px;
+  user-select: none;
+}
+
+/* ── Responsive styling ── */
+@media (max-width: 991px) {
+  .ticker-outer-wrap {
+    padding: 12px 15px;
+  }
+  .ticker-container {
+    height: 52px;
+  }
+  .ticker-label {
+    padding: 0 18px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ticker-outer-wrap {
+    padding: 10px 10px;
+  }
+  .ticker-container {
+    height: 50px;
+    border-radius: 10px;
+  }
+  .ticker-label {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .ticker-outer-wrap {
+    padding: 8px 8px;
+  }
+  .ticker-container {
+    height: 48px;
+  }
+  .ticker-label {
+    padding: 0 12px;
+    font-size: 11px;
+    gap: 6px;
+  }
+  .ticker-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* ============================================================
+   21. NOTIFICATIONS MODAL PANEL
+   ============================================================ */
+
+/* Full-screen Overlay panel */
+.notifications-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 31, 64, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+.notifications-modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Modern popup card panel */
+.notifications-modal-card {
+  width: 90%;
+  max-width: 520px;
+  max-height: 80vh;
+  background: var(--surface);
+  border-radius: 24px;
+  box-shadow: 0 30px 70px rgba(10, 31, 64, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--text-200);
+  transform: scale(0.95) translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.3s ease;
+}
+
+.notifications-modal-overlay.open .notifications-modal-card {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+body.dark .notifications-modal-card {
+  background: #0D2240;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Header */
+.notifications-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  background: var(--grad-navy);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.notifications-modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notifications-modal-title-icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--secondary);
+  fill: none;
+}
+
+.notifications-modal-header h3 {
+  font-family: var(--font-head);
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.notifications-modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 1;
+  transition: all 0.25s ease;
+}
+
+.notifications-modal-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg) scale(1.05);
+}
+
+/* Modal Body list spacing */
+.notifications-modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0;
+  background: var(--surface);
+}
+
+body.dark .notifications-modal-body {
+  background: #0D2240;
+}
+
+.notification-detail-item {
+  padding: 24px 28px;
+  border-bottom: 1px solid var(--text-200);
+  transition: background 0.25s ease;
+}
+
+body.dark .notification-detail-item {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+.notification-detail-item:last-child {
+  border-bottom: none;
+}
+
+.notification-detail-item:hover {
+  background: rgba(15, 46, 94, 0.02);
+}
+
+body.dark .notification-detail-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.notification-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.notification-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  background: rgba(242, 177, 52, 0.15);
+  color: var(--secondary-dark);
+  font-family: var(--font-head);
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: var(--r-pill);
+}
+
+body.dark .notification-badge {
+  background: rgba(242, 177, 52, 0.2);
+  color: var(--secondary);
+}
+
+.notification-date {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--text-400);
+  font-weight: 500;
+}
+
+.notification-title {
+  font-family: var(--font-head);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+body.dark .notification-title {
+  color: #ffffff;
+}
+
+.notification-desc {
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-600);
+  margin: 0 0 14px;
+}
+
+body.dark .notification-desc {
+  color: var(--text-400);
+}
+
+.notification-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-head);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+body.dark .notification-link {
+  color: var(--secondary);
+}
+
+.notification-link:hover {
+  color: var(--secondary-dark);
+  gap: 10px;
+}
+
+@media (max-width: 575px) {
+  .notifications-modal-overlay {
+    padding: 70px 12px 12px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .notifications-modal-card {
+    width: 95%;
+    max-height: 75vh;
+    border-radius: 18px;
+  }
+  .notifications-modal-header {
+    padding: 18px 20px;
+  }
+  .notification-detail-item {
+    padding: 18px 20px;
+  }
+}
