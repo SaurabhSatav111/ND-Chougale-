@@ -20,6 +20,10 @@
       <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
       <polyline points="9 22 9 12 15 12 15 22" />
     </symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+      <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+    </symbol>
     <symbol id="i-account" viewBox="0 0 24 24">
       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
       <circle cx="12" cy="7" r="4" />
@@ -340,6 +344,7 @@
 
   <!-- MAIN -->
   <main>
+
     <section class="home-hero" id="hero">
       <div class="container">
         <div class="hero-slider reveal">
@@ -378,6 +383,67 @@
         </div>
       </div>
     </section>
+
+    <!-- LATEST ANNOUNCEMENTS TICKER -->
+    <div class="container">
+      <div class="ticker-container">
+        <!-- Fixed Left Label Container -->
+        <div class="ticker-label">
+          <svg class="icon ticker-icon"><use href="#i-bell" /></svg>
+          <span data-lang="mr">महत्वाचे अपडेट्स</span>
+          <span data-lang="en">Latest Updates</span>
+        </div>
+        <!-- Independent Right Scrolling Container -->
+        <div class="ticker-marquee">
+          <div class="ticker-track">
+            <!-- Announcement 1 -->
+            <a href="deposits.html" class="ticker-item">
+              <span data-lang="mr">ठेव योजना: मुदत ठेवींवर आकर्षक व्याजदर ९.५% पर्यंत मिळवा!</span>
+              <span data-lang="en">Attractive Interest Rates: Get up to 9.5% interest on Fixed Deposits!</span>
+            </a>
+            <span class="ticker-divider">•</span>
+            <!-- Announcement 2 -->
+            <a href="services.html#internet-banking" class="ticker-item">
+              <span data-lang="mr">नवीन सेवा: सुरक्षित इंटरनेट बँकिंग आणि ऑनलाइन खाते उघडण्याची सुविधा सुरू झाली.</span>
+              <span data-lang="en">New Service: Secure Internet Banking and Online Account Opening are now live.</span>
+            </a>
+            <span class="ticker-divider">•</span>
+            <!-- Announcement 3 -->
+            <a href="gold-loan.html" class="ticker-item">
+              <span data-lang="mr">सुवर्ण कर्ज: सर्वात कमी व्याजदर आणि त्वरित सुलभ मंजुरीसह उपलब्ध.</span>
+              <span data-lang="en">Gold Loan: Quick approval with the lowest interest rates at Chougale.</span>
+            </a>
+            <span class="ticker-divider">•</span>
+            <!-- Announcement 4 -->
+            <a href="downloads.html" class="ticker-item">
+              <span data-lang="mr">ऑडिट अहवाल: आर्थिक वर्ष २०२५-२६ चा अधिकृत वार्षिक ऑडिट अहवाल आता डाउनलोड करा.</span>
+              <span data-lang="en">Audit Report: Download the official 2025-26 Annual Audit Report.</span>
+            </a>
+            <!-- Duplicated items for seamless loop -->
+            <span class="ticker-divider">•</span>
+            <a href="deposits.html" class="ticker-item">
+              <span data-lang="mr">ठेव योजना: मुदत ठेवींवर आकर्षक व्याजदर ९.५% पर्यंत मिळवा!</span>
+              <span data-lang="en">Attractive Interest Rates: Get up to 9.5% interest on Fixed Deposits!</span>
+            </a>
+            <span class="ticker-divider">•</span>
+            <a href="services.html#internet-banking" class="ticker-item">
+              <span data-lang="mr">नवीन सेवा: सुरक्षित इंटरनेट बँकिंग आणि ऑनलाइन खाते उघडण्याची सुविधा सुरू झाली.</span>
+              <span data-lang="en">New Service: Secure Internet Banking and Online Account Opening are now live.</span>
+            </a>
+            <span class="ticker-divider">•</span>
+            <a href="gold-loan.html" class="ticker-item">
+              <span data-lang="mr">सुवर्ण कर्ज: सर्वात कमी व्याजदर आणि त्वरित सुलभ मंजुरीसह उपलब्ध.</span>
+              <span data-lang="en">Gold Loan: Quick approval with the lowest interest rates at Chougale.</span>
+            </a>
+            <span class="ticker-divider">•</span>
+            <a href="downloads.html" class="ticker-item">
+              <span data-lang="mr">ऑडिट अहवाल: आर्थिक वर्ष २०२५-२६ चा अधिकृत वार्षिक ऑडिट अहवाल आता डाउनलोड करा.</span>
+              <span data-lang="en">Audit Report: Download the official 2025-26 Annual Audit Report.</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Quick Navigation Tabs -->
     <section class="quick-nav-tabs-section">
@@ -706,12 +772,30 @@
                 <span data-lang="mr">चौगुले ॲपवर एका क्लिकवर सर्व बँकिंग सेवा उपलब्ध</span>
                 <span data-lang="en">Banking services available on Chougale App on one click</span>
               </p>
-              <a href="services.html" class="service-dark-btn">
+              <a href="services.html#mobile-banking" class="service-dark-btn">
                 <span data-lang="mr">अधिक माहिती</span>
                 <span data-lang="en">Know More</span> &rarr;
               </a>
             </div>
-            <!-- Card 2: Money Transfer -->
+            <!-- Card 2: Internet Banking -->
+            <div class="service-dark-card">
+              <div class="service-dark-icon">
+                <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-shield" /></svg>
+              </div>
+              <h3 class="service-dark-title">
+                <span data-lang="mr">इंटरनेट बँकिंग</span>
+                <span data-lang="en">Internet Banking</span>
+              </h3>
+              <p class="service-dark-desc">
+                <span data-lang="mr">तुमच्या ब्राउझरद्वारे खात्यात प्रवेश करा, सुरक्षित निधी हस्तांतरण आणि अधिक सेवा मिळवा</span>
+                <span data-lang="en">Access your account, transfer funds, and manage banking securely from your browser</span>
+              </p>
+              <a href="services.html#internet-banking" class="service-dark-btn">
+                <span data-lang="mr">अधिक माहिती</span>
+                <span data-lang="en">Know More</span> &rarr;
+              </a>
+            </div>
+            <!-- Card 3: Money Transfer -->
             <div class="service-dark-card">
               <div class="service-dark-icon">
                 <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-neft" /></svg>
@@ -724,12 +808,12 @@
                 <span data-lang="mr">RTGS, NEFT आणि IMPS द्वारे जलद पैसे ट्रान्सफरचा आनंद घ्या</span>
                 <span data-lang="en">Enjoy fastest money transfer through RTGS, NEFT & IMPS</span>
               </p>
-              <a href="services.html" class="service-dark-btn">
+              <a href="services.html#money-transfer" class="service-dark-btn">
                 <span data-lang="mr">अधिक माहिती</span>
                 <span data-lang="en">Know More</span> &rarr;
               </a>
             </div>
-            <!-- Card 3: Locker Facility -->
+            <!-- Card 4: Locker Facility -->
             <div class="service-dark-card">
               <div class="service-dark-icon">
                 <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-locker" /></svg>
@@ -742,12 +826,12 @@
                 <span data-lang="mr">तुमच्या मौल्यवान वस्तूंसाठी अत्याधुनिक सुरक्षा लॉकर</span>
                 <span data-lang="en">State-of-the-art safety vaults for your valuables</span>
               </p>
-              <a href="services.html" class="service-dark-btn">
+              <a href="services.html#locker-facility" class="service-dark-btn">
                 <span data-lang="mr">अधिक माहिती</span>
                 <span data-lang="en">Know More</span> &rarr;
               </a>
             </div>
-            <!-- Card 4: Micro ATM -->
+            <!-- Card 5: Micro ATM -->
             <div class="service-dark-card">
               <div class="service-dark-icon">
                 <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-atm" /></svg>
@@ -760,12 +844,12 @@
                 <span data-lang="mr">डेबिट कार्डद्वारे पैसे काढण्यासाठी पतसंस्थेतील पहिलीच सुविधा</span>
                 <span data-lang="en">First-ever in Credit Society to withdraw money with debit card</span>
               </p>
-              <a href="services.html" class="service-dark-btn">
+              <a href="services.html#micro-atm" class="service-dark-btn">
                 <span data-lang="mr">अधिक माहिती</span>
                 <span data-lang="en">Know More</span> &rarr;
               </a>
             </div>
-            <!-- Card 5: Paperless Banking -->
+            <!-- Card 6: Paperless Banking -->
             <div class="service-dark-card">
               <div class="service-dark-icon">
                 <svg class="icon" style="width: 32px; height: 32px;"><use href="#i-passbook" /></svg>
@@ -778,7 +862,7 @@
                 <span data-lang="mr">सुरक्षा वाढवण्यासोबतच लोकांच्या सोयीसाठी तंत्रज्ञानाचा वापर</span>
                 <span data-lang="en">Using technology for people's convenience, while adding security</span>
               </p>
-              <a href="services.html" class="service-dark-btn">
+              <a href="services.html#paperless-banking" class="service-dark-btn">
                 <span data-lang="mr">अधिक माहिती</span>
                 <span data-lang="en">Know More</span> &rarr;
               </a>
@@ -1477,6 +1561,8 @@
       </div>
     </section>
 
+
+
     <!-- ══════════════════════════════════════════════
      20. CONTACT CTA
      ══════════════════════════════════════════════ -->
@@ -1638,6 +1724,114 @@
       </div>
     </div>
   </footer>
+
+  <!-- NOTIFICATIONS MODAL -->
+  <div id="notifications-modal" class="notifications-modal-overlay">
+    <div class="notifications-modal-card">
+      <div class="notifications-modal-header">
+        <div class="notifications-modal-title-group">
+          <svg class="icon notifications-modal-title-icon"><use href="#i-bell" /></svg>
+          <h3>
+            <span data-lang="mr">महत्वाचे अपडेट्स आणि सूचना</span>
+            <span data-lang="en">Latest Updates & Notices</span>
+          </h3>
+        </div>
+        <button class="notifications-modal-close" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="notifications-modal-body">
+        <!-- Notification Item 1 -->
+        <div class="notification-detail-item">
+          <div class="notification-meta">
+            <span class="notification-badge"><span data-lang="mr">नवीन</span><span data-lang="en">New</span></span>
+            <span class="notification-date">July 13, 2026</span>
+          </div>
+          <h4 class="notification-title">
+            <span data-lang="mr">मुदत ठेव योजना आकर्षक व्याजदर</span>
+            <span data-lang="en">Fixed Deposit Scheme Attractive Interest Rates</span>
+          </h4>
+          <p class="notification-desc">
+            <span data-lang="mr">एन. डी. चौगुले नागरी पतसंस्थेत आपल्या ठेवींवर ९.५% पर्यंत व्याज मिळवा! आजच गुंतवणूक करा आणि सुरक्षित परतावा मिळवा.</span>
+            <span data-lang="en">Get up to 9.5% interest on your Fixed Deposits at N.D. Chougale Credit Society! Invest today for secure and guaranteed returns.</span>
+          </p>
+          <a href="deposits.html" class="notification-link">
+            <span data-lang="mr">अधिक वाचा</span><span data-lang="en">Read More</span> &rarr;
+          </a>
+        </div>
+        <!-- Notification Item 2 -->
+        <div class="notification-detail-item">
+          <div class="notification-meta">
+            <span class="notification-badge"><span data-lang="mr">नवीन</span><span data-lang="en">New</span></span>
+            <span class="notification-date">July 10, 2026</span>
+          </div>
+          <h4 class="notification-title">
+            <span data-lang="mr">सुरक्षित इंटरनेट बँकिंग आणि ऑनलाइन खाते</span>
+            <span data-lang="en">Secure Internet Banking & Online Account Opening</span>
+          </h4>
+          <p class="notification-desc">
+            <span data-lang="mr">नवीन सुरक्षा वैशिष्ट्यांसह इंटरनेट बँकिंग सेवा आता थेट उपलब्ध आहे. आपण घरबसल्या खाते उघडू शकता आणि व्यवहार व्यवस्थापित करू शकता.</span>
+            <span data-lang="en">Our new secure Internet Banking features and Online Account Opening forms are now live. Manage your account from the comfort of your home.</span>
+          </p>
+          <a href="services.html#internet-banking" class="notification-link">
+            <span data-lang="mr">अधिक वाचा</span><span data-lang="en">Read More</span> &rarr;
+          </a>
+        </div>
+        <!-- Notification Item 3 -->
+        <div class="notification-detail-item">
+          <div class="notification-meta">
+            <span class="notification-date">July 05, 2026</span>
+          </div>
+          <h4 class="notification-title">
+            <span data-lang="mr">सुवर्ण कर्ज व्याजदर सवलत</span>
+            <span data-lang="en">Gold Loan Interest Rate Discount</span>
+          </h4>
+          <p class="notification-desc">
+            <span data-lang="mr">चौगुले पतसंस्थेमध्ये सोन्यावर सर्वात जलद कर्ज मिळवा. कमीत कमी कागदपत्रे आणि सवलतीच्या व्याजदरात त्वरित मंजुरी.</span>
+            <span data-lang="en">Avail gold loans at the lowest interest rates with fast processing and minimal paperwork. Quick approvals and hassle-free disbursements.</span>
+          </p>
+          <a href="gold-loan.html" class="notification-link">
+            <span data-lang="mr">अधिक वाचा</span><span data-lang="en">Read More</span> &rarr;
+          </a>
+        </div>
+        <!-- Notification Item 4 -->
+        <div class="notification-detail-item">
+          <div class="notification-meta">
+            <span class="notification-date">June 28, 2026</span>
+          </div>
+          <h4 class="notification-title">
+            <span data-lang="mr">२०२५-२६ वार्षिक ऑडिट अहवाल प्रसिद्ध</span>
+            <span data-lang="en">2025-26 Annual Audit Report Released</span>
+          </h4>
+          <p class="notification-desc">
+            <span data-lang="mr">एन. डी. चौगुले पतसंस्थेचे आर्थिक वर्ष २०२५-२६ चे अधिकृत वित्तीय अहवाल आणि वार्षिक लेखापरीक्षण अहवाल प्रसिद्ध झाले आहेत.</span>
+            <span data-lang="en">The official financial statements and annual audit reports for the fiscal year 2025-26 are now available for download.</span>
+          </p>
+          <a href="downloads.html" class="notification-link">
+            <span data-lang="mr">अधिक वाचा</span><span data-lang="en">Read More</span> &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PREMIUM FIXED SIDE TABS -->
+  <div class="side-tabs-container">
+    <!-- Internet Banking Tab -->
+    <a href="services.html#internet-banking" class="side-tab tab-netbanking">
+      <svg class="icon side-tab-icon"><use href="#i-shield" /></svg>
+      <span class="side-tab-text">
+        <span data-lang="mr">इंटरनेट बँकिंग</span>
+        <span data-lang="en">Internet Banking</span>
+      </span>
+    </a>
+    <!-- Open Online Account Tab -->
+    <a href="contact.html" class="side-tab tab-openaccount">
+      <svg class="icon side-tab-icon"><use href="#i-account" /></svg>
+      <span class="side-tab-text">
+        <span data-lang="mr">ऑनलाइन खाते उघडा</span>
+        <span data-lang="en">Open Account</span>
+      </span>
+    </a>
+  </div>
 
   <!-- FLOATING CTAs -->
   <div class="float-actions">

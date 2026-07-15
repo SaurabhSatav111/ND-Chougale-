@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initGalleryFilter();
   initQuickTabs();
   initHeroSlider();
+  initNotificationsModal();
 });
 
 /* ============================================================
@@ -625,4 +626,46 @@ function initHeroSlider() {
   });
 
   startAutoplay();
+}
+
+/* ============================================================
+   22. NOTIFICATIONS MODAL
+   ============================================================ */
+function initNotificationsModal() {
+  const trigger = document.querySelector('.ticker-label');
+  const modal   = document.getElementById('notifications-modal');
+  if (!trigger || !modal) return;
+
+  const closeEl = modal.querySelector('.notifications-modal-close');
+
+  const open = () => {
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden'; // Prevent background scroll
+  };
+
+  const close = () => {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  };
+
+  trigger.style.cursor = 'pointer';
+  trigger.addEventListener('click', open);
+
+  if (closeEl) {
+    closeEl.addEventListener('click', close);
+  }
+
+  // Close when clicking overlay background
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      close();
+    }
+  });
+
+  // Close on Escape key press
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      close();
+    }
+  });
 }
