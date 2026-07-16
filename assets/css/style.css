@@ -4871,7 +4871,13 @@ body.dark .drawer-lang .lang-switch-link.active {
   }
   
   .nav-actions {
-    display: none !important;
+    display: flex !important;
+    position: absolute !important;
+    right: 24px !important;
+    bottom: 0 !important;
+    height: 50px !important;
+    align-items: center !important;
+    z-index: 105 !important;
   }
 }
 
@@ -5231,7 +5237,7 @@ body.dark .services-dark-section {
 }
 .services-dark-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 @media(max-width: 991px) {
@@ -8931,47 +8937,6 @@ body.dark .tab-openaccount {
 
   .side-tab-text {
     font-size: 12px;
-  
-  .scheme-showcase-block.alternate .scheme-story-text {
-    grid-column: span 1 !important;
-    grid-row: auto !important;
-  }
-  
-  .scheme-showcase-block.alternate .scheme-story-visual {
-    grid-column: span 1 !important;
-    grid-row: auto !important;
-  }
-  
-  .scheme-visual-container {
-    height: 380px;
-  }
-  
-  .visual-floating-stat {
-    padding: 10px 16px;
-  }
-  
-  .visual-focus-card {
-    padding: 28px 24px;
-  }
-}
-
-@media (max-width: 575px) {
-  .scheme-feature-panels {
-    grid-template-columns: 1fr;
-    gap: 14px;
-  }
-  
-  .completed-schemes-section {
-    padding: 60px 0;
-  }
-  
-  .visual-floating-stat {
-    display: none; /* Hide floating stats on very small screens */
-  }
-  
-  .visual-focus-card {
-    width: 100%;
-    max-width: 100%;
   }
 }
 
@@ -9399,3 +9364,44 @@ body.dark .notification-link {
     padding: 18px 20px;
   }
 }
+
+/* ============================================================
+   22. NOTIFICATION TRIGGER BUTTON & BADGE
+   ============================================================ */
+.notification-trigger {
+  position: relative;
+}
+
+.notification-badge-dot {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 9px;
+  height: 9px;
+  background-color: #EF4444; /* High-visibility modern red */
+  border-radius: 50%;
+  border: 1.5px solid var(--primary-dark);
+  box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  animation: pulseBadge 2s infinite;
+  pointer-events: none;
+}
+
+body.dark .notification-badge-dot {
+  border-color: #071424;
+}
+
+@keyframes pulseBadge {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 5px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
