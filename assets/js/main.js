@@ -632,15 +632,146 @@ function initHeroSlider() {
    22. NOTIFICATIONS MODAL
    ============================================================ */
 function initNotificationsModal() {
-  const trigger = document.querySelector('.ticker-label');
-  const modal   = document.getElementById('notifications-modal');
-  if (!trigger || !modal) return;
+  // 1. Dynamically inject the trigger button into .nav-actions of the header
+  const navActions = document.querySelector('.nav-actions');
+  if (navActions && !navActions.querySelector('.notification-trigger')) {
+    const hamburger = navActions.querySelector('.hamburger');
+    const notifBtn = document.createElement('button');
+    notifBtn.className = 'nav-icon-btn notification-trigger';
+    notifBtn.id = 'notification-trigger';
+    notifBtn.setAttribute('aria-label', 'Notifications');
+    notifBtn.innerHTML = `
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+      </svg>
+      <span class="notification-badge-dot"></span>
+    `;
+    if (hamburger) {
+      navActions.insertBefore(notifBtn, hamburger);
+    } else {
+      navActions.appendChild(notifBtn);
+    }
+  }
 
+  // 2. Dynamically inject the notifications modal into the body if not present
+  let modal = document.getElementById('notifications-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'notifications-modal';
+    modal.className = 'notifications-modal-overlay';
+    modal.innerHTML = `
+      <div class="notifications-modal-card">
+        <div class="notifications-modal-header">
+          <div class="notifications-modal-title-group">
+            <svg class="icon notifications-modal-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+            </svg>
+            <h3>
+              <span data-lang="mr">महत्वाचे अपडेट्स आणि सूचना</span>
+              <span data-lang="en">Latest Updates & Notices</span>
+            </h3>
+          </div>
+          <button class="notifications-modal-close" aria-label="Close Modal">&times;</button>
+        </div>
+        <div class="notifications-modal-body">
+          <!-- Notification Item 1 -->
+          <div class="notification-detail-item">
+            <div class="notification-meta">
+              <span class="notification-badge"><span data-lang="mr">नवीन</span><span data-lang="en">New</span></span>
+              <span class="notification-date">July 13, 2026</span>
+            </div>
+            <h4 class="notification-title">
+              <span data-lang="mr">मुदत ठेव योजना आकर्षक व्याजदर</span>
+              <span data-lang="en">Fixed Deposit Scheme Attractive Interest Rates</span>
+            </h4>
+            <p class="notification-desc">
+              <span data-lang="mr">एन. डी. चौगुले नागरी पतसंस्थेत आपल्या ठेवींवर ९.५% पर्यंत व्याज मिळवा! आजच गुंतवणूक करा आणि सुरक्षित परतावा मिळवा.</span>
+              <span data-lang="en">Get up to 9.5% interest on your Fixed Deposits at N.D. Chougale Credit Society! Invest today for secure and guaranteed returns.</span>
+            </p>
+            <a href="deposits.html" class="notification-link">
+              <span data-lang="mr">अधिक वाचा</span><span data-lang="en">Read More</span> &rarr;
+            </a>
+          </div>
+          <!-- Notification Item 2 -->
+          <div class="notification-detail-item">
+            <div class="notification-meta">
+              <span class="notification-badge"><span data-lang="mr">नवीन</span><span data-lang="en">New</span></span>
+              <span class="notification-date">July 10, 2026</span>
+            </div>
+            <h4 class="notification-title">
+              <span data-lang="mr">सुरक्षित इंटरनेट बँकिंग आणि ऑनलाइन खाते</span>
+              <span data-lang="en">Secure Internet Banking & Online Account Opening</span>
+            </h4>
+            <p class="notification-desc">
+              <span data-lang="mr">नवीन सुरक्षा वैशिष्ट्यांसह इंटरनेट बँकिंग सेवा आता थेट उपलब्ध आहे. आपण घरबसल्या खाते उघडू शकता आणि व्यवहार व्यवस्थापित करू शकता.</span>
+              <span data-lang="en">Our new secure Internet Banking features and Online Account Opening forms are now live. Manage your account from the comfort of your home.</span>
+            </p>
+            <a href="services.html#internet-banking" class="notification-link">
+              <span data-lang="mr">अधिक वाचा</span><span data-lang="en">Read More</span> &rarr;
+            </a>
+          </div>
+          <!-- Notification Item 3 -->
+          <div class="notification-detail-item">
+            <div class="notification-meta">
+              <span class="notification-date">July 05, 2026</span>
+            </div>
+            <h4 class="notification-title">
+              <span data-lang="mr">सुवर्ण कर्ज व्याजदर सवलत</span>
+              <span data-lang="en">Gold Loan Interest Rate Discount</span>
+            </h4>
+            <p class="notification-desc">
+              <span data-lang="mr">चौगुले पतसंस्थेमध्ये सोन्यावर सर्वात जलद कर्ज मिळवा. कमीत कमी कागदपत्रे आणि सवलतीच्या व्याजदरात त्वरित मंजुरी.</span>
+              <span data-lang="en">Avail gold loans at the lowest interest rates with fast processing and minimal paperwork. Quick approvals and hassle-free disbursements.</span>
+            </p>
+            <a href="gold-loan.html" class="notification-link">
+              <span data-lang="mr">अधिक वाचा</span><span data-lang="en">Read More</span> &rarr;
+            </a>
+          </div>
+          <!-- Notification Item 4 -->
+          <div class="notification-detail-item">
+            <div class="notification-meta">
+              <span class="notification-date">June 28, 2026</span>
+            </div>
+            <h4 class="notification-title">
+              <span data-lang="mr">२०२५-२६ वार्षिक ऑडिट अहवाल प्रसिद्ध</span>
+              <span data-lang="en">2025-26 Annual Audit Report Released</span>
+            </h4>
+            <p class="notification-desc">
+              <span data-lang="mr">एन. डी. चौगुले पतसंस्थेचे आर्थिक वर्ष २०२५-२६ चे अधिकृत वित्तीय अहवाल आणि वार्षिक लेखापरीक्षण अहवाल प्रसिद्ध झाले आहेत.</span>
+              <span data-lang="en">The official financial statements and annual audit reports for the fiscal year 2025-26 are now available for download.</span>
+            </p>
+            <a href="downloads.html" class="notification-link">
+              <span data-lang="mr">अधिक वाचा</span><span data-lang="en">Read More</span> &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+
+  // 3. Set up triggers
+  const tickerLabelTrigger = document.querySelector('.ticker-label');
+  const headerTrigger = document.querySelector('.notification-trigger');
   const closeEl = modal.querySelector('.notifications-modal-close');
+  const badgeDot = headerTrigger ? headerTrigger.querySelector('.notification-badge-dot') : null;
+
+  // Manage Badge Read/Unread State
+  if (badgeDot && localStorage.getItem('notifications_read') === 'true') {
+    badgeDot.style.display = 'none';
+  }
 
   const open = () => {
     modal.classList.add('open');
     document.body.style.overflow = 'hidden'; // Prevent background scroll
+    
+    // Hide badge and mark as read
+    if (badgeDot) {
+      badgeDot.style.display = 'none';
+      localStorage.setItem('notifications_read', 'true');
+    }
   };
 
   const close = () => {
@@ -648,8 +779,20 @@ function initNotificationsModal() {
     document.body.style.overflow = '';
   };
 
-  trigger.style.cursor = 'pointer';
-  trigger.addEventListener('click', open);
+  if (tickerLabelTrigger) {
+    tickerLabelTrigger.style.cursor = 'pointer';
+    tickerLabelTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      open();
+    });
+  }
+
+  if (headerTrigger) {
+    headerTrigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      open();
+    });
+  }
 
   if (closeEl) {
     closeEl.addEventListener('click', close);
